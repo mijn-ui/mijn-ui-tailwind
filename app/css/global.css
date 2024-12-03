@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./override.css";
+
+/* These variables come from the Tailw
+ind plugin @mijn-ui/react-theme */
+/* eg: --main, --main-text */
+:root {
+  /* general */
+  --fd-background: var(--main); /* slate-100 */
+  --fd-foreground: var(--main-text); /* black */
+
+  --fd-border: var(--main-border); /* neutral-300 */
+
+  --fd-muted: var(--muted); /* neutral-300 */
+  --fd-muted-foreground: var(--muted-text); /* neutral-700 */
+
+  --fd-primary: var(--primary); /* orange-500 */
+  --fd-primary-foreground: var(--primary-text); /* white */
+
+  --fd-accent: var(--accent); /* neutral-200 */
+  --fd-accent-foreground: var(--accent-text); /* black */
+
+  --fd-card: var(--surface); /* neutral-50 */
+  --fd-card-foreground: var(--surface-text); /* black */
+
+  --fd-ring: var(--ring); /* neutral-800 */
+
+  --fd-input: var(--input-border); /* neutral-500 */
+}
+
+.custom_scroll_bar {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.custom_scroll_bar::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .custom_scroll_bar::-webkit-scrollbar {
+    height: 0.3rem;
+    width: 0.3rem;
+  }
+}
+
+.custom_scroll_bar::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  @apply bg-fd-muted;
+}
+
+.custom_scroll_bar::-webkit-scrollbar-track {
+  border-radius: 0.25rem;
+  @apply bg-transparent;
+  margin: 0.5rem 0.5rem;
+}
+
+.custom_scroll_bar::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}

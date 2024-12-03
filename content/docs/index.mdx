@@ -1,13 +1,32 @@
 ---
-title: Hello World
-description: Your first document
+title: Introduction
+description: Free Open Source Tailwind CSS Components
+root: true
+defaultOpen: true
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+import { Cards, Card } from "fumadocs-ui/components/card";
 
-## What is Next?
+## MijnUI-Tailwind
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
+MijnUI-Tailwind is a collection of Tailwind CSS components designed to enhance the development process of websites and applications. These components offer great versatility and can be seamlessly integrated into various types of projects, such as marketing websites, dashboards, and e-commerce platforms.
+
+<Alert
+  description="Currently, MijnUI only provides styling. More functionalities will be added in the future."
+  className="my-4 [&>p]:mt-0"
+/>
+
+### Learn More
+
+<Cards className="not-prose">
+  <Card
+    href="/docs/tailwind/installation"
+    title="Installation"
+    description="Learn how to get started by configuring MijnUI locally on your machine and start developing."
+  />
+  <Card
+    href="/docs/tailwind/theming"
+    title="Theming"
+    description="Explore how to customize the visual appearance of your MijnUI components by leveraging the powerful theming capabilities provided by Tailwind CSS."
+  />
 </Cards>
