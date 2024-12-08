@@ -35,8 +35,8 @@ const Navbar = () => {
   const { open: isSidebarOpen } = useSidebar()
   const pathname = usePathname()
 
-  // Check if the pathname starts with '/docs/' but isn't exactly '/docs'
-  const isDocsPage = /^\/docs\/.+/.test(pathname)
+  // Check if the pathname starts with '/docs'
+  const isDocsPage = /^\/docs/.test(pathname)
 
   const renderSidebarTrigger = (
     <SidebarTrigger
