@@ -26,7 +26,7 @@ const ComponentPreview = ({
       setLoading(true)
       setError(false)
       try {
-        const response = await fetch(`/api/get-html?filename=${src}`, {
+        const response = await fetch(`/tailwind/api/get-html?filename=${src}`, {
           cache: "force-cache",
         })
         const data = await response.json()
