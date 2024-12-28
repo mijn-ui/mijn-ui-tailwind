@@ -7,6 +7,14 @@ const config = {
   reactStrictMode: true,
   basePath: "/tailwind",
   assetPrefix: "/tailwind",
+  redirects: async () => [
+    {
+      source: "/",
+      destination: "/tailwind",
+      basePath: false,
+      permanent: true,
+    },
+  ],
 }
 
 export default withMDX(config)
