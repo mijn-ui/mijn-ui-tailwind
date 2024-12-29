@@ -6,16 +6,6 @@ const withMDX = createMDX()
 const config = {
   output: "standalone",
   reactStrictMode: true,
-  basePath: "/tailwind",
-  assetPrefix: "/tailwind",
-  redirects: async () => [
-    {
-      source: "/",
-      destination: "/tailwind",
-      basePath: false,
-      permanent: true,
-    },
-  ],
 }
 
 export default withMDX(config)

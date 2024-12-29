@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <RootProvider
           search={{
             options: {
-              api: "/tailwind/api/search",
+              api: "/api/search",
             },
           }}
         >
