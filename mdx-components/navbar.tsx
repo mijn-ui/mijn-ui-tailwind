@@ -8,23 +8,12 @@ import ThemeToggler from "@/app/components/theme-toggler"
 import ClickAwayListener from "@/app/utils/click-away-listener"
 import { Badge } from "@mijn-ui/react-badge"
 import { Button, buttonStyles } from "@mijn-ui/react-button"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@mijn-ui/react-collapsible"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@mijn-ui/react-collapsible"
 import { Separator } from "@mijn-ui/react-separator"
 import { cn } from "@mijn-ui/react-utilities/shared"
 import { SidebarTrigger } from "fumadocs-core/sidebar"
 import { useSearchContext, useSidebar } from "fumadocs-ui/provider"
-import {
-  LuChevronDown,
-  LuExternalLink,
-  LuGithub,
-  LuMenu,
-  LuSearch,
-  LuX,
-} from "react-icons/lu"
+import { LuChevronDown, LuExternalLink, LuGithub, LuMenu, LuSearch, LuX } from "react-icons/lu"
 import { usePathname } from "next/navigation"
 
 const GITHUB_URL = "https://github.com/mijn-ui/mijn-ui-tailwind"
@@ -47,8 +36,7 @@ const Navbar = () => {
           size: "icon",
           className: "-me-2 md:hidden",
         }),
-      )}
-    >
+      )}>
       {isSidebarOpen ? <LuX /> : <LuMenu />}
     </SidebarTrigger>
   )
@@ -61,9 +49,7 @@ const Navbar = () => {
             <Logo className="size-5 items-center fill-fd-foreground" />
             MijnUI
           </Link>
-          <Badge className="bg-primary/20 text-primary hover:bg-primary/20">
-            v0.0.1
-          </Badge>
+          <Badge className="bg-primary/20 text-primary hover:bg-primary/20">v0.0.1</Badge>
         </div>
 
         {/* Desktop Buttons */}
@@ -73,8 +59,7 @@ const Navbar = () => {
             color={"accent"}
             variant={"outline"}
             size={"sm"}
-            className="gap-2"
-          >
+            className="gap-2">
             <LuSearch />
             <span className="inline-block text-muted-text">Search...</span>
             <div className="ml-4 inline-flex h-5 gap-1 rounded-full border px-2 py-px">
@@ -96,8 +81,7 @@ const Navbar = () => {
         <div className="flex items-center md:hidden">
           <button
             onClick={() => setOpenSearch(true)}
-            className="inline-flex size-8 items-center justify-center text-muted-text transition duration-200 hover:text-secondary-text"
-          >
+            className="inline-flex size-8 items-center justify-center text-muted-text transition duration-200 hover:text-secondary-text">
             <LuSearch />
           </button>
 
@@ -114,8 +98,7 @@ const Navbar = () => {
                     <Link
                       className="inline-flex items-center gap-2 text-muted-text hover:text-secondary-text"
                       target="_blank"
-                      href={GITHUB_URL}
-                    >
+                      href={GITHUB_URL}>
                       Github <LuExternalLink />
                     </Link>
                     <ThemeToggler />

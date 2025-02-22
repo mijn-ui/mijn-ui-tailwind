@@ -22,8 +22,7 @@ const ThemeToggler = ({ className }: { className?: string }) => {
         className={cn(
           "flex size-8 items-center justify-center text-muted-text transition duration-200 hover:text-secondary-text sm:size-10",
           className,
-        )}
-      >
+        )}>
         <FiSun />
       </button>
     )
@@ -35,8 +34,7 @@ const ThemeToggler = ({ className }: { className?: string }) => {
         className={cn(
           "flex size-8 items-center justify-center text-muted-text transition duration-200 hover:text-secondary-text sm:size-10",
           className,
-        )}
-      >
+        )}>
         <FiMoon />
       </button>
     )

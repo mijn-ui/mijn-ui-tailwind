@@ -1,10 +1,4 @@
-import {
-  AlertDescription,
-  AlertIcon,
-  AlertTitle,
-  Alert as MijnUIAlert,
-  alertStyles,
-} from "@mijn-ui/react-alert"
+import { AlertDescription, AlertIcon, AlertTitle, Alert as MijnUIAlert, alertStyles } from "@mijn-ui/react-alert"
 import { cn } from "@mijn-ui/react-utilities/shared"
 import { VariantProps } from "class-variance-authority"
 import { LuCircleAlert, LuBug } from "react-icons/lu"
@@ -16,20 +10,11 @@ type AlertProps = {
   className?: string
 }
 
-const Alert = ({
-  title,
-  description,
-  status = "info",
-  className,
-}: AlertProps) => {
+const Alert = ({ title, description, status = "info", className }: AlertProps) => {
   const Icon = status === "danger" ? LuBug : LuCircleAlert
 
   return (
-    <MijnUIAlert
-      className={cn("not-prose w-full backdrop-blur-md", className)}
-      variant="default"
-      status={status}
-    >
+    <MijnUIAlert className={cn("not-prose w-full backdrop-blur-md", className)} variant="default" status={status}>
       <AlertIcon>
         <Icon />
       </AlertIcon>

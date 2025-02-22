@@ -12,10 +12,7 @@ export default {
     "./node_modules/@mijn-ui/**/dist/*.js",
     "./node_modules/fumadocs-ui/dist/**/*.js",
   ],
-  presets: [
-    createPreset({ cssPrefix: "fd", addGlobalColors: false }),
-    mijnUiPreset,
-  ],
+  presets: [createPreset({ cssPrefix: "fd", addGlobalColors: false }), mijnUiPreset],
   theme: {
     extend: {
       fontSize: {
