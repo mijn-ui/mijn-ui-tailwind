@@ -27,8 +27,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             options: {
               api: "/api/search",
             },
-          }}
-        >
+          }}>
           {children}
         </RootProvider>
       </body>

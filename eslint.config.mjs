@@ -14,13 +14,7 @@ const compat = new FlatCompat({
 /** @type {import('eslint').Linter.Config[]} */
 const configs = [
   {
-    ignores: [
-      "**/node_modules/*",
-      "**/out/*",
-      "**/.next/*",
-      ".source",
-      "**/coverage",
-    ],
+    ignores: ["**/node_modules/*", "**/out/*", "**/.next/*", ".source", "**/coverage"],
   },
   eslintPluginPrettierRecommended,
   ...compat.extends("next/core-web-vitals"),

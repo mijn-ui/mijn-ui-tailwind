@@ -9,17 +9,12 @@ export default function HomePage() {
         MijnUI Tailwind Components For HTML Projects
       </h1>
       <p className="w-full text-lg font-medium text-muted-text md:w-3/4">
-        MijnUI-Tailwind offers flexible, ready-to-use components for building
-        marketing sites, dashboards, and e-commerce platforms.
+        MijnUI-Tailwind offers flexible, ready-to-use components for building marketing sites, dashboards, and
+        e-commerce platforms.
       </p>
 
       <div className="flex w-full items-center justify-start gap-2 md:justify-center">
-        <Link
-          className={cn(
-            buttonStyles({ size: "sm", className: "text-xs md:text-sm" }),
-          )}
-          href={"/docs"}
-        >
+        <Link className={cn(buttonStyles({ size: "sm", className: "text-xs md:text-sm" }))} href={"/docs"}>
           Getting Started
         </Link>
         <Link
@@ -30,8 +25,7 @@ export default function HomePage() {
               className: "text-xs md:text-sm",
             }),
           )}
-          href={"/docs/components/accordion"}
-        >
+          href={"/docs/components/accordion"}>
           Components
         </Link>
       </div>

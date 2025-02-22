@@ -9,14 +9,7 @@ type CodePreviewerProps = React.ComponentPropsWithoutRef<"div"> & {
   children?: React.ReactNode
 }
 
-export const revalidate = 3600 // revalidate every hour
-
-const ComponentPreview = ({
-  src,
-  className,
-  children,
-  ...props
-}: CodePreviewerProps) => {
+const ComponentPreview = ({ src, className, children, ...props }: CodePreviewerProps) => {
   const [reactElement, setReactElement] = useState<React.ReactNode>(null)
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<boolean>(false)
@@ -27,7 +20,7 @@ const ComponentPreview = ({
       setError(false)
       try {
         const response = await fetch(`/api/get-html?filename=${src}`, {
-          cache: "force-cache",
+          cache: "no-cache",
         })
         const data = await response.json()
         const parsedHTML = HTMLReactParser(data.html)
@@ -49,8 +42,7 @@ const ComponentPreview = ({
         "not-prose relative flex min-h-80 w-full items-center justify-center gap-5 rounded-lg border p-5",
         className,
       )}
-      {...props}
-    >
+      {...props}>
       {loading ? (
         <div className="flex items-center gap-2">
           <svg
@@ -64,16 +56,13 @@ const ComponentPreview = ({
             height="1em"
             width="1em"
             aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
           </svg>
           <p className="text-sm">Loading...</p>
         </div>
       ) : error ? (
-        <p className="text-sm text-danger">
-          Error loading content. Please try refreshing the page again.
-        </p>
+        <p className="text-sm text-danger">Error loading content. Please try refreshing the page again.</p>
       ) : (
         reactElement
       )}
