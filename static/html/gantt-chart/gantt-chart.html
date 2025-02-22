@@ -1,0 +1,501 @@
+<div class="space-y-2 bg-surface p-4 h-[672px] w-full max-w-[1056px] rounded-2xl">
+  <div class="relative flex h-full w-full overflow-hidden rounded-lg border border-main-border items-stretch">
+    <!-- -------------------------- Gantt Chart Desktop Panel -------------------------- -->
+    <div
+      class="sticky hidden sm:block left-0 top-0 z-10 h-full w-60 flex-shrink-0 border-r border-main-border bg-surface p-0">
+      <!-- Gantt Chart Header -->
+      <div
+        class="flex w-full gap-2 border-b border-main-border px-3 py-2 h-14 items-center justify-between bg-accent font-semibold">
+        <p class="text-sm text-main-text">Tasks</p>
+      </div>
+
+      <!-- Gantt Chart Buttons -->
+      <button
+        class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+        <div class="h-2 w-2 rounded-full bg-slate-500"></div>
+        <p class="text-sm text-main-text">Feature Documentation</p>
+      </button>
+      <button
+        class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+        <div class="h-2 w-2 rounded-full bg-yellow-500"></div>
+        <p class="text-sm text-main-text">Usability Testing</p>
+      </button>
+
+      <!-- Gantt Chart Buttons with Subtasks -->
+      <div>
+        <button
+          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+          <div class="flex items-center gap-2">
+            <div class="h-2 w-2 rounded-full bg-blue-500"></div>
+            <p class="text-sm font-medium text-main-text">Development</p>
+          </div>
+          <span class="transition rotate-180">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-4 w-4"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="w-full">
+          <div>
+            <button
+              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              <div class="h-2 w-2 rounded-full bg-blue-200"></div>
+              <p class="text-sm text-main-text">Planning</p>
+            </button>
+            <button
+              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              <div class="h-2 w-2 rounded-full bg-blue-200"></div>
+              <p class="text-sm text-main-text">Framework Migration</p>
+            </button>
+            <button
+              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              <div class="h-2 w-2 rounded-full bg-blue-200"></div>
+              <p class="text-sm text-main-text">Refactoring</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gantt Chart Buttons with Subtasks -->
+      <div>
+        <button
+          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+          <div class="flex items-center gap-2">
+            <div class="h-2 w-2 rounded-full bg-green-500"></div>
+            <p class="text-sm font-medium text-main-text">Release</p>
+          </div>
+          <span class="transition rotate-0">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-4 w-4"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="w-full">
+          <div>
+            <button
+              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              <div class="h-2 w-2 rounded-full bg-green-200"></div>
+              <p class="text-sm text-main-text">CI/CD Automation</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gantt Chart Buttons with Subtasks -->
+      <div>
+        <button
+          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+          <div class="flex items-center gap-2">
+            <div class="h-2 w-2 rounded-full bg-purple-500"></div>
+            <p class="text-sm font-medium text-main-text">Getting Feedback</p>
+          </div>
+          <span class="transition rotate-180">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-4 w-4"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="w-full">
+          <div>
+            <button
+              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              <div class="h-2 w-2 rounded-full bg-purple-200"></div>
+              <p class="text-sm text-main-text">User Interview</p>
+            </button>
+            <button
+              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              <div class="h-2 w-2 rounded-full bg-purple-200"></div>
+              <p class="text-sm text-main-text">Follow-up Email</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------- Gantt Chart Panel Mobile ----------------------- -->
+    <!-- !! Remove the 'hidden' class to activate the overlay when the panel is active !! -->
+    <div class="hidden absolute inset-0 z-10 bg-black/70"></div>
+
+    <div class="sticky sm:hidden left-0 top-0 z-10 h-full flex-shrink-0 border-r border-main-border bg-accent p-2">
+      <button class="block">
+        <svg
+          stroke="currentColor"
+          fill="none"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          height="16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+          <line x1="9" x2="9" y1="3" y2="21"></line>
+        </svg>
+      </button>
+
+      <!-- !! Set the 'left' property to 0 to make the element visible in its active state !! -->
+      <div
+        class="absolute inset-y-0 z-50 h-full min-w-52 border-r border-main-border bg-surface transition-all duration-300 -left-52">
+        <!-- Gantt Chart Panel Header -->
+        <div
+          class="flex w-full gap-2 border-b border-main-border px-3 py-2 h-14 items-center justify-between bg-accent font-semibold">
+          <p class="text-sm text-main-text">Tasks</p>
+          <button class="flex items-center justify-center p-2">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              height="14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <button
+          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+          <div class="h-2 w-2 rounded-full bg-slate-500"></div>
+          <p class="text-sm text-main-text">Feature Documentation</p></button
+        ><button
+          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+          <div class="h-2 w-2 rounded-full bg-yellow-500"></div>
+          <p class="text-sm text-main-text">Usability Testing</p>
+        </button>
+        <div>
+          <button
+            class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+            <div class="flex items-center gap-2">
+              <div class="h-2 w-2 rounded-full bg-blue-500"></div>
+              <p class="text-sm font-medium text-main-text">Development</p>
+            </div>
+            <span class="transition rotate-180">
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </span>
+          </button>
+          <div class="height_animation w-full height_animation_active">
+            <div>
+              <button
+                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                <div class="h-2 w-2 rounded-full bg-blue-200"></div>
+                <p class="text-sm text-main-text">Planning</p>
+              </button>
+              <button
+                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                <div class="h-2 w-2 rounded-full bg-blue-200"></div>
+                <p class="text-sm text-main-text">Framework Migration</p>
+              </button>
+              <button
+                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                <div class="h-2 w-2 rounded-full bg-blue-200"></div>
+                <p class="text-sm text-main-text">Refactoring</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+            <div class="flex items-center gap-2">
+              <div class="h-2 w-2 rounded-full bg-green-500"></div>
+              <p class="text-sm font-medium text-main-text">Release</p>
+            </div>
+            <span class="transition rotate-0">
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </span>
+          </button>
+          <div class="height_animation w-full">
+            <div>
+              <button
+                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                <div class="h-2 w-2 rounded-full bg-green-200"></div>
+                <p class="text-sm text-main-text">CI/CD Automation</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+            <div class="flex items-center gap-2">
+              <div class="h-2 w-2 rounded-full bg-purple-500"></div>
+              <p class="text-sm font-medium text-main-text">Getting Feedback</p>
+            </div>
+            <span class="transition rotate-180">
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </span>
+          </button>
+          <div class="height_animation w-full height_animation_active">
+            <div>
+              <button
+                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                <div class="h-2 w-2 rounded-full bg-purple-200"></div>
+                <p class="text-sm text-main-text">User Interview</p>
+              </button>
+              <button
+                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                <div class="h-2 w-2 rounded-full bg-purple-200"></div>
+                <p class="text-sm text-main-text">Follow-up Email</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------- Gantt Chart Main ---------------------------- -->
+    <div class="flex h-full w-full flex-col overflow-auto">
+      <!-- xxxxxxxx Gantt Chart Main Header xxxxxxxx -->
+      <div class="sticky left-0 top-0 h-7 w-full border-b border-b-main-border bg-accent px-3 py-1">
+        <!-- Gantt Chart Title -->
+        <p class="text-sm font-semibold text-muted-text">September 2024</p>
+      </div>
+
+      <!-- xxxxxxxxxxxxxxxxxxxx Gantt Chart Date xxxxxxxxxxxxxxxxxxxx -->
+      <div class="flex w-full items-center">
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">01</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">W <span class="font-semibold">02</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">03</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">F <span class="font-semibold">04</span></p>
+        </div>
+        <div
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          <p class="text-sm text-muted-text">S <span class="font-semibold">05</span></p>
+        </div>
+        <div
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          <p class="text-sm text-muted-text">S <span class="font-semibold">06</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">M <span class="font-semibold">07</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">08</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">W <span class="font-semibold">09</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">10</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">F <span class="font-semibold">11</span></p>
+        </div>
+        <div
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          <p class="text-sm text-muted-text">S <span class="font-semibold">12</span></p>
+        </div>
+        <div
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          <p class="text-sm text-muted-text">S <span class="font-semibold">13</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">M <span class="font-semibold">14</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">15</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">W <span class="font-semibold">16</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">17</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">F <span class="font-semibold">18</span></p>
+        </div>
+        <div
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          <p class="text-sm text-muted-text">S <span class="font-semibold">19</span></p>
+        </div>
+        <div
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          <p class="text-sm text-muted-text">S <span class="font-semibold">20</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">M <span class="font-semibold">21</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">22</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">W <span class="font-semibold">23</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">24</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">F <span class="font-semibold">25</span></p>
+        </div>
+        <div
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          <p class="text-sm text-muted-text">S <span class="font-semibold">26</span></p>
+        </div>
+        <div
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          <p class="text-sm text-muted-text">S <span class="font-semibold">27</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">M <span class="font-semibold">28</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
+          <p class="text-sm text-muted-text">T <span class="font-semibold">29</span></p>
+        </div>
+        <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-b-main-border">
+          <p class="text-sm text-muted-text">W <span class="font-semibold">30</span></p>
+        </div>
+      </div>
+
+      <!-- xxxxxxxxxxxxxxxxxxxx Gantt Chart Main Background Grid xxxxxxxxxxxxxxxxxxxx -->
+      <div class="relative flex h-full w-fit items-center [&amp;>div]:flex-shrink-0">
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px] border-r border-main-border"></div>
+        <div class="h-full w-[63px]"></div>
+
+        <!-- xxxxxxxxxxxxxxxxxxxx Gantt Chart Main Task xxxxxxxxxxxxxxxxxxxx -->
+        <div class="absolute left-[568px] top-[16px] h-2 w-[316px] rounded-full bg-slate-500"></div>
+
+        <div class="absolute left-[379px] top-[54px] h-2 w-[190px] rounded-full bg-yellow-500"></div>
+
+        <div class="absolute left-[63px] top-[93px] h-2 w-[504px] rounded-full bg-blue-600"></div>
+
+        <div
+          class="absolute left-[63px] top-[123px] flex w-[251px] items-center gap-2 rounded-default border border-blue-500 bg-blue-500/20 px-2 py-1 text-xs backdrop-blur">
+          <p>2 - 5 Sep</p>
+          <p class="flex-1 font-medium">Planning</p>
+        </div>
+
+        <div
+          class="absolute left-[189px] top-[163px] flex w-[251px] items-center gap-2 rounded-default border border-blue-500 bg-blue-500/10 px-2 py-1 text-xs backdrop-blur">
+          <p>4 - 7 Sep</p>
+          <p class="flex-1 font-medium">Framework Migration</p>
+        </div>
+
+        <div
+          class="absolute left-[378px] top-[203px] flex w-[188px] items-center gap-2 rounded-default border border-blue-500 bg-blue-500/10 px-2 py-1 text-xs backdrop-blur">
+          <p>7 - 9 Sep</p>
+          <p class="flex-1 font-medium">Refactoring</p>
+        </div>
+
+        <div class="absolute left-[442px] top-[250px] h-2 w-[252px] rounded-full bg-green-500"></div>
+
+        <div class="absolute left-[504px] top-[289px] h-2 w-[503px] rounded-full bg-purple-500"></div>
+
+        <div
+          class="absolute left-[504px] top-[323px] flex w-[188px] items-center gap-2 rounded-default border border-purple-500 bg-purple-500/10 px-2 py-1 text-xs backdrop-blur">
+          <p>9 - 11 Sep</p>
+          <p class="flex-1 font-medium">User Interview</p>
+        </div>
+
+        <div
+          class="absolute left-[756px] top-[359px] flex w-[251px] items-center gap-2 rounded-default border border-purple-500 bg-purple-500/10 px-2 py-1 text-xs backdrop-blur">
+          <p>14 - 16 Sep</p>
+          <p class="flex-1 font-medium">Follow-up Email</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
