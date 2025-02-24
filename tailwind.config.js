@@ -15,6 +15,13 @@ export default {
   presets: [createPreset({ cssPrefix: "fd", addGlobalColors: false }), mijnUiPreset],
   theme: {
     extend: {
+      colors: {
+        default: {
+          DEFAULT: "hsl(var(--default))",
+          foreground: "hsl(var(--default-text))",
+        },
+      },
+
       fontSize: {
         xxs: "0.625rem",
       },

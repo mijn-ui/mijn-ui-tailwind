@@ -8,6 +8,9 @@
     --main-text: 0 0% 0%; /* black */
     --main-border: 0 0% 83%; /* neutral-300 */
 
+    --default: 216 12.2% 83.9%;
+    --default-text: 240 5.9% 10%;
+
     --surface: 0 0% 98%; /* neutral-50 */
     --surface-text: 0 0% 0%; /* black */
 
@@ -20,8 +23,8 @@
     --primary: 29 100% 52%; /* orange-500 */
     --primary-text: 0 0% 100%; /* white */
 
-    --secondary: 34 100% 82%; /* #FED7AA */
-    --secondary-text: 29 93% 39%; /* orange-700 */
+    --secondary: 33 35% 50%;
+    --secondary-text: 0 0% 100%;
 
     --info: 216 76% 52%; /* blue-500 */
     --info-text: 219 64% 43%; /* blue-800 */
@@ -51,6 +54,9 @@
     --main-text: 0 0% 96%; /* neutral-100 */
     --main-border: 0 0% 15%; /* neutral-800 */
 
+    --default: 240 3.7% 15.9%;
+    --default-text: 0 0% 98%;
+
     --surface: 0 0% 7%; /* neutral-925 */
     --surface-text: 0 0% 96%; /* neutral-100 */
 
@@ -63,8 +69,8 @@
     --primary: 29 100% 52%; /* orange-500 */
     --primary-text: 0 0% 100%; /* white */
 
-    --secondary: 34 100% 82%; /* #FED7AA */
-    --secondary-text: 29 93% 39%; /* orange-700 */
+    --secondary: 33 35% 50%;
+    --secondary-text: 0 0% 100%;
 
     --info: 216 76% 52%; /* blue-500 */
     --info-text: 207 70% 80%; /* blue-200 */

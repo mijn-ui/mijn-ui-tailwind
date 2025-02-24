@@ -29,6 +29,20 @@ ind plugin @mijn-ui/react-theme */
   --fd-ring: var(--ring); /* neutral-800 */
 
   --fd-input: var(--input-border); /* neutral-500 */
+
+  --default: 216 12.2% 83.9%;
+  --default-text: 240 5.9% 10%;
+
+  --secondary: 33 35% 50%;
+  --secondary-text: 0 0% 100%;
+}
+
+.dark {
+  --default: 240 3.7% 15.9%;
+  --default-text: 0 0% 98%;
+
+  --secondary: 33 35% 50%;
+  --secondary-text: 0 0% 100%;
 }
 
 .custom_scroll_bar {

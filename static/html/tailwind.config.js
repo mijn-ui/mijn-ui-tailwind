@@ -11,6 +11,11 @@ export default {
           border: "hsl(var(--main-border) / <alpha-value>)",
         },
 
+        default: {
+          DEFAULT: "hsl(var(--default) / <alpha-value>)",
+          text: "hsl(var(--default-text) / <alpha-value>)",
+        },
+
         surface: {
           DEFAULT: "hsl(var(--surface) / <alpha-value>)",
           text: "hsl(var(--surface-text) / <alpha-value>)",

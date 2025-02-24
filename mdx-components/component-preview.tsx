@@ -20,7 +20,7 @@ const ComponentPreview = ({ src, className, children, ...props }: CodePreviewerP
       setError(false)
       try {
         const response = await fetch(`/tailwind/api/get-html?filename=${src}`, {
-          cache: "force-cache",
+          cache: "no-cache",
         })
         const data = await response.json()
         const parsedHTML = HTMLReactParser(data.html)

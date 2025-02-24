@@ -1,91 +1,57 @@
-<nav
-  class="flex flex-col items-start sm:items-center justify-start gap-1 text-muted-text sm:flex-row"
-  aria-label="breadcrumb">
-  <div class="flex items-center gap-1">
-    <span class="flex items-center text-sm">
-      <a class="flex items-center text-muted-text hover:text-main-text hover:underline" href="/"> Home </a>
-    </span>
+<!-- Breadcrumb -->
+<nav>
+  <!-- Breadcrumb List -->
+  <ol class="flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-text sm:gap-2.5">
+    <!-- Breadcrumb Item -->
+    <li class="inline-flex items-center gap-1.5">
+      <!-- Breadcrumb Link -->
+      <a class="transition-colors hover:text-main-text hover:underline" href="#">Home</a>
+    </li>
 
-    <span class="size-3.5">
+    <!-- Breadcrumb Item/Separator -->
+    <li class="[&>svg]:w-3.5 [&>svg]:h-3.5">
       <svg
-        stroke="currentColor"
-        fill="none"
-        stroke-width="2"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="h-full w-full"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg">
+        class="lucide lucide-chevron-right">
         <path d="m9 18 6-6-6-6"></path>
       </svg>
-    </span>
-  </div>
+    </li>
 
-  <div class="flex items-center gap-1">
-    <span class="flex items-center text-sm">
-      <a class="flex items-center text-muted-text hover:text-main-text hover:underline" href="/"> Blocks </a>
-    </span>
+    <!-- Breadcrumb Item -->
+    <li class="inline-flex items-center gap-1.5">
+      <!-- Breadcrumb Link -->
+      <a class="transition-colors hover:text-main-text hover:underline" href="#">Components</a>
+    </li>
 
-    <span class="size-3.5">
+    <!-- Breadcrumb Item/Separator -->
+    <li class="[&>svg]:w-3.5 [&>svg]:h-3.5">
       <svg
-        stroke="currentColor"
-        fill="none"
-        stroke-width="2"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="h-full w-full"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg">
+        class="lucide lucide-chevron-right">
         <path d="m9 18 6-6-6-6"></path>
       </svg>
-    </span>
-  </div>
+    </li>
 
-  <div class="flex items-center gap-1">
-    <span class="flex items-center text-sm">
-      <a class="flex items-center text-muted-text hover:text-main-text hover:underline" href="/"> Components </a>
-    </span>
-
-    <span class="size-3.5">
-      <svg
-        stroke="currentColor"
-        fill="none"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="h-full w-full"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="m9 18 6-6-6-6"></path>
-      </svg>
-    </span>
-  </div>
-
-  <div class="flex items-center gap-1">
-    <span class="flex items-center text-sm">
-      <a class="flex items-center text-muted-text hover:text-main-text hover:underline" href="/"> Documentation </a>
-    </span>
-
-    <span class="size-3.5">
-      <svg
-        stroke="currentColor"
-        fill="none"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="h-full w-full"
-        height="1em"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="m9 18 6-6-6-6"></path>
-      </svg>
-    </span>
-  </div>
+    <!-- Breadcrumb Item/Active Page -->
+    <li class="inline-flex items-center gap-1.5">
+      <!-- Breadcrumb Link/Active Link -->
+      <span class="font-normal text-main-text">Breadcrumb</span>
+    </li>
+  </ol>
 </nav>

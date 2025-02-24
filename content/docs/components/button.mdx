@@ -1,5 +1,5 @@
 ---
-title: Buttons
+title: Button
 ---
 
 ### Default Button
@@ -32,9 +32,10 @@ title: Buttons
 
 ---
 
-### Button Outline
+## Button Variants
 
-There are four colors available for the outline variant `primary`, `accent`, `muted` and `danger`.
+### Outlined
+
 
 <ComponentPreview className="flex-col md:flex-row" src="/button/button-outline" />
 
@@ -50,18 +51,50 @@ There are four colors available for the outline variant `primary`, `accent`, `mu
 
 ---
 
-### Text
+### Subtle
 
-There are four colors available for the text variant `primary`, `accent`, `muted` and `danger`.
 
-<ComponentPreview className="flex-col md:flex-row" src="/button/button-text" />
+<ComponentPreview className="flex-col md:flex-row" src="/button/button-subtle" />
 
 ```json doc-gen:file
 {
-  "file": "./static/html/button/button-text.html",
+  "file": "./static/html/button/button-subtle.html",
   "codeblock": {
     "lang": "html",
-    "meta": "title=\"button-text.html\""
+    "meta": "title=\"button-subtle.html\""
+  }
+}
+```
+
+---
+
+### Ghost
+
+
+<ComponentPreview className="flex-col md:flex-row" src="/button/button-ghost" />
+
+```json doc-gen:file
+{
+  "file": "./static/html/button/button-ghost.html",
+  "codeblock": {
+    "lang": "html",
+    "meta": "title=\"button-ghost.html\""
+  }
+}
+```
+
+---
+
+### Radius
+
+<ComponentPreview className="flex-col md:flex-row" src="/button/button-radius" />
+
+```json doc-gen:file
+{
+  "file": "./static/html/button/button-radius.html",
+  "codeblock": {
+    "lang": "html",
+    "meta": "title=\"button-radius.html\""
   }
 }
 ```
@@ -84,16 +117,17 @@ There are four colors available for the text variant `primary`, `accent`, `muted
 
 ---
 
-### Radius
+### Icon Only
 
-<ComponentPreview className="flex-col md:flex-row" src="/button/button-radius" />
+<ComponentPreview src="/button/button-icon-only" />
 
 ```json doc-gen:file
 {
-  "file": "./static/html/button/button-radius.html",
+  "file": "./static/html/button/button-icon-only.html",
   "codeblock": {
     "lang": "html",
-    "meta": "title=\"button-radius.html\""
+    "meta": "title=\"button-icon-only.html\""
   }
 }
 ```
+
