@@ -5,4 +5,5 @@ export default {
   singleQuote: false,
   tabWidth: 2,
   bracketSameLine: true,
+  plugins: ["prettier-plugin-tailwindcss"],
 }

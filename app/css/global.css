@@ -4,8 +4,7 @@
 
 @import "./override.css";
 
-/* These variables come from the Tailw
-ind plugin @mijn-ui/react-theme */
+/* These variables come from the Tailwind plugin @mijn-ui/react-theme */
 /* eg: --main, --main-text */
 :root {
   /* general */
@@ -35,6 +34,8 @@ ind plugin @mijn-ui/react-theme */
 
   --secondary: 33 35% 50%;
   --secondary-text: 0 0% 100%;
+
+  --input-border: 0 0% 83%;
 }
 
 .dark {
@@ -43,6 +44,7 @@ ind plugin @mijn-ui/react-theme */
 
   --secondary: 33 35% 50%;
   --secondary-text: 0 0% 100%;
+  --input-border: 0 0% 15%; /* neutral-800 */
 }
 
 .custom_scroll_bar {
