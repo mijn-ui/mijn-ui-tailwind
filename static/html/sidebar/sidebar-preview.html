@@ -1,9 +1,11 @@
+<!-- Sidebar -->
 <aside
   class="sticky left-0 top-0 z-[5] h-full w-52 space-y-2 overflow-y-auto border-r border-main-border bg-surface px-3 pb-4 pt-2 shadow-sm ease-out">
-  <!-- /* --------------------------------- Header --------------------------------- */ -->
+  <!-- --------------------------- Sidebar Header ---------------------------- -->
   <div class="flex items-center gap-2">
+    <!-- Sidebar Trigger (Button Outlined Component) -->
     <button
-      class="inline-flex h-10 w-10 items-center justify-center gap-1 rounded-md border text-sm hover:bg-accent hover:text-accent-text">
+      class="text-default-text inline-flex h-10 w-10 items-center justify-center gap-1 rounded-md border border-main-border bg-transparent text-sm transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
       <svg
         stroke="currentColor"
         fill="none"
@@ -19,14 +21,17 @@
         <path d="m16 15-3-3 3-3"></path>
       </svg>
     </button>
+
+    <!-- Sidebar Brand/Logo -->
     <h5 class="flex items-center gap-1 font-extrabold text-main-text">MijnUI</h5>
   </div>
 
-  <!-- /* --------------------------------- Content -------------------------------- */ -->
-  <ul class="w-full list-none space-y-1 p-1">
+  <!-- --------------------------- Sidebar Content --------------------------- -->
+  <div class="w-full list-none space-y-1 p-1">
+    <!-- Sidebar Item Active (Button Primary Component) -->
     <a
       href="#"
-      class="inline-flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-primary px-3 py-2 text-sm text-primary-text hover:bg-primary hover:text-primary-text">
+      class="inline-flex h-10 w-full items-center justify-center gap-1 rounded-md bg-primary px-3.5 text-sm text-primary-text transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
       <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
         <svg
           stroke="currentColor"
@@ -46,9 +51,11 @@
         <p class="flex-1 text-sm font-medium">Dashboard</p>
       </div>
     </a>
+
+    <!-- Sidebar Item (Button Ghost Component) -->
     <a
       href="#"
-      class="inline-flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-text">
+      class="text-default-text inline-flex h-10 w-full items-center justify-center gap-1 rounded-md px-3.5 text-sm transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
       <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
         <svg
           stroke="currentColor"
@@ -68,9 +75,11 @@
         <p class="flex-1 text-sm font-medium">Search</p>
       </div>
     </a>
+
+    <!-- Sidebar Item (Button Ghost Component) -->
     <a
       href="#"
-      class="inline-flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-text">
+      class="text-default-text inline-flex h-10 w-full items-center justify-center gap-1 rounded-md px-3.5 text-sm transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
       <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
         <svg
           stroke="currentColor"
@@ -91,9 +100,11 @@
         <p class="flex-1 text-sm font-medium">Insights</p>
       </div>
     </a>
+
+    <!-- Sidebar Item (Button Ghost Component) -->
     <a
       href="#"
-      class="inline-flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-text">
+      class="text-default-text inline-flex h-10 w-full items-center justify-center gap-1 rounded-md px-3.5 text-sm transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
       <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
         <svg
           stroke="currentColor"
@@ -117,9 +128,11 @@
         <p class="flex-1 text-sm font-medium">Documents</p>
       </div>
     </a>
+
+    <!-- Sidebar Item (Button Ghost Component) -->
     <a
       href="#"
-      class="inline-flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-text">
+      class="text-default-text inline-flex h-10 w-full items-center justify-center gap-1 rounded-md px-3.5 text-sm transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
       <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
         <svg
           stroke="currentColor"
@@ -140,9 +153,11 @@
         <p class="flex-1 text-sm font-medium">Settings</p>
       </div>
     </a>
+
+    <!-- Sidebar Item (Button Ghost Component) -->
     <a
       href="#"
-      class="inline-flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-text">
+      class="text-default-text inline-flex h-10 w-full items-center justify-center gap-1 rounded-md px-3.5 text-sm transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
       <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
         <svg
           stroke="currentColor"
@@ -161,9 +176,12 @@
         <p class="flex-1 text-sm font-medium">Messages</p>
       </div>
     </a>
+
+    <!-- xxxxx Sidebar Collapsible xxxxx -->
     <div>
+      <!-- Sidebar Collapsible Trigger (Button Ghost Component) -->
       <button
-        class="group inline-flex h-10 w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-text">
+        class="text-default-text inline-flex h-10 w-full items-center justify-center gap-1 rounded-md px-3.5 text-sm transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
         <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
           <svg
             stroke="currentColor"
@@ -175,12 +193,11 @@
             height="1em"
             width="1em"
             xmlns="http://www.w3.org/2000/svg">
-            <circle cx="8" cy="21" r="1"></circle>
-            <circle cx="19" cy="21" r="1"></circle>
-            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
           </svg>
         </span>
-        <div class="flex-1 text-left font-medium">Ecommerce</div>
+        <p class="flex-1 text-left font-medium">Dashboard</p>
         <span>
           <svg
             stroke="currentColor"
@@ -198,9 +215,11 @@
         </span>
       </button>
     </div>
+
+    <!-- Sidebar Item Disabled (Button Ghost Component) -->
     <a
       href="#"
-      class="inline-flex h-10 w-full cursor-default items-center justify-center gap-2 rounded-md px-3 py-2 text-sm text-muted-text/75">
+      class="text-default-text pointer-events-none inline-flex h-10 w-full items-center justify-center gap-1 rounded-md px-3.5 text-sm opacity-50 transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90">
       <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
         <svg
           stroke="currentColor"
@@ -216,9 +235,7 @@
           <circle cx="12" cy="9" r="2.5"></circle>
         </svg>
       </span>
-      <div class="flex-1 text-left">
-        <p class="flex-1 text-sm font-medium">Location</p>
-      </div>
+      <p class="flex-1 text-left text-sm font-medium">Location</p>
     </a>
-  </ul>
+  </div>
 </aside>
