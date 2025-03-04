@@ -1,0 +1,61 @@
+<div class="relative">
+  <!-- DropdownMenuTrigger(Button Component) -->
+  <button
+    class="text-default-text inline-flex h-10 items-center justify-center gap-1 rounded-md bg-default px-3.5 text-sm transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+    Edit
+  </button>
+
+  <!-- DropdownMenuContent -->
+  <div
+    class="absolute left-1/2 z-10 mt-2 w-60 -translate-x-1/2 overflow-hidden rounded-md border border-main-border bg-surface p-1 text-surface-text"
+    role="menu">
+    <div class="px-3 py-1.5 sm:px-4 sm:py-2">
+      <p class="text-sm font-semibold text-main-text">Appearance</p>
+    </div>
+
+    <!-- DropdownMenuSeparator -->
+    <div class="-mx-1 my-1 h-px bg-main-border"></div>
+
+    <!-- DropdownMenuItem/Active -->
+    <button
+      role="menuitemcheckbox"
+      aria-checked="true"
+      class="relative flex w-full select-none items-center rounded-md bg-primary/20 py-2 pl-4 pr-10 text-sm text-primary outline-none transition-colors disabled:opacity-50">
+      <!-- DropdownMenuCheckbox -->
+      <span class="absolute right-4 flex h-3.5 w-3.5 items-center justify-center">
+        <span data-state="checked">
+          <svg
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-4">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </span>
+      </span>
+
+      Status Bar
+    </button>
+
+    <!-- DropdownMenuItem/Active -->
+    <button
+      role="menuitemcheckbox"
+      disabled
+      class="relative flex w-full select-none items-center rounded-md py-2 pl-4 pr-10 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-text disabled:pointer-events-none disabled:opacity-50">
+      Activity Bar
+    </button>
+
+    <!-- DropdownMenuItem/Active -->
+    <button
+      role="menuitemcheckbox"
+      class="relative flex w-full select-none items-center rounded-md py-2 pl-4 pr-10 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-text disabled:pointer-events-none disabled:opacity-50">
+      Panel
+    </button>
+  </div>
+</div>
