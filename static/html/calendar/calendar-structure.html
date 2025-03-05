@@ -1,0 +1,59 @@
+<!-- CalendarWrapper  -->
+<div class="rounded-lg border border-main-border bg-surface p-3"></div>
+
+<!-- Calendar -->
+<div class="relative flex flex-col sm:flex-row"></div>
+
+<!-- ----------------------------- CalendarNav ----------------------------- -->
+<nav></nav>
+
+<!-- Calendar PreviousButton -->
+<button
+  class="absolute left-1 top-0 z-10 inline-flex h-7 w-7 items-center justify-center gap-1 rounded-md border border-main-border bg-transparent p-0 text-sm opacity-50 transition-colors duration-150 hover:bg-accent hover:text-accent-text hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
+  aria-label="Go to the Previous Month"></button>
+
+<!-- Calendar NextButton -->
+<button
+  class="absolute right-1 top-0 z-10 inline-flex h-7 w-7 items-center justify-center gap-1 rounded-md border border-main-border bg-transparent p-0 text-sm opacity-50 transition-colors duration-150 hover:bg-accent hover:text-accent-text hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
+  aria-label="Go to the Next Month"></button>
+
+<!-- ---------------------------- CalendarMain ----------------------------- -->
+<div></div>
+
+<!-- CalendarTitle -->
+<div class="flex items-center justify-center py-2">
+  <span class="text-sm font-medium" role="status">Calendar Title</span>
+</div>
+
+<!-- CalendarTable -->
+<table role="grid" class="w-full border-collapse space-y-1"></table>
+
+<!-- CalendarTableHeader -->
+<thead></thead>
+
+<!-- CalendarTableHeaderRow -->
+<tr class="flex"></tr>
+
+<!-- CalendarTableHeaderCell -->
+<th class="flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal text-muted-text"></th>
+
+<!-- CalendarTableBody -->
+<tbody></tbody>
+
+<!-- CalendarTableRow -->
+<tr class="mt-0.5 flex w-full"></tr>
+
+<!-- CalendarTableCell -->
+<td></td>
+
+<!-- CalendarTableCellButton/Default -->
+<button
+  class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"></button>
+
+<!-- CalendarTableCellButton/Muted -->
+<button
+  class="relative h-9 w-9 rounded-md p-0 text-center text-sm text-muted-text text-muted-text/80 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"></button>
+
+<!-- CalendarTableCellButton/Active -->
+<button
+  class="relative h-9 w-9 rounded-md bg-primary p-0 text-center text-sm text-primary-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"></button>

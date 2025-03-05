@@ -1,10 +1,9 @@
-<div class="border-main-border bg-surface p-3 rounded-lg border">
+<div class="rounded-lg border border-main-border bg-surface p-3">
   <div class="relative flex flex-col sm:flex-row">
-    <!-- /* --------------------------- DATE PICKER NAVBAR --------------------------- */ -->
+    <!-- /* --------------------------- CALENDAR NAV --------------------------- */ -->
     <nav>
       <button
-        type="button"
-        class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm border border-main-border hover:bg-accent hover:text-accent-text rounded-md absolute left-1 top-0 h-7 w-7 bg-transparent p-0 z-10 opacity-50 hover:opacity-100"
+        class="absolute left-1 top-0 z-10 inline-flex h-7 w-7 items-center justify-center gap-1 rounded-md border border-main-border bg-transparent p-0 text-sm opacity-50 transition-colors duration-150 hover:bg-accent hover:text-accent-text hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
         aria-label="Go to the Previous Month">
         <svg
           stroke="currentColor"
@@ -20,9 +19,9 @@
           <path d="m15 18-6-6 6-6" />
         </svg>
       </button>
+
       <button
-        type="button"
-        class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm border border-main-border hover:bg-accent hover:text-accent-text rounded-md absolute right-1 top-0 h-7 w-7 bg-transparent p-0 z-10 opacity-50 hover:opacity-100"
+        class="absolute right-1 top-0 z-10 inline-flex h-7 w-7 items-center justify-center gap-1 rounded-md border border-main-border bg-transparent p-0 text-sm opacity-50 transition-colors duration-150 hover:bg-accent hover:text-accent-text hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
         aria-label="Go to the Next Month">
         <svg
           stroke="currentColor"
@@ -40,428 +39,315 @@
       </button>
     </nav>
 
-    <!-- /* ---------------------------- DATE PICKER TITLE --------------------------- */ -->
+    <!-- /* ---------------------------- CALENDAR TITLE --------------------------- */ -->
     <div>
-      <div class="flex justify-center py-2 relative items-center">
+      <div class="relative flex items-center justify-center py-2">
         <span class="text-sm font-medium" role="status">October 2024</span>
       </div>
 
-      <!-- /* ---------------------------- DATE PICKER TABLE --------------------------- */ -->
+      <!-- /* ---------------------------- CALENDAR TABLE --------------------------- */ -->
       <table role="grid" aria-label="October 2024" class="w-full border-collapse space-y-1">
-        <!-- Date Picker Table Caption -->
+        <!-- CALENDAR TABLE HEADER -->
         <thead>
           <tr class="flex">
             <th
               aria-label="Sunday"
-              class="text-muted-text w-9 font-normal text-[0.8rem] h-9 flex items-center justify-center"
+              class="flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal text-muted-text"
               scope="col">
               Su
             </th>
             <th
               aria-label="Monday"
-              class="text-muted-text w-9 font-normal text-[0.8rem] h-9 flex items-center justify-center"
+              class="flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal text-muted-text"
               scope="col">
               Mo
             </th>
             <th
               aria-label="Tuesday"
-              class="text-muted-text w-9 font-normal text-[0.8rem] h-9 flex items-center justify-center"
+              class="flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal text-muted-text"
               scope="col">
               Tu
             </th>
             <th
               aria-label="Wednesday"
-              class="text-muted-text w-9 font-normal text-[0.8rem] h-9 flex items-center justify-center"
+              class="flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal text-muted-text"
               scope="col">
               We
             </th>
             <th
               aria-label="Thursday"
-              class="text-muted-text w-9 font-normal text-[0.8rem] h-9 flex items-center justify-center"
+              class="flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal text-muted-text"
               scope="col">
               Th
             </th>
             <th
               aria-label="Friday"
-              class="text-muted-text w-9 font-normal text-[0.8rem] h-9 flex items-center justify-center"
+              class="flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal text-muted-text"
               scope="col">
               Fr
             </th>
             <th
               aria-label="Saturday"
-              class="text-muted-text w-9 font-normal text-[0.8rem] h-9 flex items-center justify-center"
+              class="flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal text-muted-text"
               scope="col">
               Sa
             </th>
           </tr>
         </thead>
 
-        <!-- Date Picker Table Numbers -->
+        <!-- CALENDAR TABLE BODY -->
         <tbody>
-          <tr class="flex w-full mt-0.5">
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal day-outside text-muted-text opacity-50">
+          <tr class="mt-0.5 flex w-full">
+            <td>
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm text-muted-text text-muted-text/80 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
                 aria-label="Sunday, September 29th, 2024">
                 29
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal day-outside text-muted-text opacity-50"
-              data-day="2024-09-30"
-              data-month="2024-09"
-              data-outside="true">
+            <td data-day="2024-09-30" data-month="2024-09">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm text-muted-text text-muted-text/80 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
                 aria-label="Monday, September 30th, 2024">
                 30
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-01">
+            <td data-day="2024-10-01">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Tuesday, October 1st, 2024">
                 1
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-02">
+            <td data-day="2024-10-02">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Wednesday, October 2nd, 2024">
                 2
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-03">
+            <td data-day="2024-10-03">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Thursday, October 3rd, 2024">
                 3
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-04">
+            <td data-day="2024-10-04">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Friday, October 4th, 2024">
                 4
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-05">
+            <td data-day="2024-10-05">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Saturday, October 5th, 2024">
                 5
               </button>
             </td>
           </tr>
-          <tr class="flex w-full mt-0.5">
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-06">
+          <tr class="mt-0.5 flex w-full">
+            <td data-day="2024-10-06">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Sunday, October 6th, 2024">
                 6
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-07">
+            <td data-day="2024-10-07">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Monday, October 7th, 2024">
                 7
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-08">
+            <td data-day="2024-10-08">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Tuesday, October 8th, 2024">
                 8
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-09">
+            <td data-day="2024-10-09">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Wednesday, October 9th, 2024">
                 9
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-10">
+            <td data-day="2024-10-10">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Thursday, October 10th, 2024">
                 10
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-11">
+            <td data-day="2024-10-11">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Friday, October 11th, 2024">
                 11
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-12">
+            <td data-day="2024-10-12">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Saturday, October 12th, 2024">
                 12
               </button>
             </td>
           </tr>
-          <tr class="flex w-full mt-0.5">
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-13">
+          <tr class="mt-0.5 flex w-full">
+            <td data-day="2024-10-13">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Sunday, October 13th, 2024">
                 13
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-14">
+            <td data-day="2024-10-14">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Monday, October 14th, 2024">
                 14
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-15">
+            <td data-day="2024-10-15">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Tuesday, October 15th, 2024">
                 15
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-16">
+            <td data-day="2024-10-16">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Wednesday, October 16th, 2024">
                 16
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-17">
+            <td data-day="2024-10-17">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Thursday, October 17th, 2024">
                 17
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-18">
+            <td data-day="2024-10-18">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Friday, October 18th, 2024">
                 18
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-19">
+            <td data-day="2024-10-19">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Saturday, October 19th, 2024">
                 19
               </button>
             </td>
           </tr>
-          <tr class="flex w-full mt-0.5">
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-20">
+          <tr class="mt-0.5 flex w-full">
+            <td data-day="2024-10-20">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Sunday, October 20th, 2024">
                 20
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm rounded-md h-9 w-9 p-0 font-normal hover:bg-primary hover:text-primary-text focus:bg-primary focus:text-primary-text bg-primary text-primary-text"
-              data-day="2024-10-21"
-              data-today="true"
-              aria-selected="true"
-              data-selected="true">
+            <td data-day="2024-10-21" data-today="true" aria-selected="true" data-selected="true">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md bg-primary p-0 text-center text-sm text-primary-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
                 tabindex="0"
                 aria-label="Today, Monday, October 21st, 2024, selected">
                 21
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-22">
+            <td data-day="2024-10-22">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Tuesday, October 22nd, 2024">
                 22
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-23">
+            <td data-day="2024-10-23">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Wednesday, October 23rd, 2024">
                 23
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-24">
+            <td data-day="2024-10-24">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Thursday, October 24th, 2024">
                 24
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-25">
+            <td data-day="2024-10-25">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Friday, October 25th, 2024">
                 25
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-26">
+            <td data-day="2024-10-26">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Saturday, October 26th, 2024">
                 26
               </button>
             </td>
           </tr>
-          <tr class="flex w-full mt-0.5">
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-27">
+          <tr class="mt-0.5 flex w-full">
+            <td data-day="2024-10-27">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Sunday, October 27th, 2024">
                 27
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-28">
+            <td data-day="2024-10-28">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Monday, October 28th, 2024">
                 28
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-29">
+            <td data-day="2024-10-29">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Tuesday, October 29th, 2024">
                 29
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-30">
+            <td data-day="2024-10-30">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Wednesday, October 30th, 2024">
                 30
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal"
-              data-day="2024-10-31">
+            <td data-day="2024-10-31">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90"
                 aria-label="Thursday, October 31st, 2024">
                 31
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal day-outside text-muted-text opacity-50"
-              data-day="2024-11-01"
-              data-month="2024-11"
-              data-outside="true">
+            <td data-day="2024-11-01" data-month="2024-11" data-outside="true">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm text-muted-text/80 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
                 aria-label="Friday, November 1st, 2024">
                 1
               </button>
             </td>
-            <td
-              class="inline-flex items-center justify-center gap-1 transition-colors duration-150 active:brightness-95 text-sm hover:bg-accent hover:text-accent-text rounded-md h-9 w-9 p-0 font-normal day-outside text-muted-text opacity-50"
-              data-day="2024-11-02"
-              data-month="2024-11"
-              data-outside="true">
+            <td data-day="2024-11-02" data-month="2024-11" data-outside="true">
               <button
-                class="h-9 w-9 text-center text-sm p-0 relative focus-within:relative focus-within:z-20"
-                type="button"
+                class="relative h-9 w-9 rounded-md p-0 text-center text-sm text-muted-text/80 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
                 aria-label="Saturday, November 2nd, 2024">
                 2
               </button>
