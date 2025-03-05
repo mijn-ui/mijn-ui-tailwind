@@ -1,9 +1,115 @@
 <!-- DropdownMenu -->
 <div class="relative"></div>
 
+<!-- DropdownMenuTrigger(Button Component) -->
+<button
+  class="text-default-text inline-flex h-10 items-center justify-center gap-1 rounded-md bg-default px-3.5 text-sm transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+  DropdownMenuTrigger
+</button>
+
 <!-- DropdownMenuContent -->
 <div
   class="absolute left-1/2 z-10 mt-2 w-60 -translate-x-1/2 overflow-hidden rounded-md border border-main-border bg-surface p-1 text-surface-text"></div>
 
+<!-- DropdownMenuSub -->
+<div class="relative"></div>
+
+<!-- DropdownMenuSubTrigger -->
+<button
+  class="flex select-none items-center gap-2 rounded-md px-3 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-text sm:px-4 sm:py-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+  <span class="flex-1">DropdownMenuSubTrigger</span>
+
+  <svg
+    stroke="currentColor"
+    fill="none"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</button>
+
+<!-- DropdownMenuSubContent -->
+<div
+  class="absolute left-0 z-10 w-40 rounded-md border border-main-border bg-surface p-1 text-surface-text sm:left-auto sm:right-0 sm:top-0 sm:translate-x-40"></div>
+
 <!-- DropdownMenuSeparator -->
 <div class="-mx-1 my-1 h-px bg-main-border"></div>
+
+<!-- DropdownMenuItem -->
+<a
+  class="relative flex select-none items-center gap-2 rounded-md px-3 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-text sm:px-4 sm:py-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+  DropdownMenuItem
+</a>
+
+<!-- DropdownMenuItem/Active -->
+<a
+  class="relative flex select-none items-center gap-2 rounded-md bg-primary/20 px-3 py-1.5 text-sm text-primary outline-none transition-colors sm:px-4 sm:py-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
+  DropdownMenuItem/Active
+</a>
+
+<!-- DropdownMenuCheckboxItem -->
+<button
+  class="relative flex w-full select-none items-center rounded-md py-2 pl-4 pr-10 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-text disabled:pointer-events-none disabled:opacity-50"></button>
+
+<!-- DropdownMenuCheckboxItem/Active -->
+<button
+  role="menuitemcheckbox"
+  aria-checked="true"
+  class="relative flex w-full select-none items-center rounded-md bg-primary/20 py-2 pl-4 pr-10 text-sm text-primary outline-none transition-colors disabled:opacity-50">
+  <!-- DropdownMenuCheckbox -->
+  <span class="absolute right-4 flex h-3.5 w-3.5 items-center justify-center">
+    <span data-state="checked">
+      <svg
+        stroke="currentColor"
+        fill="none"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-4">
+        <path d="M20 6L9 17l-5-5"></path>
+      </svg>
+    </span>
+  </span>
+
+  DropdownMenuCheckboxItem/Active
+</button>
+
+<!-- DropdownMenuRadioItem -->
+<button
+  class="relative flex w-full select-none items-center rounded-md py-2 pl-4 pr-10 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-text disabled:opacity-50">
+  DropdownMenuRadioItem
+</button>
+
+<!-- DropdownMenuRadioItems/Active -->
+<button
+  class="relative flex w-full select-none items-center rounded-md bg-primary/20 py-2 pl-4 pr-10 text-sm text-primary outline-none transition-colors disabled:opacity-50">
+  <span class="absolute right-4 flex h-3.5 w-3.5 items-center justify-center">
+    <span class="inline-flex items-center">
+      <label class="relative flex cursor-pointer items-center rounded-full p-0" for="radio-button-example">
+        <input
+          type="radio"
+          class="before:content[''] peer relative h-3.5 w-3.5 cursor-pointer appearance-none rounded-full border border-main-text text-primary transition-all before:absolute before:left-2/4 before:top-2/4 before:block before:h-12 before:w-12 before:-translate-x-2/4 before:-translate-y-2/4 before:rounded-full before:opacity-0 before:transition-opacity checked:border-primary checked:before:bg-primary hover:before:opacity-0"
+          id="radio-button-example"
+          name="example"
+          checked />
+        <span
+          class="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-primary opacity-0 transition-opacity peer-checked:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" viewBox="0 0 16 16" fill="currentColor">
+            <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+          </svg>
+        </span>
+      </label>
+    </span>
+  </span>
+
+  DropdownMenuRadioItems/Active
+</button>
