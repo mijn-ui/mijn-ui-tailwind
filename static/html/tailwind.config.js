@@ -44,21 +44,25 @@ export default {
         info: {
           DEFAULT: "hsl(var(--info) / <alpha-value>)",
           text: "hsl(var(--info-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--info-filled-text) / <alpha-value>)",
         },
 
         warning: {
           DEFAULT: "hsl(var(--warning) / <alpha-value>)",
           text: "hsl(var(--warning-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--warning-filled-text) / <alpha-value>)",
         },
 
         danger: {
           DEFAULT: "hsl(var(--danger) / <alpha-value>)",
           text: "hsl(var(--danger-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--danger-filled-text) / <alpha-value>)",
         },
 
         success: {
           DEFAULT: "hsl(var(--success) / <alpha-value>)",
           text: "hsl(var(--success-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--success-filled-text) / <alpha-value>)",
         },
 
         "input-border": "hsl(var(--input-border) / <alpha-value>)",
