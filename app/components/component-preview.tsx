@@ -1,8 +1,8 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-import { cn } from "@mijn-ui/react-utilities/shared"
 import HTMLReactParser from "html-react-parser"
+import { cn } from "@/lib/utils"
 
 type CodePreviewerProps = React.ComponentPropsWithoutRef<"div"> & {
   src: string
@@ -52,7 +52,7 @@ const ComponentPreview = ({ src, className, children, ...props }: CodePreviewerP
             viewBox="0 0 24 24"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="mr-2 size-5 animate-spin "
+            className="mr-2 size-5 animate-spin"
             height="1em"
             width="1em"
             aria-hidden="true"

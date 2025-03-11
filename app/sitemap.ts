@@ -5,8 +5,7 @@ import { source } from "@/lib/source"
 export const revalidate = false
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const url = (path: string): string =>
-    new URL(`/tailwind${path}`, baseUrl).toString()
+  const url = (path: string): string => new URL(`/tailwind${path}`, baseUrl).toString()
 
   return [
     {

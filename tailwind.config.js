@@ -1,4 +1,3 @@
-import { mijnUiPreset } from "@mijn-ui/react-theme"
 import { createPreset } from "fumadocs-ui/tailwind-plugin"
 
 /** @type {import('tailwindcss').Config} */
@@ -9,17 +8,74 @@ export default {
     "./content/**/*.{md,mdx}",
     "./mdx-components/**/*.{ts,tsx}",
 
-    "./node_modules/@mijn-ui/**/dist/*.js",
     "./node_modules/fumadocs-ui/dist/**/*.js",
   ],
-  presets: [createPreset({ cssPrefix: "fd", addGlobalColors: false }), mijnUiPreset],
+  presets: [createPreset({ cssPrefix: "fd", addGlobalColors: false })],
   theme: {
     extend: {
       colors: {
-        default: {
-          DEFAULT: "hsl(var(--default))",
-          foreground: "hsl(var(--default-text))",
+        main: {
+          DEFAULT: "hsl(var(--main) / <alpha-value>)",
+          text: "hsl(var(--main-text) / <alpha-value>)",
+          border: "hsl(var(--main-border) / <alpha-value>)",
         },
+
+        default: {
+          DEFAULT: "hsl(var(--default) / <alpha-value>)",
+          text: "hsl(var(--default-text) / <alpha-value>)",
+        },
+
+        surface: {
+          DEFAULT: "hsl(var(--surface) / <alpha-value>)",
+          text: "hsl(var(--surface-text) / <alpha-value>)",
+        },
+
+        muted: {
+          DEFAULT: "hsl(var(--muted) / <alpha-value>)",
+          text: "hsl(var(--muted-text) / <alpha-value>)",
+        },
+
+        accent: {
+          DEFAULT: "hsl(var(--accent) / <alpha-value>)",
+          text: "hsl(var(--accent-text) / <alpha-value>)",
+        },
+
+        primary: {
+          DEFAULT: "hsl(var(--primary) / <alpha-value>)",
+          text: "hsl(var(--primary-text) / <alpha-value>)",
+        },
+
+        secondary: {
+          DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
+          text: "hsl(var(--secondary-text) / <alpha-value>)",
+        },
+
+        info: {
+          DEFAULT: "hsl(var(--info) / <alpha-value>)",
+          text: "hsl(var(--info-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--info-filled-text) / <alpha-value>)",
+        },
+
+        warning: {
+          DEFAULT: "hsl(var(--warning) / <alpha-value>)",
+          text: "hsl(var(--warning-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--warning-filled-text) / <alpha-value>)",
+        },
+
+        danger: {
+          DEFAULT: "hsl(var(--danger) / <alpha-value>)",
+          text: "hsl(var(--danger-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--danger-filled-text) / <alpha-value>)",
+        },
+
+        success: {
+          DEFAULT: "hsl(var(--success) / <alpha-value>)",
+          text: "hsl(var(--success-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--success-filled-text) / <alpha-value>)",
+        },
+
+        "input-border": "hsl(var(--input-border) / <alpha-value>)",
+        ring: "hsl(var(--ring) / <alpha-value>)",
       },
 
       fontSize: {

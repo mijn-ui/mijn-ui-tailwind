@@ -1,9 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { cn } from "@mijn-ui/react-utilities/shared"
 import { useTheme } from "next-themes"
 import { FiMoon, FiSun } from "react-icons/fi"
+import { cn } from "@/lib/utils"
 
 /* -------------------------------------------------------------------------- */
 

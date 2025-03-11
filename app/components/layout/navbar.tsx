@@ -3,18 +3,18 @@
 import { useState } from "react"
 import Link from "next/link"
 import { TopRightRadialGradient } from "@/app/components/decorators/gradient-bg"
-import Logo from "@/app/components/logo"
+import Logo from "@/app/components/ui/logo"
 import ThemeToggler from "@/app/components/theme-toggler"
-import { Badge } from "@mijn-ui/react-badge"
-import { Button, buttonStyles } from "@mijn-ui/react-button"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@mijn-ui/react-collapsible"
-import { Separator } from "@mijn-ui/react-separator"
-import { cn } from "@mijn-ui/react-utilities/shared"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../ui/collapsible"
+import { Separator } from "../ui/separator"
 import { SidebarTrigger } from "fumadocs-core/sidebar"
 import { useSearchContext, useSidebar } from "fumadocs-ui/provider"
 import { LuChevronDown, LuExternalLink, LuGithub, LuMenu, LuSearch, LuX } from "react-icons/lu"
 import ClickAwayListener from "react-click-away-listener"
 import { usePathname } from "next/navigation"
+import { Button, buttonVariants } from "../ui/button"
+import { Badge } from "../ui/badge"
+import { cn } from "@/lib/utils"
 
 const GITHUB_URL = "https://github.com/mijn-ui/mijn-ui-tailwind"
 
@@ -30,11 +30,10 @@ const Navbar = () => {
   const renderSidebarTrigger = (
     <SidebarTrigger
       className={cn(
-        buttonStyles({
-          variant: "text",
-          color: "accent",
-          size: "icon",
-          className: "-me-2 md:hidden",
+        buttonVariants().base({
+          variant: "ghost",
+          iconOnly: true,
+          className: "-me-2 text-muted-text md:hidden",
         }),
       )}>
       {isSidebarOpen ? <LuX /> : <LuMenu />}
@@ -49,17 +48,14 @@ const Navbar = () => {
             <Logo className="size-5 items-center fill-fd-foreground" />
             MijnUI
           </Link>
-          <Badge className="bg-primary/20 text-primary hover:bg-primary/20">v0.0.1</Badge>
+          <Badge size="xs" variant="subtle" color="primary">
+            v0.0.1
+          </Badge>
         </div>
 
         {/* Desktop Buttons */}
         <div className="hidden items-center gap-2 md:flex">
-          <Button
-            onClick={() => setOpenSearch(true)}
-            color={"accent"}
-            variant={"outline"}
-            size={"sm"}
-            className="gap-2">
+          <Button onClick={() => setOpenSearch(true)} variant={"outlined"} size={"sm"} className="gap-2">
             <LuSearch />
             <span className="inline-block text-muted-text">Search...</span>
             <div className="ml-4 inline-flex h-5 gap-1 rounded-full border px-2 py-px">
@@ -68,7 +64,7 @@ const Navbar = () => {
             </div>
           </Button>
 
-          <Button color={"accent"} size={"sm"} className="border px-2" asChild>
+          <Button size={"sm"} iconOnly className="border px-2" asChild>
             <Link target="_blank" href={GITHUB_URL}>
               <LuGithub size={18} />
             </Link>

@@ -1,6 +1,5 @@
 import Link from "next/link"
-import { buttonStyles } from "@mijn-ui/react-button"
-import { cn } from "@mijn-ui/react-utilities/shared"
+import { Button } from "../components/ui/button"
 
 export default function HomePage() {
   return (
@@ -14,20 +13,13 @@ export default function HomePage() {
       </p>
 
       <div className="flex w-full items-center justify-start gap-2 md:justify-center">
-        <Link className={cn(buttonStyles({ size: "sm", className: "text-xs md:text-sm" }))} href={"/docs"}>
-          Getting Started
-        </Link>
-        <Link
-          className={cn(
-            buttonStyles({
-              size: "sm",
-              color: "secondary",
-              className: "text-xs md:text-sm",
-            }),
-          )}
-          href={"/docs/components/accordion"}>
-          Components
-        </Link>
+        <Button asChild color="primary" size="sm" className="text-xs md:text-sm">
+          <Link href={"/docs"}>Getting Started</Link>
+        </Button>
+
+        <Button asChild size="sm" variant="outlined" color="secondary" className="text-xs md:text-sm">
+          <Link href={"/docs/components/accordion"}>Components</Link>
+        </Button>
       </div>
     </section>
   )

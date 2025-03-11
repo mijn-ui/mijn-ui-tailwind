@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@mijn-ui/react-utilities/shared"
+import { cn } from "@/lib/utils"
 import { LuGripVertical } from "react-icons/lu"
 import * as ResizablePrimitive from "react-resizable-panels"
 
@@ -27,7 +27,7 @@ const ResizableHandle = ({
     )}
     {...props}>
     {withHandle && (
-      <div className="rounded-small z-10 flex h-4 w-3 items-center justify-center border bg-main-border">
+      <div className="z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-main-border">
         <LuGripVertical className="size-2.5" />
       </div>
     )}

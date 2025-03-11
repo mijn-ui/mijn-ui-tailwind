@@ -1,4 +1,4 @@
-import Navbar from "@/mdx-components/navbar"
+import Navbar from "@/app/components/layout/navbar"
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared"
 
 /**

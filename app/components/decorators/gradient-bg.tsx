@@ -1,5 +1,5 @@
+import { cn } from "@/lib/utils"
 import React from "react"
-import { cn } from "@mijn-ui/react-utilities/shared"
 
 const LeftRadialGradient = ({ className, style, ...props }: React.ComponentProps<"div">) => {
   return (

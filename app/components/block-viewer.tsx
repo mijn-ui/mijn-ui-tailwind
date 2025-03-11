@@ -1,7 +1,7 @@
 // Temporary block-viewer component.
 // TODO: Refactor to implement a proper structure and make it reusable
 
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/app/components/resizable"
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/app/components/ui/resizable"
 import Link from "next/link"
 import { LuExternalLink } from "react-icons/lu"
 
