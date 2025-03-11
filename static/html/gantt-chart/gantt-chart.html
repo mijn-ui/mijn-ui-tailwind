@@ -1,22 +1,22 @@
-<div class="space-y-2 bg-surface p-4 h-[672px] w-full max-w-[1056px] rounded-2xl">
-  <div class="relative flex h-full w-full overflow-hidden rounded-lg border border-main-border items-stretch">
+<div class="h-[672px] w-full max-w-[1056px] space-y-2 rounded-2xl bg-surface p-4">
+  <div class="relative flex h-full w-full items-stretch overflow-hidden rounded-lg border border-main-border">
     <!-- -------------------------- Gantt Chart Desktop Panel -------------------------- -->
     <div
-      class="sticky hidden sm:block left-0 top-0 z-10 h-full w-60 flex-shrink-0 border-r border-main-border bg-surface p-0">
+      class="sticky left-0 top-0 z-10 hidden h-full w-60 flex-shrink-0 border-r border-main-border bg-surface p-0 sm:block">
       <!-- Gantt Chart Header -->
       <div
-        class="flex w-full gap-2 border-b border-main-border px-3 py-2 h-14 items-center justify-between bg-accent font-semibold">
+        class="flex h-14 w-full items-center justify-between gap-2 border-b border-main-border bg-accent px-3 py-2 font-semibold">
         <p class="text-sm text-main-text">Tasks</p>
       </div>
 
       <!-- Gantt Chart Buttons -->
       <button
-        class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+        class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
         <div class="h-2 w-2 rounded-full bg-slate-500"></div>
         <p class="text-sm text-main-text">Feature Documentation</p>
       </button>
       <button
-        class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+        class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
         <div class="h-2 w-2 rounded-full bg-yellow-500"></div>
         <p class="text-sm text-main-text">Usability Testing</p>
       </button>
@@ -24,12 +24,12 @@
       <!-- Gantt Chart Buttons with Subtasks -->
       <div>
         <button
-          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+          class="flex h-10 w-full cursor-pointer items-center justify-between gap-2 border-b border-main-border bg-accent px-3 py-2 font-medium">
           <div class="flex items-center gap-2">
             <div class="h-2 w-2 rounded-full bg-blue-500"></div>
             <p class="text-sm font-medium text-main-text">Development</p>
           </div>
-          <span class="transition rotate-180">
+          <span class="rotate-180 transition">
             <svg
               stroke="currentColor"
               fill="none"
@@ -48,17 +48,17 @@
         <div class="w-full">
           <div>
             <button
-              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
               <div class="h-2 w-2 rounded-full bg-blue-200"></div>
               <p class="text-sm text-main-text">Planning</p>
             </button>
             <button
-              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
               <div class="h-2 w-2 rounded-full bg-blue-200"></div>
               <p class="text-sm text-main-text">Framework Migration</p>
             </button>
             <button
-              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
               <div class="h-2 w-2 rounded-full bg-blue-200"></div>
               <p class="text-sm text-main-text">Refactoring</p>
             </button>
@@ -69,12 +69,12 @@
       <!-- Gantt Chart Buttons with Subtasks -->
       <div>
         <button
-          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+          class="flex h-10 w-full cursor-pointer items-center justify-between gap-2 border-b border-main-border bg-accent px-3 py-2 font-medium">
           <div class="flex items-center gap-2">
             <div class="h-2 w-2 rounded-full bg-green-500"></div>
             <p class="text-sm font-medium text-main-text">Release</p>
           </div>
-          <span class="transition rotate-0">
+          <span class="rotate-0 transition">
             <svg
               stroke="currentColor"
               fill="none"
@@ -93,7 +93,7 @@
         <div class="w-full">
           <div>
             <button
-              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
               <div class="h-2 w-2 rounded-full bg-green-200"></div>
               <p class="text-sm text-main-text">CI/CD Automation</p>
             </button>
@@ -104,12 +104,12 @@
       <!-- Gantt Chart Buttons with Subtasks -->
       <div>
         <button
-          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+          class="flex h-10 w-full cursor-pointer items-center justify-between gap-2 border-b border-main-border bg-accent px-3 py-2 font-medium">
           <div class="flex items-center gap-2">
             <div class="h-2 w-2 rounded-full bg-purple-500"></div>
             <p class="text-sm font-medium text-main-text">Getting Feedback</p>
           </div>
-          <span class="transition rotate-180">
+          <span class="rotate-180 transition">
             <svg
               stroke="currentColor"
               fill="none"
@@ -128,12 +128,12 @@
         <div class="w-full">
           <div>
             <button
-              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
               <div class="h-2 w-2 rounded-full bg-purple-200"></div>
               <p class="text-sm text-main-text">User Interview</p>
             </button>
             <button
-              class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+              class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
               <div class="h-2 w-2 rounded-full bg-purple-200"></div>
               <p class="text-sm text-main-text">Follow-up Email</p>
             </button>
@@ -144,9 +144,9 @@
 
     <!-- ---------------------- Gantt Chart Panel Mobile ----------------------- -->
     <!-- !! Remove the 'hidden' class to activate the overlay when the panel is active !! -->
-    <div class="hidden absolute inset-0 z-10 bg-black/70"></div>
+    <div class="absolute inset-0 z-10 hidden bg-black/70"></div>
 
-    <div class="sticky sm:hidden left-0 top-0 z-10 h-full flex-shrink-0 border-r border-main-border bg-accent p-2">
+    <div class="sticky left-0 top-0 z-10 h-full flex-shrink-0 border-r border-main-border bg-accent p-2 sm:hidden">
       <button class="block">
         <svg
           stroke="currentColor"
@@ -165,10 +165,10 @@
 
       <!-- !! Set the 'left' property to 0 to make the element visible in its active state !! -->
       <div
-        class="absolute inset-y-0 z-50 h-full min-w-52 border-r border-main-border bg-surface transition-all duration-300 -left-52">
+        class="absolute inset-y-0 -left-52 z-50 h-full min-w-52 border-r border-main-border bg-surface transition-all duration-300">
         <!-- Gantt Chart Panel Header -->
         <div
-          class="flex w-full gap-2 border-b border-main-border px-3 py-2 h-14 items-center justify-between bg-accent font-semibold">
+          class="flex h-14 w-full items-center justify-between gap-2 border-b border-main-border bg-accent px-3 py-2 font-semibold">
           <p class="text-sm text-main-text">Tasks</p>
           <button class="flex items-center justify-center p-2">
             <svg
@@ -187,22 +187,22 @@
           </button>
         </div>
         <button
-          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+          class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
           <div class="h-2 w-2 rounded-full bg-slate-500"></div>
           <p class="text-sm text-main-text">Feature Documentation</p></button
         ><button
-          class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+          class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
           <div class="h-2 w-2 rounded-full bg-yellow-500"></div>
           <p class="text-sm text-main-text">Usability Testing</p>
         </button>
         <div>
           <button
-            class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+            class="flex h-10 w-full cursor-pointer items-center justify-between gap-2 border-b border-main-border bg-accent px-3 py-2 font-medium">
             <div class="flex items-center gap-2">
               <div class="h-2 w-2 rounded-full bg-blue-500"></div>
               <p class="text-sm font-medium text-main-text">Development</p>
             </div>
-            <span class="transition rotate-180">
+            <span class="rotate-180 transition">
               <svg
                 stroke="currentColor"
                 fill="none"
@@ -218,20 +218,20 @@
               </svg>
             </span>
           </button>
-          <div class="height_animation w-full height_animation_active">
+          <div class="height_animation height_animation_active w-full">
             <div>
               <button
-                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
                 <div class="h-2 w-2 rounded-full bg-blue-200"></div>
                 <p class="text-sm text-main-text">Planning</p>
               </button>
               <button
-                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
                 <div class="h-2 w-2 rounded-full bg-blue-200"></div>
                 <p class="text-sm text-main-text">Framework Migration</p>
               </button>
               <button
-                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
                 <div class="h-2 w-2 rounded-full bg-blue-200"></div>
                 <p class="text-sm text-main-text">Refactoring</p>
               </button>
@@ -240,12 +240,12 @@
         </div>
         <div>
           <button
-            class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+            class="flex h-10 w-full cursor-pointer items-center justify-between gap-2 border-b border-main-border bg-accent px-3 py-2 font-medium">
             <div class="flex items-center gap-2">
               <div class="h-2 w-2 rounded-full bg-green-500"></div>
               <p class="text-sm font-medium text-main-text">Release</p>
             </div>
-            <span class="transition rotate-0">
+            <span class="rotate-0 transition">
               <svg
                 stroke="currentColor"
                 fill="none"
@@ -264,7 +264,7 @@
           <div class="height_animation w-full">
             <div>
               <button
-                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
                 <div class="h-2 w-2 rounded-full bg-green-200"></div>
                 <p class="text-sm text-main-text">CI/CD Automation</p>
               </button>
@@ -273,12 +273,12 @@
         </div>
         <div>
           <button
-            class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer justify-between bg-accent">
+            class="flex h-10 w-full cursor-pointer items-center justify-between gap-2 border-b border-main-border bg-accent px-3 py-2 font-medium">
             <div class="flex items-center gap-2">
               <div class="h-2 w-2 rounded-full bg-purple-500"></div>
               <p class="text-sm font-medium text-main-text">Getting Feedback</p>
             </div>
-            <span class="transition rotate-180">
+            <span class="rotate-180 transition">
               <svg
                 stroke="currentColor"
                 fill="none"
@@ -294,15 +294,15 @@
               </svg>
             </span>
           </button>
-          <div class="height_animation w-full height_animation_active">
+          <div class="height_animation height_animation_active w-full">
             <div>
               <button
-                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
                 <div class="h-2 w-2 rounded-full bg-purple-200"></div>
                 <p class="text-sm text-main-text">User Interview</p>
               </button>
               <button
-                class="flex h-10 w-full items-center gap-2 border-b border-main-border px-3 py-2 font-medium cursor-pointer">
+                class="flex h-10 w-full cursor-pointer items-center gap-2 border-b border-main-border px-3 py-2 font-medium">
                 <div class="h-2 w-2 rounded-full bg-purple-200"></div>
                 <p class="text-sm text-main-text">Follow-up Email</p>
               </button>
@@ -335,11 +335,11 @@
           <p class="text-sm text-muted-text">F <span class="font-semibold">04</span></p>
         </div>
         <div
-          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border bg-main">
           <p class="text-sm text-muted-text">S <span class="font-semibold">05</span></p>
         </div>
         <div
-          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border bg-main">
           <p class="text-sm text-muted-text">S <span class="font-semibold">06</span></p>
         </div>
         <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
@@ -358,11 +358,11 @@
           <p class="text-sm text-muted-text">F <span class="font-semibold">11</span></p>
         </div>
         <div
-          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border bg-main">
           <p class="text-sm text-muted-text">S <span class="font-semibold">12</span></p>
         </div>
         <div
-          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border bg-main">
           <p class="text-sm text-muted-text">S <span class="font-semibold">13</span></p>
         </div>
         <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
@@ -381,11 +381,11 @@
           <p class="text-sm text-muted-text">F <span class="font-semibold">18</span></p>
         </div>
         <div
-          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border bg-main">
           <p class="text-sm text-muted-text">S <span class="font-semibold">19</span></p>
         </div>
         <div
-          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border bg-main">
           <p class="text-sm text-muted-text">S <span class="font-semibold">20</span></p>
         </div>
         <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
@@ -404,11 +404,11 @@
           <p class="text-sm text-muted-text">F <span class="font-semibold">25</span></p>
         </div>
         <div
-          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border bg-main">
           <p class="text-sm text-muted-text">S <span class="font-semibold">26</span></p>
         </div>
         <div
-          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b bg-main border-r border-main-border">
+          class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border bg-main">
           <p class="text-sm text-muted-text">S <span class="font-semibold">27</span></p>
         </div>
         <div class="flex h-7 w-[63px] shrink-0 items-center justify-center border-b border-r border-main-border">
@@ -423,7 +423,7 @@
       </div>
 
       <!-- xxxxxxxxxxxxxxxxxxxx Gantt Chart Main Background Grid xxxxxxxxxxxxxxxxxxxx -->
-      <div class="relative flex h-full w-fit items-center [&amp;>div]:flex-shrink-0">
+      <div class="[&amp;>div]:flex-shrink-0 relative flex h-full w-fit items-center">
         <div class="h-full w-[63px] border-r border-main-border"></div>
         <div class="h-full w-[63px] border-r border-main-border"></div>
         <div class="h-full w-[63px] border-r border-main-border"></div>

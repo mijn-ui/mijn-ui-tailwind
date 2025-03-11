@@ -86,7 +86,7 @@ const Navbar = () => {
               <CollapsibleTrigger className="flex size-8 items-center justify-center text-muted-text transition duration-200 hover:text-secondary-text">
                 <LuChevronDown className="text-lg" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="top-[calc(var(--navbar-height)] absolute inset-x-0 mt-2 overflow-hidden bg-surface text-sm transition-[height] data-[state=closed]:animate-collapsible-close data-[state=open]:animate-collapsible-open">
+              <CollapsibleContent className="top-[calc(var(--navbar-height)] data-[state=closed]:animate-collapsible-close data-[state=open]:animate-collapsible-open absolute inset-x-0 mt-2 overflow-hidden bg-surface text-sm transition-[height]">
                 <div className="relative flex w-full flex-col items-start justify-between space-y-2 px-4 py-2">
                   <Separator />
 

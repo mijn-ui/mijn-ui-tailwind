@@ -13,7 +13,7 @@ const BlockViewer = () => {
           <Link
             href={"/view/layout"}
             target="_blank"
-            className="text-default-text inline-flex h-10 items-center justify-center gap-1 rounded-md px-3.5 text-sm transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+            className="inline-flex h-10 items-center justify-center gap-1 rounded-md px-3.5 text-sm text-default-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
             <LuExternalLink />
           </Link>
         </div>
