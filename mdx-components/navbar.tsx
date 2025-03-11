@@ -5,7 +5,6 @@ import Link from "next/link"
 import { TopRightRadialGradient } from "@/app/components/decorators/gradient-bg"
 import Logo from "@/app/components/logo"
 import ThemeToggler from "@/app/components/theme-toggler"
-import ClickAwayListener from "@/app/utils/click-away-listener"
 import { Badge } from "@mijn-ui/react-badge"
 import { Button, buttonStyles } from "@mijn-ui/react-button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@mijn-ui/react-collapsible"
@@ -14,6 +13,7 @@ import { cn } from "@mijn-ui/react-utilities/shared"
 import { SidebarTrigger } from "fumadocs-core/sidebar"
 import { useSearchContext, useSidebar } from "fumadocs-ui/provider"
 import { LuChevronDown, LuExternalLink, LuGithub, LuMenu, LuSearch, LuX } from "react-icons/lu"
+import ClickAwayListener from "react-click-away-listener"
 import { usePathname } from "next/navigation"
 
 const GITHUB_URL = "https://github.com/mijn-ui/mijn-ui-tailwind"
@@ -45,7 +45,7 @@ const Navbar = () => {
     <header className="sticky inset-x-0 top-0 z-50 h-[var(--navbar-height)] w-full flex-col items-center justify-center border-b bg-transparent backdrop-blur-md md:flex">
       <nav className="flex w-full items-center justify-between px-5 py-2">
         <div className="flex items-center gap-4">
-          <Link href={"/"} className="flex  items-center gap-2 font-bold">
+          <Link href={"/"} className="flex items-center gap-2 font-bold">
             <Logo className="size-5 items-center fill-fd-foreground" />
             MijnUI
           </Link>
