@@ -1,19 +1,22 @@
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/app/components/ui/resizable"
+import { Templates } from "@/static/_templates"
 import Link from "next/link"
 import { LuExternalLink } from "react-icons/lu"
 
-type BlockViewerProps = {
-  src: string
-  height?: number
+type BlockerViewerProps = {
+  name: string
 }
 
-const BlockViewer = ({ src, height }: BlockViewerProps) => {
+const BlockViewer = ({ name }: BlockerViewerProps) => {
+  const template = Templates[name]
+  const url = `/tailwind/view/${template.name}`
+
   return (
     <div>
       <div className="grid w-full gap-4">
         <div className="flex w-full items-center justify-end">
           <Link
-            href={"/view/layout"}
+            href={url}
             target="_blank"
             className="inline-flex h-10 items-center justify-center gap-1 rounded-md px-3.5 text-sm text-default-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
             <LuExternalLink />
@@ -24,7 +27,7 @@ const BlockViewer = ({ src, height }: BlockViewerProps) => {
             className="relative aspect-[4/2.5] rounded-xl border bg-main md:aspect-auto"
             defaultSize={100}
             minSize={30}>
-            <iframe src={src} height={height || 740} className="relative z-20 w-full bg-main" />
+            <iframe src={url} height={template.iframeHeight || 740} className="relative z-20 w-full bg-main" />
           </ResizablePanel>
           <ResizableHandle className="relative hidden w-3 bg-transparent p-0 after:absolute after:right-0 after:top-1/2 after:h-8 after:w-[6px] after:-translate-x-px after:-translate-y-1/2 after:rounded-full after:bg-main-border after:transition-all after:hover:h-10 md:block" />
           <ResizablePanel defaultSize={0} minSize={0} />
