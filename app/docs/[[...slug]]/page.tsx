@@ -7,6 +7,7 @@ import { Step, Steps } from "fumadocs-ui/components/steps"
 import { Tab, Tabs } from "fumadocs-ui/components/tabs"
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/page"
+import { LayoutViewer } from "@/app/components/layout-viewer"
 
 export default async function Page(props: { params: Promise<{ slug?: string[] }> }) {
   const params = await props.params
@@ -34,6 +35,7 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
             Folder,
             Alert,
             ComponentPreview,
+            LayoutViewer,
           }}
         />
       </DocsBody>

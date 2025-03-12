@@ -7,7 +7,7 @@ type BlockerViewerProps = {
   name: string
 }
 
-const BlockViewer = ({ name }: BlockerViewerProps) => {
+const LayoutViewer = ({ name }: BlockerViewerProps) => {
   const template = Templates[name]
   const url = `/tailwind/view/${template.name}`
 
@@ -37,4 +37,4 @@ const BlockViewer = ({ name }: BlockerViewerProps) => {
   )
 }
 
-export { BlockViewer }
+export { LayoutViewer }
