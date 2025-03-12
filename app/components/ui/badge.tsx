@@ -146,7 +146,7 @@ const badgeVariants = tv({
       color: "default",
       variant: "filled",
       class: {
-        base: [colorVariants.filled.default, "hover:bg-accent hover:text-accent-text shadow-small"],
+        base: [colorVariants.filled.default, "hover:bg-accent hover:text-accent-text shadow-sm"],
       },
     },
     {

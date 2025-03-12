@@ -8,6 +8,7 @@ import { Tab, Tabs } from "fumadocs-ui/components/tabs"
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/page"
 import { LayoutViewer } from "@/app/components/layout-viewer"
+import { PreviewTabs, PreviewTab } from "@/app/components/preview-tabs"
 
 export default async function Page(props: { params: Promise<{ slug?: string[] }> }) {
   const params = await props.params
@@ -21,7 +22,6 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle className="md:text-4xl md:font-extrabold">{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
-      <hr />
       <DocsBody>
         <MDX
           components={{
@@ -34,6 +34,8 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
             Files,
             Folder,
             Alert,
+            PreviewTabs,
+            PreviewTab,
             ComponentPreview,
             LayoutViewer,
           }}
