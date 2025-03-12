@@ -11,7 +11,7 @@ export async function GET(req: Request) {
       return NextResponse.json({ error: "Invalid filename" }, { status: 400 })
     }
 
-    const filePath = path.join(process.cwd(), "static/html/", `${filename}.html`)
+    const filePath = path.join(process.cwd(), "static/", `${filename}.html`)
     const html = fs.readFileSync(filePath, "utf8")
 
     return NextResponse.json({ html })

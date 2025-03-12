@@ -46,7 +46,7 @@ const alertVariants = tv({
       color: "success",
       class: {
         base: [colorVariants.subtle.success, "border-success"],
-        title: "text-success-foreground",
+        title: "text-success-text",
         description: "text-muted-text",
       },
     },
@@ -55,7 +55,7 @@ const alertVariants = tv({
       color: "info",
       class: {
         base: [colorVariants.subtle.info, "border-info"],
-        title: "text-info-foreground",
+        title: "text-info-text",
         description: "text-muted-text",
       },
     },
@@ -64,7 +64,7 @@ const alertVariants = tv({
       color: "warning",
       class: {
         base: [colorVariants.subtle.warning, "border-warning"],
-        title: "text-warning-foreground",
+        title: "text-warning-text",
         description: "text-muted-text",
       },
     },
@@ -73,7 +73,7 @@ const alertVariants = tv({
       color: "danger",
       class: {
         base: [colorVariants.subtle.danger, "border-danger"],
-        title: "text-danger-foreground",
+        title: "text-danger-text",
         description: "text-muted-text",
       },
     },
@@ -137,7 +137,7 @@ const alertVariants = tv({
       color: "success",
       class: {
         base: [colorVariants.outlined.success],
-        title: "text-success-foreground",
+        title: "text-success-text",
         description: "text-muted-text",
       },
     },
@@ -146,7 +146,7 @@ const alertVariants = tv({
       color: "info",
       class: {
         base: [colorVariants.outlined.info],
-        title: "text-info-foreground",
+        title: "text-info-text",
         description: "text-muted-text",
       },
     },
@@ -155,7 +155,7 @@ const alertVariants = tv({
       color: "warning",
       class: {
         base: [colorVariants.outlined.warning],
-        title: "text-warning-foreground",
+        title: "text-warning-text",
         description: "text-muted-text",
       },
     },
@@ -164,7 +164,7 @@ const alertVariants = tv({
       color: "danger",
       class: {
         base: [colorVariants.outlined.danger],
-        title: "text-danger-foreground",
+        title: "text-danger-text",
         description: "text-muted-text",
       },
     },
