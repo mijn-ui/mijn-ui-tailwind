@@ -1,4 +1,4 @@
-import { Templates } from "@/static/_templates"
+import { Templates } from "@/static/_layout"
 import React from "react"
 import { LuLoaderCircle } from "react-icons/lu"
 import { notFound } from "next/navigation"

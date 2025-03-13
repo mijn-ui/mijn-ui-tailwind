@@ -1,0 +1,39 @@
+type TemplateItems = {
+  name: string
+  title: string
+  description: string
+  htmlSrc: string
+  iframeHeight: number
+}
+
+export const Templates: Record<string, TemplateItems> = {
+  "dashboard-layout": {
+    name: "dashboard-layout",
+    title: "Dashboard Layout",
+    description:
+      "A responsive application layout with sidebar navigation, top navbar, and card components for building admin interfaces or dashboards.",
+    htmlSrc: "_layout/dashboard-layout",
+    iframeHeight: 740,
+  },
+  "sidebar-01": {
+    name: "sidebar-01",
+    title: "Sidebar",
+    description: "Vertical navigation panel for site or app sections, typically positioned at the side of the screen.",
+    htmlSrc: "_layout/sidebar",
+    iframeHeight: 740,
+  },
+  "sidebar-02": {
+    name: "sidebar-02",
+    title: "Sidebar without icons",
+    description: "Vertical navigation panel for site or app sections, typically positioned at the side of the screen.",
+    htmlSrc: "_layout/sidebar-without-icons",
+    iframeHeight: 740,
+  },
+  "sidebar-03": {
+    name: "sidebar-03",
+    title: "Sidebar with Dropdown Items",
+    description: "Vertical navigation panel for site or app sections, typically positioned at the side of the screen.",
+    htmlSrc: "_layout/sidebar-dropdown-items",
+    iframeHeight: 740,
+  },
+}
