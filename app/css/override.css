@@ -55,6 +55,16 @@ h1 {
   @apply bg-fd-card;
 }
 
+.fd-codeblock code {
+  font-size: 14px !important;
+}
+
+/* Override Fumadocs Codeblock default max height */
+.layout-viewer .fd-codeblock {
+  .max-h-\[400px\] {
+    max-height: var(--layout-viewer-height);
+  }
+}
 /* override for the preview */
 
 .preview {
