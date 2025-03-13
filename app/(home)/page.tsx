@@ -17,7 +17,7 @@ export default function HomePage() {
           <Link href={"/docs"}>Getting Started</Link>
         </Button>
 
-        <Button asChild size="sm" variant="outlined" color="secondary" className="text-xs md:text-sm">
+        <Button asChild size="sm" variant="outlined" className="text-xs md:text-sm">
           <Link href={"/docs/components/accordion"}>Components</Link>
         </Button>
       </div>
