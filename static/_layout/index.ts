@@ -15,6 +15,13 @@ export const Templates: Record<string, TemplateItems> = {
     htmlSrc: "_layout/dashboard-layout",
     iframeHeight: 740,
   },
+  "header-01": {
+    name: "header-01",
+    title: "Header",
+    description: "Navigation header at the top of the UI that provides access to key sections and features.",
+    htmlSrc: "_layout/header",
+    iframeHeight: 740,
+  },
   "sidebar-01": {
     name: "sidebar-01",
     title: "Sidebar",
