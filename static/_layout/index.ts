@@ -43,4 +43,12 @@ export const Templates: Record<string, TemplateItems> = {
     htmlSrc: "_layout/sidebar-dropdown-items",
     iframeHeight: 740,
   },
+  "sidebar-04": {
+    name: "sidebar-04",
+    title: "Double Sidebar",
+    description:
+      "Two vertical navigation panels for site or app sections, typically positioned at the side of the screen.",
+    htmlSrc: "_layout/sidebar-double",
+    iframeHeight: 740,
+  },
 }

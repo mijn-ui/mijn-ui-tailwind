@@ -20,7 +20,7 @@ h1 {
 }
 
 #nd-tocnav {
-  @apply h-[var(--toc-height)];
+  @apply z-30 h-[var(--toc-height)];
 }
 
 #nd-docs-layout aside#nd-sidebar {
