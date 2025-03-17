@@ -51,4 +51,11 @@ export const Templates: Record<string, TemplateItems> = {
     htmlSrc: "_layout/sidebar-double",
     iframeHeight: 740,
   },
+  "gantt-chart": {
+    name: "gantt-chart",
+    title: "Gantt Chart",
+    description: "A project management tool that visualizes tasks and resources over time.",
+    htmlSrc: "_layout/gantt-chart",
+    iframeHeight: 740,
+  },
 }
