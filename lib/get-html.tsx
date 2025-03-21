@@ -2,33 +2,44 @@ import path from "path"
 import fs from "fs"
 import HTMLReactParser from "html-react-parser/lib/index"
 
-type HtmlSource = string | { htmlSrc: string }
-interface HtmlOptions {
+interface fileOptions {
   basePath?: string
   addExtension?: boolean
 }
 
 /**
- * Gets HTML content from a file and parses it to React elements
- *
- * @param source - Path to HTML file or object with htmlSrc property
- * @param options - Configuration options for file path resolution
- * @returns Parsed HTML content as React elements
+ * Helper function to build the file path
  */
-export const getHTMLContent = (source: HtmlSource, options: HtmlOptions = {}): ReturnType<typeof HTMLReactParser> => {
-  const { basePath = "static/", addExtension = true } = options
+const buildFilePath = (url: string, { basePath = "static/", addExtension = true }: fileOptions): string => {
+  if (!url || typeof url !== "string") {
+    throw new Error("Invalid URL parameter provided.")
+  }
+  return path.join(process.cwd(), basePath, addExtension ? `${url}.html` : url)
+}
 
-  // Handle both string paths and objects with htmlSrc
-  const htmlPath = typeof source === "string" ? source : source.htmlSrc
-
+/**
+ * Gets HTML content from a file and parses it to React elements
+ */
+export const getHTMLContent = (url: string, options: fileOptions = {}): ReturnType<typeof HTMLReactParser> => {
   try {
-    // Build file path based on options
-    const filePath = path.join(process.cwd(), basePath, addExtension ? `${htmlPath}.html` : htmlPath)
-
+    const filePath = buildFilePath(url, options)
     const html = fs.readFileSync(filePath, "utf8")
     return HTMLReactParser(html)
   } catch (error) {
-    console.error(`Failed to load HTML content: ${htmlPath}`, error)
-    return <div className="text-red-500">Error loading HTML content</div>
+    console.error(`Failed to load HTML content: ${url}`, error)
+    return <div className="text-red-500">The requested content is not available.</div>
+  }
+}
+
+/**
+ * Gets raw HTML source code from a file
+ */
+export const getSourceCode = (url: string, options: fileOptions = {}): string => {
+  try {
+    const filePath = buildFilePath(url, options)
+    return fs.readFileSync(filePath, "utf8")
+  } catch (error) {
+    console.error(`Failed to load source code for URL ${url}:`, error)
+    return `Error loading source code for ${url}`
   }
 }
