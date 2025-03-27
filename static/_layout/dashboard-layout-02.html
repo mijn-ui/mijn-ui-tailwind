@@ -1,0 +1,554 @@
+<!-- Page Container -->
+<!-- Ensure padding-left of 80 when sidebar is active to avoid overlap -->
+<!-- Ensure padding-top of 14 to avoid overlap with navbar -->
+<div class="pt-14 sm:pl-72">
+  <!-- Header -->
+  <!-- Adjust left property based on sidebar visibility -->
+  <header class="fixed left-0 right-0 top-0 z-10 flex h-14 items-center justify-center bg-surface shadow-sm sm:left-72">
+    <!-- Navbar -->
+    <nav class="flex w-full items-center justify-between px-3 py-2">
+      <!-- Navbar Left -->
+      <div class="flex items-center gap-4">
+        <!-- Sidebar Trigger Button -->
+        <button
+          class="inline-flex h-8 w-8 items-center justify-center gap-1 rounded-md border border-main-border bg-transparent text-sm text-default-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50 sm:h-10 sm:w-10">
+          <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.66699 9C1.66699 5.92572 1.66699 4.38858 2.34517 3.29897C2.59608 2.89585 2.90775 2.54522 3.26608 2.26295C4.23462 1.5 5.60097 1.5 8.33366 1.5H11.667C14.3997 1.5 15.766 1.5 16.7346 2.26295C17.0929 2.54522 17.4046 2.89585 17.6555 3.29897C18.3337 4.38858 18.3337 5.92572 18.3337 9C18.3337 12.0743 18.3337 13.6114 17.6555 14.701C17.4046 15.1041 17.0929 15.4548 16.7346 15.737C15.766 16.5 14.3997 16.5 11.667 16.5H8.33366C5.60097 16.5 4.23462 16.5 3.26608 15.737C2.90775 15.4548 2.59608 15.1041 2.34517 14.701C1.66699 13.6114 1.66699 12.0743 1.66699 9Z"
+              stroke="#737373"
+              stroke-width="1.5" />
+            <path d="M7.91699 1.5L7.91699 16.5" stroke="#737373" stroke-width="1.5" stroke-linejoin="round" />
+            <path
+              d="M4.16699 4.83337H5.00033M4.16699 7.33337H5.00033"
+              stroke="#737373"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navbar Right -->
+      <div class="flex items-center gap-2">
+        <!-- Search Input (Visible on XL screens) -->
+        <div class="relative hidden w-80 xl:block">
+          <!-- Search Icon -->
+          <div class="absolute left-2 top-1/2 -translate-y-1/2 transform">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-muted-text"
+              height="16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+          </div>
+
+          <input
+            class="peer flex h-10 w-full rounded-md border border-input-border bg-transparent py-2 pl-8 pr-8 text-sm placeholder:text-muted-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
+            id="example-4"
+            placeholder="Username..." />
+
+          <!-- Clear Icon -->
+          <div class="absolute right-3.5 top-1/2 -translate-y-1/2 transform">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-muted-text"
+              height="16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center">
+          <!-- Notification Button -->
+          <button
+            class="inline-flex h-10 w-10 items-center justify-center gap-1 rounded-full text-sm text-default-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+              <path
+                d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path>
+            </svg>
+          </button>
+
+          <!-- Settings Button -->
+          <button
+            class="inline-flex h-10 w-10 items-center justify-center gap-1 rounded-full text-sm text-default-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              class="h-5 w-5"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="32"
+                d="M427.68 351.43C402 320 383.87 304 383.87 217.35 383.87 138 343.35 109.73 310 96c-4.43-1.82-8.6-6-9.95-10.55C294.2 65.54 277.8 48 256 48s-38.21 17.55-44 37.47c-1.35 4.6-5.52 8.71-9.95 10.53-33.39 13.75-73.87 41.92-73.87 121.35C128.13 304 110 320 84.32 351.43 73.68 364.45 83 384 101.61 384h308.88c18.51 0 27.77-19.61 17.19-32.57zM320 384v16a64 64 0 0 1-128 0v-16"></path>
+            </svg>
+          </button>
+
+          <!-- Language Selector Button -->
+          <button
+            class="inline-flex h-10 w-10 items-center justify-center gap-1 rounded-full text-sm text-default-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+            <p>EN</p>
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              height="14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- User Avatar -->
+        <div
+          class="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-sm">
+          <!-- Avatar Image -->
+          <img
+            src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D"
+            alt="anthony"
+            class="h-full w-full object-cover" />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Overlay For Mobile Screen -->
+  <div class="fixed inset-0 z-20 bg-black/75 sm:hidden"></div>
+
+  <!-- ------------------------------- Sidebar ------------------------------- -->
+  <aside class="fixed inset-y-0 left-0 z-50 flex shadow-sm ease-out">
+    <div class="h-full w-16 space-y-2 overflow-y-auto border-r border-main-border bg-surface">
+      <!-- Sidebar Icon Header -->
+      <div class="flex items-center justify-center py-4">
+        <!-- Sidebar Logo -->
+        <a href="#" class="inline-flex size-10 items-center justify-center gap-1 text-sm text-default-text">
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 65 69"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-6">
+            <path
+              d="M29.5909 5.97315C29.5909 7.51623 28.9779 8.9961 27.8868 10.0872L22.9207 15.0534C21.0881 16.886 17.9545 15.588 17.9545 12.9963V10.7931C17.9545 9.25001 18.5675 7.77013 19.6586 6.67901L24.6248 1.71288C26.4574 -0.119741 29.5909 1.1782 29.5909 3.76992V5.97315Z"
+              fill="currentColor"></path>
+            <path
+              d="M0.5 28.2476C0.5 26.7046 1.11298 25.2247 2.2041 24.1336L7.17023 19.1674C9.00286 17.3348 12.1364 18.6327 12.1364 21.2245V28.1443C12.1364 29.4401 13.7031 30.0891 14.6194 29.1728L24.6248 19.1674C26.4574 17.3348 29.5909 18.6327 29.5909 21.2245V38.3261C29.5909 39.0852 30.5087 39.4653 31.0455 38.9286C31.5822 38.3918 32.5 38.772 32.5 39.5311V39.6399C32.5 40.1158 32.311 40.5722 31.9745 40.9087L22.9207 49.9625C21.088 51.7951 17.9545 50.4971 17.9545 47.9054V32.2583C17.9545 30.9625 16.3878 30.3135 15.4715 31.2298L12.9884 33.7129C12.4429 34.2584 12.1364 34.9984 12.1364 35.7699V40.8822C12.1364 42.4253 11.5234 43.9052 10.4323 44.9963L5.46613 49.9624C3.63351 51.7951 0.5 50.4971 0.5 47.9054V28.2476Z"
+              fill="currentColor"></path>
+            <path
+              d="M64.5 21.2245C64.5 18.6327 61.3665 17.3348 59.5339 19.1674L49.5285 29.1728C48.6122 30.0891 47.0455 29.4401 47.0455 28.1443V21.2245C47.0455 18.6327 43.912 17.3348 42.0793 19.1674L33.0255 28.2212C32.689 28.5577 32.5 29.0141 32.5 29.49V29.5988C32.5 30.3579 33.4178 30.7381 33.9545 30.2013C34.4913 29.6645 35.4091 30.0447 35.4091 30.8038V52.0195L31.6479 55.7806C30.8888 56.5397 29.5909 56.0021 29.5909 54.9286C29.5909 52.7815 26.995 51.7063 25.4768 53.2245L19.6586 59.0427C18.5675 60.1338 17.9545 61.6137 17.9545 63.1567V65.36C17.9545 67.9517 21.088 69.2496 22.9207 67.417L45.3414 44.9963C46.4325 43.9052 47.0455 42.4253 47.0455 40.8822V35.7699C47.0455 34.9984 47.3519 34.2584 47.8975 33.7129L50.3806 31.2298C51.2969 30.3135 52.8636 30.9625 52.8636 32.2583V47.9054C52.8636 50.4971 55.9971 51.7951 57.8298 49.9625L62.7959 44.9963C63.887 43.9052 64.5 42.4253 64.5 40.8822V21.2245Z"
+              fill="currentColor"></path>
+            <path
+              d="M35.4091 12.9963C35.4091 15.588 38.5426 16.886 40.3752 15.0534L45.3414 10.0872C46.4325 8.9961 47.0455 7.51623 47.0455 5.97315V3.76992C47.0455 1.1782 43.912 -0.119745 42.0793 1.71288L37.1132 6.67901C36.0221 7.77013 35.4091 9.25001 35.4091 10.7931V12.9963Z"
+              fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Sidebar Icon Group -->
+      <div class="flex flex-col items-center justify-center gap-2 py-4">
+        <!-- Sidebar Icon/Active -->
+        <button
+          title="Dashboard"
+          class="inline-flex size-9 items-center justify-center gap-1 rounded-md bg-primary/20 text-sm text-primary transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
+          </svg>
+        </button>
+
+        <!-- Sidebar Icon -->
+        <button
+          title="Contacts"
+          class="inline-flex size-9 items-center justify-center gap-1 rounded-md text-sm text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"></path>
+          </svg>
+        </button>
+
+        <!-- Sidebar Icon -->
+        <button
+          title="Sell"
+          class="inline-flex size-9 items-center justify-center gap-1 rounded-md text-sm text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 640 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M36.8 192l566.3 0c20.3 0 36.8-16.5 36.8-36.8c0-7.3-2.2-14.4-6.2-20.4L558.2 21.4C549.3 8 534.4 0 518.3 0L121.7 0c-16 0-31 8-39.9 21.4L6.2 134.7c-4 6.1-6.2 13.2-6.2 20.4C0 175.5 16.5 192 36.8 192zM64 224l0 160 0 80c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-80 0-160-64 0 0 160-192 0 0-160-64 0zm448 0l0 256c0 17.7 14.3 32 32 32s32-14.3 32-32l0-256-64 0z"></path>
+          </svg>
+        </button>
+
+        <!-- Sidebar Icon -->
+        <button
+          title="POS"
+          class="inline-flex size-9 items-center justify-center gap-1 rounded-md text-sm text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M64 0C46.3 0 32 14.3 32 32l0 64c0 17.7 14.3 32 32 32l80 0 0 32-57 0c-31.6 0-58.5 23.1-63.3 54.4L1.1 364.1C.4 368.8 0 373.6 0 378.4L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-69.6c0-4.8-.4-9.6-1.1-14.4L488.2 214.4C483.5 183.1 456.6 160 425 160l-217 0 0-32 80 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32L64 0zM96 48l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L96 80c-8.8 0-16-7.2-16-16s7.2-16 16-16zM64 432c0-8.8 7.2-16 16-16l352 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16zm48-168a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm120-24a24 24 0 1 1 -48 0 24 24 0 1 1 48 0zM160 344a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM328 240a24 24 0 1 1 -48 0 24 24 0 1 1 48 0zM256 344a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM424 240a24 24 0 1 1 -48 0 24 24 0 1 1 48 0zM352 344a24 24 0 1 1 0-48 24 24 0 1 1 0 48z"></path>
+          </svg>
+        </button>
+
+        <!-- Sidebar Icon -->
+        <button
+          title="Reports"
+          class="inline-flex size-9 items-center justify-center gap-1 rounded-md text-sm text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"></path>
+          </svg>
+        </button>
+
+        <!-- Sidebar Icon -->
+        <button
+          title="Inventory"
+          class="inline-flex size-9 items-center justify-center gap-1 rounded-md text-sm text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 640 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M504 352H136.4c-4.4 0-8 3.6-8 8l-.1 48c0 4.4 3.6 8 8 8H504c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm0 96H136.1c-4.4 0-8 3.6-8 8l-.1 48c0 4.4 3.6 8 8 8h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm0-192H136.6c-4.4 0-8 3.6-8 8l-.1 48c0 4.4 3.6 8 8 8H504c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm106.5-139L338.4 3.7a48.15 48.15 0 0 0-36.9 0L29.5 117C11.7 124.5 0 141.9 0 161.3V504c0 4.4 3.6 8 8 8h80c4.4 0 8-3.6 8-8V256c0-17.6 14.6-32 32.6-32h382.8c18 0 32.6 14.4 32.6 32v248c0 4.4 3.6 8 8 8h80c4.4 0 8-3.6 8-8V161.3c0-19.4-11.7-36.8-29.5-44.3z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sidebar Content Toggle Button -->
+    <button
+      class="absolute -right-4 bottom-32 inline-flex size-7 items-center justify-center gap-0 rounded-md bg-default px-0 text-sm text-default-text transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+      <!-- Remove classname "rotate-180" when the sidebar is Inactive. -->
+      <svg
+        stroke="currentColor"
+        fill="none"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="rotate-180 transition-transform duration-300"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12h14"></path>
+        <path d="m12 5 7 7-7 7"></path>
+      </svg>
+      <span class="sr-only">Toggle Sidebar</span>
+    </button>
+
+    <!-- Sidebar Content -->
+    <!-- Sidebar Content Inactive Class = 'w-0 overflow-hidden' -->
+    <div class="h-full w-56 bg-surface">
+      <!-- Sidebar Content Header -->
+      <div class="flex items-center gap-1 px-4 pt-6">
+        <h5 class="text-xs font-semibold uppercase text-muted-text">Dashboard</h5>
+      </div>
+
+      <!-- Sidebar Content Group -->
+      <div class="flex h-full w-full flex-col items-center gap-2 px-4 py-4">
+        <!-- Sidebar Item (Button Ghost Component) -->
+        <a
+          href="#"
+          class="inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-md px-3.5 text-sm text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"></path>
+            </svg>
+          </span>
+          <div class="flex-1 text-left">
+            <p class="truncate text-sm font-medium">Overview</p>
+          </div>
+        </a>
+
+        <!-- xxxxx Sidebar Collapsible xxxxx -->
+        <div class="w-full">
+          <!-- Sidebar Collapsible Trigger -->
+          <button
+            class="inline-flex h-9 w-full items-center justify-start gap-1.5 rounded-md bg-primary px-3.5 text-sm text-primary-text transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+            <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="21" r="1"></circle>
+                <circle cx="19" cy="21" r="1"></circle>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+              </svg>
+            </span>
+
+            <p class="flex-1 truncate text-left font-medium">Products</p>
+
+            <span class="[&>svg]:rotate-180">
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Sidebar Collapsible Content -->
+          <div class="flex flex-col gap-1 py-2 text-sm">
+            <!-- Sidebar Collapsible Item -->
+            <a
+              href="#"
+              class="inline-flex h-8 w-full cursor-pointer items-center justify-center gap-2 rounded-md px-3 pl-10 text-sm text-primary">
+              <p class="flex-1 truncate text-left text-sm font-normal">Add Product</p>
+            </a>
+
+            <!-- Sidebar Collapsible Item -->
+            <a
+              href="#"
+              class="inline-flex h-8 w-full cursor-pointer items-center justify-center gap-2 rounded-md px-3 pl-10 text-sm text-muted-text hover:text-accent-text">
+              <p class="flex-1 truncate text-left text-sm font-normal">Products List</p>
+            </a>
+
+            <!-- Sidebar Collapsible Item -->
+            <a
+              href="#"
+              class="inline-flex h-8 w-full cursor-pointer items-center justify-center gap-2 rounded-md px-3 pl-10 text-sm text-muted-text hover:text-accent-text">
+              <p class="flex-1 truncate text-left text-sm font-normal">Import Products</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar Item (Button Ghost Component) -->
+        <a
+          href="#"
+          class="inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-md px-3.5 text-sm text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+            </svg>
+          </span>
+          <div class="flex-1 text-left">
+            <p class="truncate text-sm font-medium">Recent Activity</p>
+          </div>
+        </a>
+
+        <!-- Sidebar Item (Button Ghost Component) -->
+        <a
+          href="#"
+          class="inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-md px-3.5 text-sm text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+          <span class="flex size-5 flex-shrink-0 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path>
+              <circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>
+            </svg>
+          </span>
+          <div class="flex-1 text-left">
+            <p class="truncate text-sm font-medium">Category</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="p-4">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Card -->
+      <div class="w-full space-y-3 rounded-xl bg-surface p-5 shadow-sm sm:space-y-4 sm:p-6">
+        <span
+          class="disabled:text-muted/75-text inline-flex h-10 w-10 items-center justify-center gap-1 rounded-full bg-accent p-0 text-sm hover:bg-muted hover:text-accent-text disabled:bg-muted/75 sm:h-12 sm:w-12">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            class="h-4 w-4 sm:h-5 sm:w-5"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="32"
+              d="M80 176a16 16 0 0 0-16 16v216c0 30.24 25.76 56 56 56h272c30.24 0 56-24.51 56-54.75V192a16 16 0 0 0-16-16zm80 0v-32a96 96 0 0 1 96-96h0a96 96 0 0 1 96 96v32"></path>
+          </svg>
+        </span>
+        <div class="space-y-0.5 sm:space-y-1">
+          <p class="text-sm font-medium text-muted-text">Total Sales</p>
+          <h3 class="text-xl font-medium sm:text-2xl">$75,890.75</h3>
+          <p class="text-xs font-normal text-muted-text">
+            <span class="text-success">+128%</span>
+            from June
+          </p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="w-full space-y-3 rounded-xl bg-surface p-5 shadow-sm sm:space-y-4 sm:p-6">
+        <span
+          class="disabled:text-muted/75-text inline-flex h-10 w-10 items-center justify-center gap-1 rounded-full bg-accent p-0 text-sm hover:bg-muted hover:text-accent-text disabled:bg-muted/75 sm:h-12 sm:w-12">
+          <svg
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4 sm:h-5 sm:w-5"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </span>
+        <div class="space-y-0.5 sm:space-y-1">
+          <p class="text-sm font-medium text-muted-text">New Users</p>
+          <h3 class="text-xl font-medium sm:text-2xl">1.35m</h3>
+          <p class="text-xs font-normal text-muted-text">
+            <span class="text-success">+19%</span>
+            from February
+          </p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="w-full space-y-3 rounded-xl bg-surface p-5 shadow-sm sm:space-y-4 sm:p-6">
+        <span
+          class="disabled:text-muted/75-text inline-flex h-10 w-10 items-center justify-center gap-1 rounded-full bg-accent p-0 text-sm hover:bg-muted hover:text-accent-text disabled:bg-muted/75 sm:h-12 sm:w-12">
+          <svg
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4 sm:h-5 sm:w-5"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+        </span>
+        <div class="space-y-0.5 sm:space-y-1">
+          <p class="text-sm font-medium text-muted-text">Item Orders</p>
+          <h3 class="text-xl font-medium sm:text-2xl">1.72m</h3>
+          <p class="text-xs font-normal text-muted-text">
+            <span class="text-success">+5%</span>
+            from November
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

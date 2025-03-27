@@ -7,12 +7,20 @@ type TemplateItems = {
 }
 
 export const Templates: Record<string, TemplateItems> = {
-  "dashboard-layout": {
-    name: "dashboard-layout",
+  "dashboard-layout-01": {
+    name: "dashboard-layout-01",
     title: "Dashboard Layout",
     description:
       "A responsive application layout with sidebar navigation, top navbar, and card components for building admin interfaces or dashboards.",
-    htmlSrc: "_layout/dashboard-layout",
+    htmlSrc: "_layout/dashboard-layout-01",
+    iframeHeight: 740,
+  },
+  "dashboard-layout-02": {
+    name: "dashboard-layout-02",
+    title: "Dashboard Layout with Sidebar",
+    description:
+      "A responsive application layout with sidebar navigation, top navbar, and card components for building admin interfaces or dashboards.",
+    htmlSrc: "_layout/dashboard-layout-02",
     iframeHeight: 740,
   },
   "header-01": {
