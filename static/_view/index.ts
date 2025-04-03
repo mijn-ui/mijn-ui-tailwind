@@ -78,4 +78,52 @@ export const ViewPages: Record<string, ViewPageItems> = {
     htmlSrc: "_view/screen-state",
     iframeHeight: 480,
   },
+  "drawer-left": {
+    name: "drawer-left",
+    title: "Drawer",
+    description:
+      "A panel that slides in from the left side of the screen, showing menu items or content without leaving the current page.",
+    htmlSrc: "_view/drawer-left",
+    iframeHeight: 740,
+  },
+  "drawer-right": {
+    name: "drawer-right",
+    title: "Drawer",
+    description:
+      "A panel that slides in from the right side of the screen, showing menu items or content without leaving the current page.",
+    htmlSrc: "_view/drawer-right",
+    iframeHeight: 740,
+  },
+  "drawer-top": {
+    name: "drawer-top",
+    title: "Drawer",
+    description:
+      "A panel that slides in from the top side of the screen, showing menu items or content without leaving the current page.",
+    htmlSrc: "_view/drawer-top",
+    iframeHeight: 740,
+  },
+  "drawer-bottom": {
+    name: "drawer-bottom",
+    title: "Drawer",
+    description:
+      "A panel that slides in from the bottom side of the screen, showing menu items or content without leaving the current page.",
+    htmlSrc: "_view/drawer-bottom",
+    iframeHeight: 740,
+  },
+  "drawer-without-overlay": {
+    name: "drawer-without-overlay",
+    title: "Drawer",
+    description:
+      "A panel that slides in from the left side of the screen, showing menu items or content without leaving the current page.",
+    htmlSrc: "_view/drawer-without-overlay",
+    iframeHeight: 740,
+  },
+  "drawer-form": {
+    name: "drawer-form",
+    title: "Drawer",
+    description:
+      "A panel that slides in from the left side of the screen, showing menu items or content without leaving the current page.",
+    htmlSrc: "_view/drawer-form",
+    iframeHeight: 740,
+  },
 }

@@ -51,7 +51,7 @@ const LayoutViewer = ({ name, hideCode }: BlockerViewerProps) => {
               <ResizablePanel
                 className="relative aspect-[4/2.5] rounded-xl border bg-main md:aspect-auto"
                 defaultSize={100}
-                minSize={30}>
+                minSize={40}>
                 <iframe
                   src={`/tailwind/${url}`}
                   height={template.iframeHeight || 740}
