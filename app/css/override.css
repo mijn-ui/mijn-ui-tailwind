@@ -61,11 +61,10 @@ h1 {
 
 /* Override Fumadocs Codeblock default max height */
 .layout-viewer .fd-codeblock {
-  .max-h-\[400px\] {
-    max-height: var(--layout-viewer-height);
+  .max-h-\[600px\] {
+    max-height: var(--layout-viewer-height) !important;
   }
 }
-/* override for the preview */
 
 .preview {
   [role="tablist"] {

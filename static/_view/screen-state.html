@@ -1,0 +1,123 @@
+<!-- Screen State Component -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-2">
+  <div
+    class="flex w-full max-w-screen-sm flex-col items-center justify-center space-y-3 rounded-2xl bg-surface p-6 text-center shadow-lg sm:space-y-6">
+    <!-- Icon -->
+    <span class="text-muted-text">
+      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+        <path
+          d="M5.83301 28C5.83301 17.5505 5.83301 12.3258 9.07924 9.07956C12.3255 5.83333 17.5502 5.83333 27.9997 5.83333C38.4491 5.83333 43.6739 5.83333 46.9201 9.07956C50.1663 12.3258 50.1663 17.5505 50.1663 28C50.1663 38.4495 50.1663 43.6742 46.9201 46.9204C43.6739 50.1667 38.4491 50.1667 27.9997 50.1667C17.5502 50.1667 12.3255 50.1667 9.07924 46.9204C5.83301 43.6742 5.83301 38.4495 5.83301 28Z"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M50.1663 31.5H38.6731C36.7082 31.5 35.1644 33.1417 34.2984 34.8769C33.3576 36.7619 31.4737 38.5 27.9997 38.5C24.5256 38.5 22.6417 36.7619 21.7009 34.8769C20.835 33.1417 19.2911 31.5 17.3262 31.5H5.83301"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linejoin="round"></path>
+      </svg>
+    </span>
+
+    <!-- Content -->
+    <div class="space-y-1">
+      <h3 class="text-lg font-medium text-main-text sm:text-xl">No files found</h3>
+      <p class="text-sm text-muted-text">Your search “design system” did not match any projects. Please try again.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-center">
+      <button
+        class="mt-2 inline-flex h-9 items-center justify-center gap-1 rounded-md border border-main-border px-3 text-sm transition-colors duration-150 hover:bg-accent hover:text-accent-text active:brightness-95 sm:mt-0 sm:h-10">
+        Cancel
+      </button>
+      <button
+        class="inline-flex h-9 items-center justify-center gap-1 rounded-md bg-primary px-3 text-sm text-primary-text transition-colors duration-150 hover:bg-primary/90 active:brightness-95 sm:h-10">
+        Create New File
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Background Elements -->
+<div class="h-screen w-full overflow-y-hidden p-5">
+  <div class="mx-auto max-w-lg">
+    <div role="status" class="my-7">
+      <div class="mb-4 h-2.5 w-48 rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[500px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[450px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[380px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div role="status" class="mb-7 max-w-lg">
+      <div class="flex h-48 w-full items-center justify-center rounded bg-neutral-400 dark:bg-neutral-700">
+        <svg
+          class="size-12 text-accent"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 640 512">
+          <path
+            d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"></path>
+        </svg>
+      </div>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div role="status" class="my-6">
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[450px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[500px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[450px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[380px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div role="status" class="my-6">
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[450px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[500px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div role="status" class="mb-6 mt-7">
+      <div class="mb-4 h-2.5 w-48 rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[450px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[500px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[450px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[380px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[500px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div role="status" class="mb-7 max-w-lg">
+      <div class="flex h-48 w-full items-center justify-center rounded bg-neutral-400 dark:bg-neutral-700">
+        <svg
+          class="size-12 text-accent"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 640 512">
+          <path
+            d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"></path>
+        </svg>
+      </div>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div role="status" class="my-6">
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[450px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div role="status" class="my-6">
+      <div class="mb-2.5 h-2 max-w-[460px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <div class="mb-2.5 h-2 max-w-[450px] rounded-full bg-neutral-400 dark:bg-neutral-700"></div>
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</div>

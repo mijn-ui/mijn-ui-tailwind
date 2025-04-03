@@ -1,38 +1,43 @@
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/app/components/ui/resizable"
-import { Templates } from "@/static/_layout"
+import { ViewPages } from "@/static/_view"
 import React from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
 import Link from "next/link"
 import { LuExternalLink } from "react-icons/lu"
 import { Button } from "./ui/button"
+import { getSourceCode } from "@/lib/get-html"
+import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock"
 
 type BlockerViewerProps = {
   name: string
-  children?: React.ReactNode
+  hideCode?: boolean
 }
 
-const LayoutViewer = ({ name, children }: BlockerViewerProps) => {
-  const template = Templates[name]
+const LayoutViewer = ({ name, hideCode }: BlockerViewerProps) => {
+  const template = ViewPages[name]
+  const code = getSourceCode(template.htmlSrc)
   const url = `/view/${template.name}`
 
   return (
     <Tabs defaultValue="preview">
-      <TabsList className="mb-2 h-12 w-full justify-between rounded-none border-b !bg-transparent">
-        <div className="flex items-center">
-          <TabsTrigger className="rounded-md hover:text-accent-text data-[state=active]:bg-default" value="preview">
-            Preview
-          </TabsTrigger>
-          <TabsTrigger className="rounded-md hover:text-accent-text data-[state=active]:bg-default" value="code">
-            Code
-          </TabsTrigger>
-        </div>
+      {!hideCode && (
+        <TabsList className="mb-2 h-12 w-full justify-between rounded-none border-b !bg-transparent">
+          <div className="flex items-center">
+            <TabsTrigger className="rounded-md hover:text-accent-text data-[state=active]:bg-default" value="preview">
+              Preview
+            </TabsTrigger>
+            <TabsTrigger className="rounded-md hover:text-accent-text data-[state=active]:bg-default" value="code">
+              Code
+            </TabsTrigger>
+          </div>
+          <Button asChild variant="ghost" iconOnly size="xs">
+            <Link href={url} target="_blank">
+              <LuExternalLink />
+            </Link>
+          </Button>
+        </TabsList>
+      )}
 
-        <Button asChild variant="ghost" iconOnly size="xs">
-          <Link href={url} target="_blank">
-            <LuExternalLink />
-          </Link>
-        </Button>
-      </TabsList>
       <div
         className="layout-viewer"
         style={
@@ -58,7 +63,12 @@ const LayoutViewer = ({ name, children }: BlockerViewerProps) => {
             </ResizablePanelGroup>
           </div>
         </TabsContent>
-        <TabsContent value="code">{children}</TabsContent>
+
+        {!hideCode && (
+          <TabsContent value="code">
+            <DynamicCodeBlock lang="html" code={code} />
+          </TabsContent>
+        )}
       </div>
     </Tabs>
   )

@@ -1,4 +1,4 @@
-import { Templates } from "@/static/_layout"
+import { ViewPages } from "@/static/_view"
 import React from "react"
 import { LuLoaderCircle } from "react-icons/lu"
 import { notFound } from "next/navigation"
@@ -6,7 +6,7 @@ import { getHTMLContent } from "@/lib/get-html"
 
 export async function generateMetadata({ params }: { params: Promise<{ name: string }> }) {
   const { name } = await params
-  const template = Templates[name]
+  const template = ViewPages[name]
 
   if (!template) {
     return {}
@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: { params: Promise<{ name: str
 }
 
 export const generateStaticParams = () => {
-  return Object.values(Templates).map(({ name }) => ({ name }))
+  return Object.values(ViewPages).map(({ name }) => ({ name }))
 }
 
 const TemplatePage = async ({ params }: { params: Promise<{ name: string }> }) => {
   const { name } = await params
-  const template = Templates[name]
+  const template = ViewPages[name]
 
   if (!template) {
     return notFound()
