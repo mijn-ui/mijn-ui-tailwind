@@ -1,12 +1,13 @@
-import { ViewPages } from "@/static/_view"
 import React from "react"
 import { LuLoaderCircle } from "react-icons/lu"
 import { notFound } from "next/navigation"
-import { getHTMLContent } from "@/lib/get-html"
+import { getHTMLContent, getViewMetaData } from "@/lib/get-html"
 
 export async function generateMetadata({ params }: { params: Promise<{ name: string }> }) {
   const { name } = await params
-  const template = ViewPages[name]
+
+  const meta = await getViewMetaData()
+  const template = meta[name]
 
   if (!template) {
     return {}
@@ -20,19 +21,22 @@ export async function generateMetadata({ params }: { params: Promise<{ name: str
   }
 }
 
-export const generateStaticParams = () => {
-  return Object.values(ViewPages).map(({ name }) => ({ name }))
+export const generateStaticParams = async () => {
+  const meta = await getViewMetaData()
+  return Object.values(meta).map(({ name }: { name: string }) => ({ name }))
 }
 
-const TemplatePage = async ({ params }: { params: Promise<{ name: string }> }) => {
+const ViewPage = async ({ params }: { params: Promise<{ name: string }> }) => {
   const { name } = await params
-  const template = ViewPages[name]
+
+  const meta = await getViewMetaData()
+  const template = meta[name]
 
   if (!template) {
     return notFound()
   }
 
-  const templateContent = getHTMLContent(template.htmlSrc)
+  const templateContent = getHTMLContent(name, { basePath: "/public/view/" })
 
   return (
     <div className="size-screen overflow-hidden">
@@ -49,4 +53,4 @@ const TemplatePage = async ({ params }: { params: Promise<{ name: string }> }) =
   )
 }
 
-export default TemplatePage
+export default ViewPage

@@ -10,8 +10,8 @@ type CodePreviewerProps = {
 } & React.ComponentPropsWithoutRef<"div">
 
 const ComponentPreview = ({ src, hideCode = false, ...props }: CodePreviewerProps) => {
-  const htmlComponent = getHTMLContent(src)
-  const code = getSourceCode(src)
+  const htmlComponent = getHTMLContent(src, { basePath: "/public/components/" })
+  const code = getSourceCode(src, { basePath: "/public/components/" })
 
   return (
     <Tabs defaultValue="preview">

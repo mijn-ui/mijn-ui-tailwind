@@ -3,8 +3,8 @@ import { createPreset } from "fumadocs-ui/tailwind-plugin"
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+    "./public/**/*.html",
     "./app/**/*.{ts,tsx}",
-    "./static/**/*.{ts,tsx,html}",
     "./content/**/*.{md,mdx}",
     "./mdx-components/**/*.{ts,tsx}",
 

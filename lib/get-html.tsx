@@ -1,45 +1,107 @@
 import path from "path"
 import fs from "fs"
+import { promises as fsPromises } from "fs"
 import HTMLReactParser from "html-react-parser/lib/index"
 
-interface fileOptions {
+export type FilePathOptions = {
   basePath?: string
   addExtension?: boolean
+  extensionName?: string
 }
 
 /**
- * Helper function to build the file path
+ * Builds a file path based on the provided options
+ *
+ * @param filePath - The relative path to the file
+ * @param options - Configuration options for the file path
+ * @returns The absolute file path
+ * @throws Error if the file path is invalid
  */
-const buildFilePath = (url: string, { basePath = "static/", addExtension = true }: fileOptions): string => {
-  if (!url || typeof url !== "string") {
-    throw new Error("Invalid URL parameter provided.")
+function buildFilePath(
+  filePath: string,
+  { basePath = "/public", addExtension = true, extensionName = "html" }: FilePathOptions,
+): string {
+  if (!filePath || typeof filePath !== "string") {
+    throw new Error("Invalid file path provided")
   }
-  return path.join(process.cwd(), basePath, addExtension ? `${url}.html` : url)
+
+  return path.join(process.cwd(), basePath, addExtension ? `${filePath}.${extensionName}` : filePath)
 }
 
 /**
- * Gets HTML content from a file and parses it to React elements
+ * Reads a file from the file system
+ *
+ * @param filePath - Path to the file
+ * @returns File content as a string
+ * @throws Error if the file cannot be read
  */
-export const getHTMLContent = (url: string, options: fileOptions = {}): ReturnType<typeof HTMLReactParser> => {
+function readFileSync(filePath: string): string {
   try {
-    const filePath = buildFilePath(url, options)
-    const html = fs.readFileSync(filePath, "utf8")
+    return fs.readFileSync(filePath, "utf8")
+  } catch (_) {
+    throw new Error(`Failed to read file: ${filePath}`)
+  }
+}
+
+/**
+ * Parses HTML content into React elements
+ *
+ * @param html - HTML content as a string
+ * @returns React elements
+ */
+export const getHTMLContent = (
+  contentPath: string,
+  options: FilePathOptions = {},
+): ReturnType<typeof HTMLReactParser> => {
+  try {
+    const absolutePath = buildFilePath(contentPath, options)
+    const html = readFileSync(absolutePath)
     return HTMLReactParser(html)
   } catch (error) {
-    console.error(`Failed to load HTML content: ${url}`, error)
+    console.error(`Failed to parse HTML content: ${contentPath}`, error)
     return <div className="text-red-500">The requested content is not available.</div>
   }
 }
 
 /**
  * Gets raw HTML source code from a file
+ *
+ * @param contentPath - Path to the HTML file
+ * @param options - Configuration options for the file path
+ * @returns HTML content as a string
  */
-export const getSourceCode = (url: string, options: fileOptions = {}): string => {
+export const getSourceCode = (contentPath: string, options: FilePathOptions = {}): string => {
   try {
-    const filePath = buildFilePath(url, options)
-    return fs.readFileSync(filePath, "utf8")
+    const absolutePath = buildFilePath(contentPath, options)
+    return readFileSync(absolutePath)
   } catch (error) {
-    console.error(`Failed to load source code for URL ${url}:`, error)
-    return `Error loading source code for ${url}`
+    console.error(`Failed to load source code for path: ${contentPath}`, error)
+    return `Error loading source code for ${contentPath}`
+  }
+}
+
+export type ViewMetaData = {
+  name: string
+  title: string
+  description: string
+  iframeHeight: number
+}
+
+export type ViewMetaDataType = Record<string, ViewMetaData>
+
+/**
+ * Gets metadata for view pages
+ *
+ * @param metaPath - Path to the metadata JSON file
+ * @returns Object containing view metadata
+ */
+export async function getViewMetaData(metaPath: string = "/public/view/meta.json"): Promise<ViewMetaDataType> {
+  try {
+    const absolutePath = path.join(process.cwd(), metaPath)
+    const data = await fsPromises.readFile(absolutePath, "utf8")
+    return JSON.parse(data) as ViewMetaDataType
+  } catch (error) {
+    console.error(`Failed to load metadata from ${metaPath}:`, error)
+    return {}
   }
 }

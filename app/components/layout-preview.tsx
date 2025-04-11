@@ -1,11 +1,10 @@
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/app/components/ui/resizable"
-import { ViewPages } from "@/static/_view"
 import React from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
 import Link from "next/link"
 import { LuExternalLink } from "react-icons/lu"
 import { Button } from "./ui/button"
-import { getSourceCode } from "@/lib/get-html"
+import { getSourceCode, getViewMetaData } from "@/lib/get-html"
 import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock"
 
 type BlockerViewerProps = {
@@ -13,9 +12,12 @@ type BlockerViewerProps = {
   hideCode?: boolean
 }
 
-const LayoutViewer = ({ name, hideCode }: BlockerViewerProps) => {
-  const template = ViewPages[name]
-  const code = getSourceCode(template.htmlSrc)
+const LayoutViewer = async ({ name, hideCode }: BlockerViewerProps) => {
+  const meta = await getViewMetaData()
+  const template = meta[name]
+  const code = getSourceCode(template.name, {
+    basePath: "/public/view",
+  })
   const url = `/view/${template.name}`
 
   return (
