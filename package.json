@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "postinstall": "echo 'Running fumadocs-mdx...' && fumadocs-mdx || echo 'fumadocs-mdx failed'",
-    "build": "next build",
+    "build:registry": "tsx --tsconfig ./tsconfig.json ./scripts/build-views-metadata.mts",
+    "build": "build:registry && next build",
     "dev": "next dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

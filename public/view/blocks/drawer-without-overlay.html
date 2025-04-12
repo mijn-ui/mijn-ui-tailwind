@@ -1,46 +1,75 @@
-<!-- Screen State Component -->
-<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-2">
-  <div
-    class="flex w-full max-w-screen-sm flex-col items-center justify-center space-y-3 rounded-2xl bg-surface p-6 text-center shadow-lg sm:space-y-6">
-    <!-- Icon -->
-    <span class="text-muted-text">
-      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-        <path
-          d="M5.83301 28C5.83301 17.5505 5.83301 12.3258 9.07924 9.07956C12.3255 5.83333 17.5502 5.83333 27.9997 5.83333C38.4491 5.83333 43.6739 5.83333 46.9201 9.07956C50.1663 12.3258 50.1663 17.5505 50.1663 28C50.1663 38.4495 50.1663 43.6742 46.9201 46.9204C43.6739 50.1667 38.4491 50.1667 27.9997 50.1667C17.5502 50.1667 12.3255 50.1667 9.07924 46.9204C5.83301 43.6742 5.83301 38.4495 5.83301 28Z"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-        <path
-          d="M50.1663 31.5H38.6731C36.7082 31.5 35.1644 33.1417 34.2984 34.8769C33.3576 36.7619 31.4737 38.5 27.9997 38.5C24.5256 38.5 22.6417 36.7619 21.7009 34.8769C20.835 33.1417 19.2911 31.5 17.3262 31.5H5.83301"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linejoin="round"></path>
+<!--
+@title: Drawer Without Overlay
+@description: A panel that slides in from the side without dimming the background, allowing interaction with the main content.
+@iframe-height: 740
+-->
+
+<div class="bg-surfce fixed inset-y-0 left-0 z-50 flex w-80 flex-col bg-surface shadow-xl">
+  <!-- Drawer Header -->
+  <div class="flex flex-shrink-0 items-center justify-between p-4">
+    <!-- Drawer Title -->
+    <h3 class="text-lg font-medium">Drawer Title</h3>
+
+    <!-- Drawer Close  -->
+    <button
+      class="inline-flex size-9 items-center justify-center gap-1 rounded-full text-base text-muted-text transition-colors duration-200 ease-in-out hover:bg-accent hover:text-accent-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+      <svg
+        stroke="currentColor"
+        fill="none"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
       </svg>
-    </span>
 
-    <!-- Content -->
-    <div class="space-y-1">
-      <h3 class="text-lg font-medium text-main-text sm:text-xl">No files found</h3>
-      <p class="text-sm text-muted-text">Your search “design system” did not match any projects. Please try again.</p>
-    </div>
+      <p class="sr-only">Close Drawer</p>
+    </button>
+  </div>
 
-    <!-- Footer -->
-    <div class="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-center">
-      <button
-        class="mt-2 inline-flex h-9 items-center justify-center gap-1 rounded-md border border-main-border px-3 text-sm transition-colors duration-150 hover:bg-accent hover:text-accent-text active:brightness-95 sm:mt-0 sm:h-10">
-        Cancel
-      </button>
-      <button
-        class="inline-flex h-9 items-center justify-center gap-1 rounded-md bg-primary px-3 text-sm text-primary-text transition-colors duration-150 hover:bg-primary/90 active:brightness-95 sm:h-10">
-        Create New File
-      </button>
-    </div>
+  <!-- Drawer Content -->
+  <div class="h-full w-full overflow-y-auto p-4 pt-0">
+    <p>Drawer Content</p>
+    <p class="text-muted-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque asperiores porro hic, cum dolore mollitia
+      fuga quibusdam at sit distinctio cumque. Id distinctio illum perferendis cum qui numquam deserunt natus possimus!
+      Voluptas illo recusandae voluptatum eveniet aliquam quis harum quibusdam quo odio! Tempore, veniam ipsam facere
+      sapiente blanditiis maiores accusamus! Non at repudiandae ab laudantium deleniti fugiat nobis doloribus mollitia
+      possimus amet delectus quam quisquam et tempora necessitatibus, eveniet vero! Voluptatum officiis perspiciatis
+      voluptatem culpa cupiditate, possimus ut nesciunt atque laudantium aperiam quaerat vitae, a rem, voluptatibus ex!
+      Quibusdam fugiat porro nisi id? Voluptate error ipsa quia earum. Quas, corrupti nobis dolorum quis eveniet, illum
+      possimus consectetur sequi eum veniam commodi. Quo fuga earum porro vel quisquam ratione numquam. Tenetur dolore
+      temporibus inventore ipsa, minus consequatur, officia incidunt ab ea ex velit repellat? Sit reiciendis adipisci
+      sunt similique voluptates id necessitatibus praesentium commodi quas quibusdam, maxime aut? Eveniet, quisquam
+      numquam. Assumenda aliquam illo, laboriosam sed distinctio iste. Dolorum pariatur iure quisquam, laudantium
+      consectetur molestiae incidunt. Iusto illum ea repellendus ratione eum officia ipsam ex? Tempore modi, impedit
+      expedita, doloremque earum repudiandae culpa voluptatibus ex quod velit nesciunt laudantium? Nobis atque rem autem
+      illum ipsam magnam id itaque minima est.
+    </p>
+  </div>
+
+  <!-- Drawer Footer -->
+  <div class="flex w-full flex-shrink-0 items-center justify-end gap-2 p-4">
+    <!-- DrawerClose (Button Subtle Color Component) -->
+    <button
+      class="inline-flex h-10 items-center justify-center gap-1 rounded-md bg-default/40 px-3.5 text-sm text-default-text transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+      Close
+    </button>
+
+    <!-- DrawerClose (Button Primary Color Component) -->
+    <button
+      class="inline-flex h-10 items-center justify-center gap-1 rounded-md bg-primary px-3.5 text-sm text-primary-text transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
+      Save Changes
+    </button>
   </div>
 </div>
 
 <!-- Background Elements -->
-<div class="h-screen w-full overflow-y-hidden p-5">
+<div class="w-full p-5">
   <div class="mx-auto max-w-lg">
     <div role="status" class="my-7">
       <div class="mb-4 h-2.5 w-48 rounded-full bg-neutral-400 dark:bg-neutral-700"></div>

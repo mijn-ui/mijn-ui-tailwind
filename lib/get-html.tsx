@@ -1,6 +1,5 @@
 import path from "path"
 import fs from "fs"
-import { promises as fsPromises } from "fs"
 import HTMLReactParser from "html-react-parser/lib/index"
 
 export type FilePathOptions = {
@@ -73,35 +72,10 @@ export const getHTMLContent = (
 export const getSourceCode = (contentPath: string, options: FilePathOptions = {}): string => {
   try {
     const absolutePath = buildFilePath(contentPath, options)
-    return readFileSync(absolutePath)
+    const htmlString = readFileSync(absolutePath)
+    return htmlString.replace(/<!--\s*@.*?-->\s*(?=\S)/gs, "")
   } catch (error) {
     console.error(`Failed to load source code for path: ${contentPath}`, error)
     return `Error loading source code for ${contentPath}`
-  }
-}
-
-export type ViewMetaData = {
-  name: string
-  title: string
-  description: string
-  iframeHeight: number
-}
-
-export type ViewMetaDataType = Record<string, ViewMetaData>
-
-/**
- * Gets metadata for view pages
- *
- * @param metaPath - Path to the metadata JSON file
- * @returns Object containing view metadata
- */
-export async function getViewMetaData(metaPath: string = "/public/view/meta.json"): Promise<ViewMetaDataType> {
-  try {
-    const absolutePath = path.join(process.cwd(), metaPath)
-    const data = await fsPromises.readFile(absolutePath, "utf8")
-    return JSON.parse(data) as ViewMetaDataType
-  } catch (error) {
-    console.error(`Failed to load metadata from ${metaPath}:`, error)
-    return {}
   }
 }

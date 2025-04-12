@@ -1,11 +1,17 @@
+<!--
+@title: Form Drawer
+@description: A sliding panel containing a form for data entry or editing without navigating away from the current context.
+@iframe-height: 740
+-->
+
 <!-- Overlay -->
 <div class="fixed inset-0 z-40 bg-black/80"></div>
 
-<div class="bg-surfce fixed inset-y-0 right-0 z-50 flex w-80 flex-col bg-surface shadow-xl">
+<div class="bg-surfce fixed inset-y-0 left-0 z-50 flex w-80 flex-col bg-surface shadow-xl">
   <!-- Drawer Header -->
   <div class="flex flex-shrink-0 items-center justify-between p-4">
     <!-- Drawer Title -->
-    <h3 class="text-lg font-medium">Drawer Title</h3>
+    <h3 class="text-lg font-medium">Drawer With Form</h3>
 
     <!-- Drawer Close  -->
     <button
@@ -29,24 +35,52 @@
   </div>
 
   <!-- Drawer Content -->
-  <div class="h-full w-full overflow-y-auto p-4 pt-0">
-    <p>Drawer Content</p>
-    <p class="text-muted-text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque asperiores porro hic, cum dolore mollitia
-      fuga quibusdam at sit distinctio cumque. Id distinctio illum perferendis cum qui numquam deserunt natus possimus!
-      Voluptas illo recusandae voluptatum eveniet aliquam quis harum quibusdam quo odio! Tempore, veniam ipsam facere
-      sapiente blanditiis maiores accusamus! Non at repudiandae ab laudantium deleniti fugiat nobis doloribus mollitia
-      possimus amet delectus quam quisquam et tempora necessitatibus, eveniet vero! Voluptatum officiis perspiciatis
-      voluptatem culpa cupiditate, possimus ut nesciunt atque laudantium aperiam quaerat vitae, a rem, voluptatibus ex!
-      Quibusdam fugiat porro nisi id? Voluptate error ipsa quia earum. Quas, corrupti nobis dolorum quis eveniet, illum
-      possimus consectetur sequi eum veniam commodi. Quo fuga earum porro vel quisquam ratione numquam. Tenetur dolore
-      temporibus inventore ipsa, minus consequatur, officia incidunt ab ea ex velit repellat? Sit reiciendis adipisci
-      sunt similique voluptates id necessitatibus praesentium commodi quas quibusdam, maxime aut? Eveniet, quisquam
-      numquam. Assumenda aliquam illo, laboriosam sed distinctio iste. Dolorum pariatur iure quisquam, laudantium
-      consectetur molestiae incidunt. Iusto illum ea repellendus ratione eum officia ipsam ex? Tempore modi, impedit
-      expedita, doloremque earum repudiandae culpa voluptatibus ex quod velit nesciunt laudantium? Nobis atque rem autem
-      illum ipsam magnam id itaque minima est.
-    </p>
+  <div class="h-full w-full space-y-4 overflow-y-auto p-4 pt-0">
+    <p class="text-sm text-muted-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, quam?</p>
+
+    <div class="space-y-2">
+      <div class="flex flex-col items-start gap-2">
+        <!-- Input Component -->
+        <label for="firstname" class="text-sm font-medium">First name</label>
+        <div class="relative w-full">
+          <input
+            class="peer flex h-10 w-full rounded-md border border-input-border bg-main px-3 py-2 text-sm placeholder:text-muted-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
+            id="firstname"
+            placeholder="John" />
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start gap-2">
+        <!-- Input Component -->
+        <label for="lastname" class="text-sm font-medium">Last name</label>
+        <div class="relative w-full">
+          <input
+            class="peer flex h-10 w-full rounded-md border border-input-border bg-main px-3 py-2 text-sm placeholder:text-muted-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
+            id="lastname"
+            placeholder="Doe" />
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start gap-2">
+        <!-- Input Component -->
+        <label for="email" class="text-sm font-medium">Email</label>
+        <div class="relative w-full">
+          <input
+            class="peer flex h-10 w-full rounded-md border border-input-border bg-main px-3 py-2 text-sm placeholder:text-muted-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main"
+            id="email"
+            placeholder="johndoe@example.com" />
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start gap-2">
+        <!-- Input Component -->
+        <label for="message" class="text-sm font-medium">Your Message</label>
+        <!-- TextArea -->
+        <textarea
+          class="border-input disabled:opacity-disabled flex min-h-[80px] w-full rounded-md border bg-main px-3 py-2 text-sm placeholder:text-muted-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed"
+          placeholder="Please leave a comment..."></textarea>
+      </div>
+    </div>
   </div>
 
   <!-- Drawer Footer -->
@@ -60,7 +94,7 @@
     <!-- DrawerClose (Button Primary Color Component) -->
     <button
       class="inline-flex h-10 items-center justify-center gap-1 rounded-md bg-primary px-3.5 text-sm text-primary-text transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
-      Save Changes
+      Submit Form
     </button>
   </div>
 </div>
