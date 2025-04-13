@@ -5,13 +5,13 @@ import PreviewWrapper from "./preview-wrapper"
 import { viewRegistry } from "@/registry"
 
 type CodePreviewerProps = {
-  src: string
+  name: string
   tabs?: boolean
   hideCode?: boolean
 } & React.ComponentPropsWithoutRef<"div">
 
-const ComponentPreview = ({ src, hideCode = false, ...props }: CodePreviewerProps) => {
-  const component = viewRegistry[src]
+const ComponentPreview = ({ name, hideCode = false, ...props }: CodePreviewerProps) => {
+  const component = viewRegistry[name]
   const htmlContent = getHTMLContent(component?.filePath)
 
   return (

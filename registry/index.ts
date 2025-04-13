@@ -7,8 +7,8 @@
  * To update, run: npm run build:registry
  * 
  * Total components: 114
- * - Components: 99
- * - Views: 15
+ * - Components: 98
+ * - Views: 16
  */
 
 export type RegistryItem = {
@@ -371,11 +371,6 @@ export const viewRegistry: Record<string, RegistryItem> = {
     "filePath": "/public/components/input/input.html",
     "type": "component"
   },
-  "kanban": {
-    "name": "kanban",
-    "filePath": "/public/components/kanban/kanban.html",
-    "type": "component"
-  },
   "list-active": {
     "name": "list-active",
     "filePath": "/public/components/list/list-active.html",
@@ -570,6 +565,14 @@ export const viewRegistry: Record<string, RegistryItem> = {
     "type": "view",
     "title": "Gantt Chart",
     "description": "A project management tool that visualizes tasks and resources over time.",
+    "iframeHeight": 740
+  },
+  "kanban": {
+    "name": "kanban",
+    "filePath": "/public/view/blocks/kanban.html",
+    "type": "view",
+    "title": "",
+    "description": "",
     "iframeHeight": 740
   },
   "screen-state": {
