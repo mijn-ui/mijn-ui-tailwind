@@ -1,7 +1,8 @@
-import { getHTMLContent, getSourceCode } from "@/lib/get-html"
+import { getHTMLContent } from "@/lib/get-html"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
 import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock"
 import PreviewWrapper from "./preview-wrapper"
+import { viewRegistry } from "@/registry"
 
 type CodePreviewerProps = {
   src: string
@@ -10,8 +11,8 @@ type CodePreviewerProps = {
 } & React.ComponentPropsWithoutRef<"div">
 
 const ComponentPreview = ({ src, hideCode = false, ...props }: CodePreviewerProps) => {
-  const htmlComponent = getHTMLContent(src, { basePath: "/public/components/" })
-  const code = getSourceCode(src, { basePath: "/public/components/" })
+  const component = viewRegistry[src]
+  const htmlContent = getHTMLContent(component?.filePath)
 
   return (
     <Tabs defaultValue="preview">
@@ -27,12 +28,12 @@ const ComponentPreview = ({ src, hideCode = false, ...props }: CodePreviewerProp
       )}
 
       <TabsContent value="preview">
-        <PreviewWrapper {...props}>{htmlComponent}</PreviewWrapper>
+        <PreviewWrapper {...props} dangerouslySetInnerHTML={{ __html: htmlContent }} />
       </TabsContent>
 
       {!hideCode && (
         <TabsContent value="code">
-          <DynamicCodeBlock lang="html" code={code} />
+          <DynamicCodeBlock lang="html" code={htmlContent} />
         </TabsContent>
       )}
     </Tabs>
