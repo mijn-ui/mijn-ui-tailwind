@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "echo 'Running fumadocs-mdx...' && fumadocs-mdx || echo 'fumadocs-mdx failed'",
     "build:registry": "tsx --tsconfig ./tsconfig.json ./scripts/build-registry.mts",
-    "build": "build:registry && next build",
+    "build": "pnpm build:registry && next build",
     "dev": "next dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
