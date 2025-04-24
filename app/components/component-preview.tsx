@@ -2,7 +2,7 @@ import { getHTMLContent } from "@/lib/get-html"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
 import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock"
 import PreviewWrapper from "./preview-wrapper"
-import { viewRegistry } from "@/registry"
+import { Registry } from "@/registry"
 
 type CodePreviewerProps = {
   name: string
@@ -11,7 +11,7 @@ type CodePreviewerProps = {
 } & React.ComponentPropsWithoutRef<"div">
 
 const ComponentPreview = ({ name, hideCode = false, ...props }: CodePreviewerProps) => {
-  const component = viewRegistry[name]
+  const component = Registry[name]
   const htmlContent = getHTMLContent(component?.filePath)
 
   return (

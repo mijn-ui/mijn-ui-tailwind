@@ -195,7 +195,7 @@ export type RegistryItem = {
   iframeHeight?: number
 }
 
-export const viewRegistry: Record<string, RegistryItem> = ${JSON.stringify(registry, null, 2)};
+export const Registry: Record<string, RegistryItem> = ${JSON.stringify(registry, null, 2)};
 `
 
   const registryDir = path.join(process.cwd(), "registry")

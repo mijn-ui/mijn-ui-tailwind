@@ -1,13 +1,13 @@
 import React from "react"
 import { LuLoaderCircle } from "react-icons/lu"
 import { notFound } from "next/navigation"
-import { viewRegistry } from "@/registry"
+import { Registry } from "@/registry"
 import { getHTMLContent } from "@/lib/get-html"
 
 export async function generateMetadata({ params }: { params: Promise<{ name: string }> }) {
   const { name } = await params
 
-  const view = viewRegistry[name]
+  const view = Registry[name]
 
   if (!view || view.type === "component") return {}
 
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ name: str
 
 export async function generateStaticParams() {
   // Filter only the view items (not components) from the registry
-  const viewItems = Object.entries(viewRegistry)
+  const viewItems = Object.entries(Registry)
     .filter(([_, item]) => item.type === "view")
     .map(([name]) => ({ name }))
 
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 const ViewPage = async ({ params }: { params: Promise<{ name: string }> }) => {
   const { name } = await params
 
-  const view = viewRegistry[name]
+  const view = Registry[name]
 
   if (!view || view.type !== "view") {
     return notFound()

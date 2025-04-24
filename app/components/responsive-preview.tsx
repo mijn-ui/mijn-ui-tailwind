@@ -5,7 +5,7 @@ import Link from "next/link"
 import { LuExternalLink } from "react-icons/lu"
 import { Button } from "./ui/button"
 import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock"
-import { viewRegistry } from "@/registry"
+import { Registry } from "@/registry"
 import { getHTMLContent } from "@/lib/get-html"
 
 type ResponsivePreviewProps = {
@@ -14,7 +14,7 @@ type ResponsivePreviewProps = {
 }
 
 const ResponsivePreview = async ({ name, hideCode }: ResponsivePreviewProps) => {
-  const template = viewRegistry[name]
+  const template = Registry[name]
 
   if (!template || template.type !== "view") {
     return (
@@ -32,8 +32,8 @@ const ResponsivePreview = async ({ name, hideCode }: ResponsivePreviewProps) => 
         </div>
         <div>
           Available views:{" "}
-          {Object.entries(viewRegistry).filter(([_, item]) => item.type === "view").length > 0
-            ? Object.entries(viewRegistry)
+          {Object.entries(Registry).filter(([_, item]) => item.type === "view").length > 0
+            ? Object.entries(Registry)
                 .filter(([_, item]) => item.type === "view")
                 .map(([key]) => (
                   <code key={key} className="mx-1 rounded bg-muted px-[0.2rem] py-0 font-mono text-xs">

@@ -20,7 +20,7 @@ export type RegistryItem = {
   iframeHeight?: number
 }
 
-export const viewRegistry: Record<string, RegistryItem> = {
+export const Registry: Record<string, RegistryItem> = {
   "accordion-active": {
     "name": "accordion-active",
     "filePath": "/public/components/accordion/accordion-active.html",
