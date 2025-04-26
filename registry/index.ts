@@ -266,16 +266,6 @@ export const Registry: Record<string, RegistryItem> = {
     "filePath": "/public/components/checkbox/checkbox.html",
     "type": "component"
   },
-  "combo-box-structure": {
-    "name": "combo-box-structure",
-    "filePath": "/public/components/combo-box/combo-box-structure.html",
-    "type": "component"
-  },
-  "combo-box": {
-    "name": "combo-box",
-    "filePath": "/public/components/combo-box/combo-box.html",
-    "type": "component"
-  },
   "date-picker-range-structure": {
     "name": "date-picker-range-structure",
     "filePath": "/public/components/date-picker/date-picker-range-structure.html",
@@ -421,6 +411,16 @@ export const Registry: Record<string, RegistryItem> = {
     "filePath": "/public/components/radio-group/radio-group.html",
     "type": "component"
   },
+  "select-structure": {
+    "name": "select-structure",
+    "filePath": "/public/components/select/select-structure.html",
+    "type": "component"
+  },
+  "select": {
+    "name": "select",
+    "filePath": "/public/components/select/select.html",
+    "type": "component"
+  },
   "separator-structure": {
     "name": "separator-structure",
     "filePath": "/public/components/separator/separator-structure.html",
@@ -476,16 +476,6 @@ export const Registry: Record<string, RegistryItem> = {
     "filePath": "/public/components/switch/switch.html",
     "type": "component"
   },
-  "tab-bar-structure": {
-    "name": "tab-bar-structure",
-    "filePath": "/public/components/tab-bar/tab-bar-structure.html",
-    "type": "component"
-  },
-  "tab-bar": {
-    "name": "tab-bar",
-    "filePath": "/public/components/tab-bar/tab-bar.html",
-    "type": "component"
-  },
   "table-customer": {
     "name": "table-customer",
     "filePath": "/public/components/table/table-customer.html",
@@ -504,6 +494,16 @@ export const Registry: Record<string, RegistryItem> = {
   "table": {
     "name": "table",
     "filePath": "/public/components/table/table.html",
+    "type": "component"
+  },
+  "tabs-structure": {
+    "name": "tabs-structure",
+    "filePath": "/public/components/tabs/tabs-structure.html",
+    "type": "component"
+  },
+  "tabs": {
+    "name": "tabs",
+    "filePath": "/public/components/tabs/tabs.html",
     "type": "component"
   },
   "textarea": {
