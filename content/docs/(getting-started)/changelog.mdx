@@ -1,0 +1,45 @@
+---
+title: ChangeLog
+description: Latest updates and announcements.
+---
+
+## April 26,2025
+
+1. `ComboBox` has been renamed to `Select`.
+2. `TabBar` has been renamed to `Tabs`.
+3. **Select Component Changes:**
+  - **Trigger Height Adjustment:**
+    
+     Removed `padding-top` and `padding-bottom` from the `SelectTrigger`. Replaced with a fixed `height` instead for better alignment and consistency.
+    
+  - **Responsiveness Removal:**
+    
+    Removed responsive (`sm:px-3` `sm:py-2`) properties from the Select components.
+    
+    **Reason:** Having different styles across screen sizes can create confusion for users, especially since they are consuming the component through an npm package and might not be aware of the underlying responsive behavior. To provide a more consistent and predictable experience, the Select components are now non-responsive by default.
+    
+  - **Added Size Variations:**
+    
+    Introduced `small`, `medium`, and `large` size options for the Select components:
+    
+    | Size | Trigger Classes | Notes |
+    | --- | --- | --- |
+    | Small | `h-8 px-3 w-44` (or `w-full`) |  |
+    | Medium | `h-10 px-4 w-44` (or `w-full`) | Default option |
+    | Large | `h-11 px-4 w-44` (or `w-full`) |  |
+    
+  - **Select Content Behavior:**
+    
+    `SelectContent` remains unchanged across all sizes. However, its width will match the `SelectTrigger` width.
+    
+    (e.g., if `SelectTrigger` uses `w-44`, then `SelectContent` will also have `w-44`.)
+    
+  - **Select Item Sizes:**
+    
+    Adjusted padding based on size:
+    
+    | Size | Item Classes |
+    | --- | --- |
+    | Small | `w-full px-3 py-1.5` |
+    | Medium | `w-full px-4 py-2` |
+    | Large | `w-full px-4 py-2.5` |

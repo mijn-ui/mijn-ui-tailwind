@@ -163,3 +163,7 @@
 .custom_scroll_bar::-webkit-scrollbar-corner {
   @apply bg-transparent;
 }
+
+table {
+  margin: 0 !important;
+}
