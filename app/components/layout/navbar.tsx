@@ -26,7 +26,7 @@ const Navbar = () => {
             MijnUI
           </Link>
           <Badge size="xs" variant="subtle" color="primary">
-            v0.0.1
+            v0.1.0
           </Badge>
         </div>
 
