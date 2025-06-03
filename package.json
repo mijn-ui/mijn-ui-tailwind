@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./input.css -o ./output.css --watch",
-    "build": "tailwindcss -i ./input.css -o ./output.min.css --minify",
-    "prettier": "prettier --check \"components/**/*.html\"",
-    "prettier:fix": "prettier --write \"components/**/*.html\"",
+    "dev": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./css/output.min.css --minify",
+    "prettier": "prettier --check \"./components/**/*.html\"",
+    "prettier:fix": "prettier --write \"./components/**/*.html\"",
     "prepare": "husky"
   },
   "keywords": [],
@@ -26,7 +26,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11"
   },
   "lint-staged": {
-    "**/*.{ts,tsx,md}": [
+    "**/*.html": [
       "pnpm prettier:fix",
       "pnpm build"
     ]
