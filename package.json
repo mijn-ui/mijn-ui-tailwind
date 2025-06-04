@@ -1,34 +1,53 @@
 {
-  "name": "mijn-ui-tailwind",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
-    "build": "tailwindcss -i ./css/input.css -o ./css/output.min.css --minify",
-    "prettier": "prettier --check \"./components/**/*.html\"",
-    "prettier:fix": "prettier --write \"./components/**/*.html\"",
-    "prepare": "husky"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.6.3",
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.4",
-    "tailwindcss": "^3.4.17",
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.11"
-  },
-  "lint-staged": {
-    "**/*.html": [
-      "pnpm prettier:fix",
-      "pnpm build"
-    ]
-  }
+	"name": "mijn-ui-tailwind",
+	"version": "0.1.0",
+	"description": "A comprehensive Tailwind CSS component library with live previews",
+	"author": "Htet Aung Lin",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"prepare": "husky",
+		"build:css": "tailwindcss -i ./css/input.css -o ./css/output.css",
+		"build:css:min": "tailwindcss -i ./css/input.css -o ./css/output.min.css --minify",
+		"build:previews": "tsx scripts/generate-previews.mts",
+		"build": "npm run build:css && npm run build:css:min && npm run build:previews",
+		"dev": "concurrently --kill-others --names css,html,server -c green,cyan,magenta \"tailwindcss -i ./css/input.css -o ./css/output.css --watch\" \"chokidar \\\"components/**/*.html\\\" \\\"scripts/**/*.mts\\\" -c \\\"tsx scripts/generate-previews.mts\\\"\" \"live-server . --port=3000 --no-browser --wait=500\"",
+		"serve": "live-server . --port=3000",
+		"clean": "rm -rf previews/ index.html css/output.css css/output.min.css",
+		"prettier:check": "prettier --check .",
+		"prettier:fix": "prettier --write ."
+	},
+	"keywords": [
+		"tailwindcss",
+		"components",
+		"ui",
+		"design-system"
+	],
+	"packageManager": "pnpm@10.6.3",
+	"devDependencies": {
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"autoprefixer": "^10.4.21",
+		"live-server": "^1.2.2",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.5.2",
+		"postcss": "^8.5.4",
+		"prettier": "^3.5.3",
+		"prettier-plugin-tailwindcss": "^0.6.12",
+		"tailwindcss": "^3.4.17",
+		"tsx": "^4.19.4",
+		"typescript": "^5.8.3",
+		"chokidar-cli": "^3.0.0",
+		"concurrently": "^8.2.0"
+	},
+	"lint-staged": {
+		"components/**/*.html": [
+			"prettier --write",
+			"pnpm run build:previews"
+		],
+		"css/input.css": [
+			"pnpm run prettier:check",
+			"pnpm run build:css"
+		]
+	}
 }
