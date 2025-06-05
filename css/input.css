@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--background: 0, 0%, 100%;
+	--background-alt: 0, 0%, 100%;
+	--foreground: 240, 8%, 4%;
+	--border: 240, 10%, 83%;
+
+	--secondary: 240, 10%, 95%;
+	--secondary-foreground: 240, 8%, 27%;
+	--border-secondary: 240, 10%, 89%;
+
+	--muted: 240, 10%, 89%;
+	--muted-alt: 240, 10%, 89%;
+	--muted-foreground: 240, 8%, 48%;
+	--border-muted: 240, 10%, 95%;
+
+	--inverse: 240, 8%, 4%;
+	--inverse-foreground: 0, 0%, 100%;
+	--border-inverse: 240, 8%, 27%;
+
+	--primary: 18, 90%, 48%;
+	--primary-subtle: 18, 100%, 92%;
+	--primary-foreground: 18, 100%, 97%;
+	--primary-foreground-subtle: 18, 75%, 28%;
+	--primary-emphasis: 18, 90%, 40%;
+	--border-primary: 18, 90%, 40%;
+	--border-primary-subtle: 18, 100%, 86%;
+
+	--success: 144, 76%, 36%;
+	--success-subtle: 144, 100%, 94%;
+	--success-foreground: 144, 100%, 99%;
+	--success-foreground-subtle: 144, 76%, 16%;
+	--success-emphasis: 144, 76%, 30%;
+	--border-success: 144, 76%, 30%;
+	--border-success-subtle: 144, 76%, 81%;
+
+	--warning-foreground: 42, 100%, 97%;
+	--warning-foreground-subtle: 42, 75%, 28%;
+	--warning-emphasis: 42, 90%, 32%;
+	--warning: 42, 90%, 40%;
+	--warning-subtle: 42, 100%, 90%;
+	--border-warning: 42, 90%, 32%;
+	--border-warning-subtle: 42, 100%, 86%;
+
+	--danger: 0, 83%, 51%;
+	--danger-subtle: 0, 100%, 94%;
+	--danger-foreground: 0, 100%, 99%;
+	--danger-foreground-subtle: 0, 76%, 25%;
+	--danger-emphasis: 0, 83%, 41%;
+	--border-danger: 0, 83%, 41%;
+	--border-danger-subtle: 0, 100%, 86%;
+}
+
+.dark {
+	--background: 240, 8%, 4%;
+	--background-alt: 240, 8%, 16%;
+	--foreground: 0, 0%, 100%;
+	--border: 240, 8%, 27%;
+
+	--secondary: 240, 8%, 10%;
+	--secondary-foreground: 240, 10%, 83%;
+	--border-secondary: 240, 8%, 16%;
+
+	--muted: 240, 8%, 16%;
+	--muted-alt: 240, 8%, 4%;
+	--muted-foreground: 240, 8%, 48%;
+	--border-muted: 240, 8%, 10%;
+
+	--inverse: 0, 0%, 100%;
+	--inverse-foreground: 240, 8%, 4%;
+	--border-inverse: 240, 10%, 83%;
+
+	--primary: 18, 100%, 61%;
+	--primary-subtle: 18, 75%, 28%;
+	--primary-foreground: 18, 75%, 14%;
+	--primary-foreground-subtle: 18, 100%, 92%;
+	--primary-emphasis: 18, 100%, 61%;
+	--border-primary: 18, 100%, 61%;
+	--border-primary-subtle: 18, 75%, 30%;
+
+	--success: 144, 76%, 61%;
+	--success-subtle: 144, 76%, 16%;
+	--success-foreground: 144, 76%, 2%;
+	--success-foreground-subtle: 144, 100%, 94%;
+	--success-emphasis: 144, 76%, 61%;
+	--border-success: 144, 76%, 61%;
+	--border-success-subtle: 144, 76%, 40%;
+
+	--warning-foreground: 42, 75%, 14%;
+	--warning-foreground-subtle: 42, 100%, 90%;
+	--warning-emphasis: 42, 100%, 49%;
+	--warning: 42, 100%, 49%;
+	--warning-subtle: 42, 75%, 28%;
+	--border-warning: 42, 100%, 49%;
+	--border-warning-subtle: 42, 75%, 20%;
+
+	--danger: 0, 83%, 73%;
+	--danger-subtle: 0, 76%, 25%;
+	--danger-foreground: 0, 76%, 4%;
+	--danger-foreground-subtle: 0, 100%, 94%;
+	--danger-emphasis: 0, 83%, 73%;
+	--border-danger: 0, 83%, 73%;
+	--border-danger-subtle: 0, 76%, 30%;
+}

@@ -1,8 +1,65 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./components/**/*.html", "./index.html", "./previews/**/*.html"],
+	content: [
+		"./components/**/*.html",
+		"./index.html",
+		"./previews/**/*.html",
+		"./scripts/generate-previews.mts",
+	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				background: "hsl(var(--background))",
+				"background-alt": "hsl(var(--background-alt))",
+				foreground: "hsl(var(--foreground))",
+				border: "hsl(var(--border))",
+
+				secondary: "hsl(var(--secondary))",
+				"secondary-foreground": "hsl(var(--secondary-foreground))",
+				"border-secondary": "hsl(var(--border-secondary))",
+
+				muted: "hsl(var(--muted))",
+				"muted-alt": "hsl(var(--muted-alt))",
+				"muted-foreground": "hsl(var(--muted-foreground))",
+				"border-muted": "hsl(var(--border-muted))",
+
+				inverse: "hsl(var(--inverse))",
+				"inverse-foreground": "hsl(var(--inverse-foreground))",
+				"border-inverse": "hsl(var(--border-inverse))",
+
+				primary: "hsl(var(--primary))",
+				"primary-subtle": "hsl(var(--primary-subtle))",
+				"primary-foreground": "hsl(var(--primary-foreground))",
+				"primary-foreground-subtle": "hsl(var(--primary-foreground-subtle))",
+				"primary-emphasis": "hsl(var(--primary-emphasis))",
+				"border-primary": "hsl(var(--border-primary))",
+				"border-primary-subtle": "hsl(var(--border-primary-subtle))",
+
+				success: "hsl(var(--success))",
+				"success-subtle": "hsl(var(--success-subtle))",
+				"success-foreground": "hsl(var(--success-foreground))",
+				"success-foreground-subtle": "hsl(var(--success-foreground-subtle))",
+				"success-emphasis": "hsl(var(--success-emphasis))",
+				"border-success": "hsl(var(--border-success))",
+				"border-success-subtle": "hsl(var(--border-success-subtle))",
+
+				"warning-foreground": "hsl(var(--warning-foreground))",
+				"warning-foreground-subtle": "hsl(var(--warning-foreground-subtle))",
+				"warning-emphasis": "hsl(var(--warning-emphasis))",
+				warning: "hsl(var(--warning))",
+				"warning-subtle": "hsl(var(--warning-subtle))",
+				"border-warning": "hsl(var(--border-warning))",
+				"border-warning-subtle": "hsl(var(--border-warning-subtle))",
+
+				danger: "hsl(var(--danger))",
+				"danger-subtle": "hsl(var(--danger-subtle))",
+				"danger-foreground": "hsl(var(--danger-foreground))",
+				"danger-foreground-subtle": "hsl(var(--danger-foreground-subtle))",
+				"danger-emphasis": "hsl(var(--danger-emphasis))",
+				"border-danger": "hsl(var(--border-danger))",
+				"border-danger-subtle": "hsl(var(--border-danger-subtle))",
+			},
+		},
 	},
 	plugins: [],
 };

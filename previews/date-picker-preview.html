@@ -8,142 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Date-picker Components</title>
   <link href="../css/output.css" rel="stylesheet">
-  <style>
-    .component-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-    }
-    @media (max-width: 768px) {
-      .component-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-background min-h-screen">
+  <nav class="sticky top-0 left-0 bg-background w-full">
+    <div class="container mx-auto py-4">
+      <a href="../index.html" class="text-primary-emphasis hover:brightness-90 font-medium">← Back to All Components</a>
+    </div>
+  </nav>
   <div class="container mx-auto px-6 py-8">
     <div class="mb-8">
-      <nav class="mb-4">
-        <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back to All Components</a>
-      </nav>
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">Date-picker Components</h1>
-      <p class="text-gray-600">Preview of all date-picker component variations</p>
+      <h1 class="text-4xl font-bold text-foreground mb-2">Date-picker Components</h1>
+      <p class="text-secondary-foreground">Preview of all date-picker component variations</p>
     </div>
     
-    <div class="component-grid">
+    <div class="space-y-8">
       
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">date-picker-range-structure</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">date-picker-range</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
-          <!-- DateRangePickerWrapper -->
-<div class="relative"></div>
-
-<!-- DateRangePickerTrigger -->
-<button
-	class="border-main-border text-default-text hover:bg-accent hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main inline-flex h-10 items-center justify-center gap-2 rounded-md border bg-transparent px-3.5 text-sm transition-colors duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
-	<svg
-		stroke="currentColor"
-		fill="none"
-		stroke-width="2"
-		viewBox="0 0 24 24"
-		stroke-linecap="round"
-		stroke-linejoin="round"
-		height="1em"
-		width="1em"
-		xmlns="http://www.w3.org/2000/svg">
-		<path d="M8 2v4"></path>
-		<path d="M16 2v4"></path>
-		<rect width="18" height="18" x="3" y="4" rx="2"></rect>
-		<path d="M3 10h18"></path>
-	</svg>
-</button>
-
-<!-- DateRangePickerContent -->
-<div
-	class="border-main-border bg-surface absolute left-1/2 z-10 mt-2 -translate-x-1/2 rounded-lg border p-3"></div>
-
-<!-- DateRangePicker -->
-<div
-	class="custom_scroll_bar relative flex max-h-96 flex-col gap-2 overflow-y-scroll sm:flex-row md:max-h-none md:overflow-auto"></div>
-
-<!-- ----------------------------- DateRangePickerNav ----------------------------- -->
-<nav></nav>
-
-<!-- DateRangePicker PreviousButton -->
-<button
-	class="border-main-border hover:bg-accent hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main absolute left-1 top-0 z-10 inline-flex h-7 w-7 items-center justify-center gap-1 rounded-md border bg-transparent p-0 text-sm opacity-50 transition-colors duration-150 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-	aria-label="Go to the Previous Month"></button>
-
-<!-- DateRangePicker NextButton -->
-<button
-	class="border-main-border hover:bg-accent hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main absolute right-1 top-0 z-10 inline-flex h-7 w-7 items-center justify-center gap-1 rounded-md border bg-transparent p-0 text-sm opacity-50 transition-colors duration-150 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-	aria-label="Go to the Next Month"></button>
-
-<!-- ---------------------------- DateRangePickerMain ----------------------------- -->
-<div></div>
-
-<!-- DateRangePickerTitle -->
-<div class="flex items-center justify-center py-2">
-	<span class="text-sm font-medium" role="status">Date Range Title</span>
-</div>
-
-<!-- DateRangePickerTable -->
-<table role="grid" class="w-full border-collapse space-y-1"></table>
-
-<!-- DateRangePickerTableHeader -->
-<thead></thead>
-
-<!-- DateRangePickerTableHeaderRow -->
-<tr class="flex"></tr>
-
-<!-- DateRangePickerTableHeaderCell -->
-<th
-	class="text-muted-text flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal"></th>
-
-<!-- DateRangePickerTableBody -->
-<tbody></tbody>
-
-<!-- DateRangePickerTableRow -->
-<tr class="mt-0.5 flex w-full"></tr>
-
-<!-- DateRangePickerTableCell/Default -->
-<td></td>
-
-<!-- DateRangePickerTableCell/InRange -->
-<td class="bg-accent"></td>
-
-<!-- DateRangePickerTableCell/DayOutside Right -->
-<td class="bg-accent rounded-r-md"></td>
-
-<!-- DateRangePickerTableCell/DayOutside Left -->
-<td class="bg-accent rounded-l-md"></td>
-
-<!-- DateRangePickerTableCellButton/Default -->
-<button
-	class="hover:bg-accent hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"></button>
-
-<!-- DateRangePickerTableCellButton/Muted -->
-<button
-	class="text-muted-text text-muted-text/80 hover:bg-accent focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"></button>
-
-<!-- DateRangePickerTableCellButton/Selected -->
-<button
-	class="bg-primary text-primary-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"></button>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">date-picker-range</h3>
-      </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <!-- DateRangePicker -->
 <div class="relative">
 	<!-- DateRangePickerTrigger -->
@@ -937,12 +822,12 @@
     </div>
   
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">date-picker</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">date-picker</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <!-- DatePicker -->
 <div class="relative">
 	<!-- DatePickerInput -->

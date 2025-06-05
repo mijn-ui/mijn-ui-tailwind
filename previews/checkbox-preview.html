@@ -8,75 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkbox Components</title>
   <link href="../css/output.css" rel="stylesheet">
-  <style>
-    .component-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-    }
-    @media (max-width: 768px) {
-      .component-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-background min-h-screen">
+  <nav class="sticky top-0 left-0 bg-background w-full">
+    <div class="container mx-auto py-4">
+      <a href="../index.html" class="text-primary-emphasis hover:brightness-90 font-medium">← Back to All Components</a>
+    </div>
+  </nav>
   <div class="container mx-auto px-6 py-8">
     <div class="mb-8">
-      <nav class="mb-4">
-        <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back to All Components</a>
-      </nav>
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">Checkbox Components</h1>
-      <p class="text-gray-600">Preview of all checkbox component variations</p>
+      <h1 class="text-4xl font-bold text-foreground mb-2">Checkbox Components</h1>
+      <p class="text-secondary-foreground">Preview of all checkbox component variations</p>
     </div>
     
-    <div class="component-grid">
+    <div class="space-y-8">
       
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">checkbox-structure</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">checkbox-with-indeterminate</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
-          <!-- Checkbox -->
-<div class="inline-flex items-center gap-2">
-	<label for="checkbox" class="relative flex items-center">
-		<input
-			id="checkbox"
-			class="before:content[''] border-main-text checked:border-primary checked:bg-primary peer relative h-5 w-5 cursor-pointer appearance-none rounded-[4px] border transition-all"
-			type="checkbox"
-			checked />
-		<span
-			class="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 opacity-0 transition-opacity peer-checked:opacity-100">
-			<svg
-				class="text-primary-text"
-				stroke="currentColor"
-				fill="none"
-				stroke-width="2"
-				viewBox="0 0 24 24"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="h-4 w-4"
-				height="1em"
-				width="1em"
-				xmlns="http://www.w3.org/2000/svg">
-				<polyline points="20 6 9 17 4 12"></polyline>
-			</svg>
-		</span>
-	</label>
-</div>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">checkbox-with-indeterminate</h3>
-      </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div>
 	<div class="flex items-center gap-2">
 		<div class="inline-flex items-center gap-2">
@@ -122,12 +74,12 @@
     </div>
   
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">checkbox</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">checkbox</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div>
 	<div class="flex items-center gap-2">
 		<div class="inline-flex items-center gap-2">

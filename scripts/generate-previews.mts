@@ -67,12 +67,12 @@ function generateComponentPreview(folderNode: ComponentNode): string {
 			const componentName = component.name.replace(".html", "");
 
 			return `
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">${componentName}</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">${componentName}</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           ${content}
         </div>
       </div>
@@ -91,30 +91,20 @@ function generateComponentPreview(folderNode: ComponentNode): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${folderNode.name.charAt(0).toUpperCase() + folderNode.name.slice(1)} Components</title>
   <link href="${OUTPUT_CSS_PATH}" rel="stylesheet">
-  <style>
-    .component-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-    }
-    @media (max-width: 768px) {
-      .component-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-background min-h-screen">
+  <nav class="sticky top-0 left-0 bg-background w-full">
+    <div class="container mx-auto py-4">
+      <a href="../index.html" class="text-primary-emphasis hover:brightness-90 font-medium">← Back to All Components</a>
+    </div>
+  </nav>
   <div class="container mx-auto px-6 py-8">
     <div class="mb-8">
-      <nav class="mb-4">
-        <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back to All Components</a>
-      </nav>
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">${folderNode.name.charAt(0).toUpperCase() + folderNode.name.slice(1)} Components</h1>
-      <p class="text-gray-600">Preview of all ${folderNode.name} component variations</p>
+      <h1 class="text-4xl font-bold text-foreground mb-2">${folderNode.name.charAt(0).toUpperCase() + folderNode.name.slice(1)} Components</h1>
+      <p class="text-secondary-foreground">Preview of all ${folderNode.name} component variations</p>
     </div>
     
-    <div class="component-grid">
+    <div class="space-y-8">
       ${componentCards}
     </div>
   </div>
@@ -136,20 +126,20 @@ function generateMainIndex(tree: ComponentNode[]): string {
 
 			return `
       <a href="previews/${previewFileName}" class="block group">
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200 overflow-hidden">
+        <div class="bg-background-alt rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-border overflow-hidden">
           <div class="p-6">
             <div class="flex items-center justify-between mb-4">
-              <h3 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+              <h3 class="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                 ${folder.name.charAt(0).toUpperCase() + folder.name.slice(1)}
               </h3>
-              <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">
+              <span class="bg-primary-subtle text-primary-emphasis text-sm font-medium px-2.5 py-0.5 rounded-full">
                 ${componentCount} components
               </span>
             </div>
-            <p class="text-gray-600 mb-4">
+            <p class="text-secondary-foreground mb-4">
               View all ${folder.name} component variations and examples
             </p>
-            <div class="flex items-center text-blue-600 group-hover:text-blue-800 font-medium">
+            <div class="flex items-center text-primary-emphasis group-hover:brightness-90 font-medium">
               View Components
               <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -185,29 +175,29 @@ function generateMainIndex(tree: ComponentNode[]): string {
     }
   </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-background min-h-screen">
   <div class="container mx-auto px-6 py-8">
     <div class="text-center mb-12">
-      <h1 class="text-5xl font-bold text-gray-900 mb-4">Tailwind Component Library</h1>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      <h1 class="text-5xl font-bold text-foreground mb-4">Tailwind Component Library</h1>
+      <p class="text-xl text-secondary-foreground max-w-2xl mx-auto">
         A comprehensive collection of reusable Tailwind CSS components. Click on any category to explore the available components.
       </p>
     </div>
     
     <div class="mb-8">
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div class="bg-background-alt rounded-lg shadow-sm border border-border p-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
           <div>
-            <div class="text-3xl font-bold text-blue-600">${folders.length}</div>
-            <div class="text-gray-600">Component Categories</div>
+            <div class="text-3xl font-bold text-primary">${folders.length}</div>
+            <div class="text-secondary-foreground">Component Categories</div>
           </div>
           <div>
-            <div class="text-3xl font-bold text-green-600">${folders.reduce((total, folder) => total + (folder.type === "folder" ? folder.children.filter((child) => child.type === "file").length : 0), 0)}</div>
-            <div class="text-gray-600">Total Components</div>
+            <div class="text-3xl font-bold text-success">${folders.reduce((total, folder) => total + (folder.type === "folder" ? folder.children.filter((child) => child.type === "file").length : 0), 0)}</div>
+            <div class="text-secondary-foreground">Total Components</div>
           </div>
           <div>
-            <div class="text-3xl font-bold text-purple-600">100%</div>
-            <div class="text-gray-600">Tailwind CSS</div>
+            <div class="text-3xl font-bold text-blue-600">100%</div>
+            <div class="text-secondary-foreground">Tailwind CSS</div>
           </div>
         </div>
       </div>
@@ -218,8 +208,8 @@ function generateMainIndex(tree: ComponentNode[]): string {
     </div>
     
     <div class="mt-12 text-center">
-      <p class="text-gray-500">
-        Built with ❤️ using by Htet Aung Lin
+      <p class="text-muted-foreground">
+        Built with ❤️ by Htet Aung Lin
       </p>
     </div>
   </div>

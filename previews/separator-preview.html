@@ -8,53 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Separator Components</title>
   <link href="../css/output.css" rel="stylesheet">
-  <style>
-    .component-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-    }
-    @media (max-width: 768px) {
-      .component-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-background min-h-screen">
+  <nav class="sticky top-0 left-0 bg-background w-full">
+    <div class="container mx-auto py-4">
+      <a href="../index.html" class="text-primary-emphasis hover:brightness-90 font-medium">← Back to All Components</a>
+    </div>
+  </nav>
   <div class="container mx-auto px-6 py-8">
     <div class="mb-8">
-      <nav class="mb-4">
-        <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back to All Components</a>
-      </nav>
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">Separator Components</h1>
-      <p class="text-gray-600">Preview of all separator component variations</p>
+      <h1 class="text-4xl font-bold text-foreground mb-2">Separator Components</h1>
+      <p class="text-secondary-foreground">Preview of all separator component variations</p>
     </div>
     
-    <div class="component-grid">
+    <div class="space-y-8">
       
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">separator-structure</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">separator</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
-          <!-- Separator Horizontal -->
-<div data-orientation="horizontal" class="bg-main-border h-px w-full"></div>
-
-<!-- Separator Vertical -->
-<div data-orientation="vertical" class="bg-main-border h-full w-px"></div>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">separator</h3>
-      </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div>
 	<div class="space-y-1">
 		<p class="text-muted-text text-sm">An open-source UI component library.</p>

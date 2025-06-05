@@ -8,37 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dropdown-menu Components</title>
   <link href="../css/output.css" rel="stylesheet">
-  <style>
-    .component-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-    }
-    @media (max-width: 768px) {
-      .component-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-background min-h-screen">
+  <nav class="sticky top-0 left-0 bg-background w-full">
+    <div class="container mx-auto py-4">
+      <a href="../index.html" class="text-primary-emphasis hover:brightness-90 font-medium">← Back to All Components</a>
+    </div>
+  </nav>
   <div class="container mx-auto px-6 py-8">
     <div class="mb-8">
-      <nav class="mb-4">
-        <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back to All Components</a>
-      </nav>
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">Dropdown-menu Components</h1>
-      <p class="text-gray-600">Preview of all dropdown-menu component variations</p>
+      <h1 class="text-4xl font-bold text-foreground mb-2">Dropdown-menu Components</h1>
+      <p class="text-secondary-foreground">Preview of all dropdown-menu component variations</p>
     </div>
     
-    <div class="component-grid">
+    <div class="space-y-8">
       
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">dropdown-menu-checkbox</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">dropdown-menu-checkbox</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div class="relative">
 	<!-- DropdownMenuTrigger(Button Component) -->
 	<button
@@ -106,12 +96,12 @@
     </div>
   
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">dropdown-menu-icons</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">dropdown-menu-icons</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div class="relative">
 	<!-- DropdownMenuTrigger(Button Component) -->
 	<button
@@ -214,12 +204,12 @@
     </div>
   
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">dropdown-menu-radio</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">dropdown-menu-radio</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div class="relative">
 	<!-- DropdownMenuTrigger(Button Component) -->
 	<button
@@ -294,144 +284,12 @@
     </div>
   
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">dropdown-menu-structure</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">dropdown-menu-sub</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
-          <!-- DropdownMenu -->
-<div class="relative"></div>
-
-<!-- DropdownMenuTrigger(Button Component) -->
-<button
-	class="bg-default text-default-text focus-visible:ring-ring focus-visible:ring-offset-main inline-flex h-10 items-center justify-center gap-1 rounded-md px-3.5 text-sm transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
-	DropdownMenuTrigger
-</button>
-
-<!-- DropdownMenuContent -->
-<div
-	class="border-main-border bg-surface text-surface-text absolute left-1/2 z-10 mt-2 w-60 -translate-x-1/2 overflow-hidden rounded-md border p-1"></div>
-
-<!-- DropdownMenuSub -->
-<div class="relative"></div>
-
-<!-- DropdownMenuSubTrigger -->
-<button
-	class="hover:bg-accent hover:text-accent-text flex select-none items-center gap-2 rounded-md px-3 py-1.5 text-sm outline-none transition-colors sm:px-4 sm:py-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
-	<span class="flex-1">DropdownMenuSubTrigger</span>
-
-	<svg
-		stroke="currentColor"
-		fill="none"
-		stroke-width="2"
-		viewBox="0 0 24 24"
-		stroke-linecap="round"
-		stroke-linejoin="round"
-		height="1em"
-		width="1em"
-		xmlns="http://www.w3.org/2000/svg">
-		<polyline points="9 18 15 12 9 6"></polyline>
-	</svg>
-</button>
-
-<!-- DropdownMenuSubContent -->
-<div
-	class="border-main-border bg-surface text-surface-text absolute left-0 z-10 w-40 rounded-md border p-1 sm:left-auto sm:right-0 sm:top-0 sm:translate-x-40"></div>
-
-<!-- DropdownMenuSeparator -->
-<div class="bg-main-border -mx-1 my-1 h-px"></div>
-
-<!-- DropdownMenuItem -->
-<a
-	class="hover:bg-accent hover:text-accent-text relative flex select-none items-center gap-2 rounded-md px-3 py-1.5 text-sm outline-none transition-colors sm:px-4 sm:py-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
-	DropdownMenuItem
-</a>
-
-<!-- DropdownMenuItem/Active -->
-<a
-	class="bg-primary/20 text-primary relative flex select-none items-center gap-2 rounded-md px-3 py-1.5 text-sm outline-none transition-colors sm:px-4 sm:py-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
-	DropdownMenuItem/Active
-</a>
-
-<!-- DropdownMenuCheckboxItem -->
-<button
-	class="hover:bg-accent hover:text-accent-text relative flex w-full select-none items-center rounded-md py-2 pl-4 pr-10 text-sm outline-none transition-colors disabled:pointer-events-none disabled:opacity-50"></button>
-
-<!-- DropdownMenuCheckboxItem/Active -->
-<button
-	role="menuitemcheckbox"
-	aria-checked="true"
-	class="bg-primary/20 text-primary relative flex w-full select-none items-center rounded-md py-2 pl-4 pr-10 text-sm outline-none transition-colors disabled:opacity-50">
-	<!-- DropdownMenuCheckbox -->
-	<span class="absolute right-4 flex h-3.5 w-3.5 items-center justify-center">
-		<span data-state="checked">
-			<svg
-				stroke="currentColor"
-				fill="none"
-				stroke-width="2"
-				viewBox="0 0 24 24"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				height="1em"
-				width="1em"
-				xmlns="http://www.w3.org/2000/svg"
-				class="size-4">
-				<path d="M20 6L9 17l-5-5"></path>
-			</svg>
-		</span>
-	</span>
-
-	DropdownMenuCheckboxItem/Active
-</button>
-
-<!-- DropdownMenuRadioItem -->
-<button
-	class="hover:bg-accent hover:text-accent-text relative flex w-full select-none items-center rounded-md py-2 pl-4 pr-10 text-sm outline-none transition-colors disabled:opacity-50">
-	DropdownMenuRadioItem
-</button>
-
-<!-- DropdownMenuRadioItems/Active -->
-<button
-	class="bg-primary/20 text-primary relative flex w-full select-none items-center rounded-md py-2 pl-4 pr-10 text-sm outline-none transition-colors disabled:opacity-50">
-	<span class="absolute right-4 flex h-3.5 w-3.5 items-center justify-center">
-		<span class="inline-flex items-center">
-			<label
-				class="relative flex cursor-pointer items-center rounded-full p-0"
-				for="radio-button-example">
-				<input
-					type="radio"
-					class="before:content[''] border-main-text text-primary checked:border-primary checked:before:bg-primary peer relative h-3.5 w-3.5 cursor-pointer appearance-none rounded-full border transition-all before:absolute before:left-2/4 before:top-2/4 before:block before:h-12 before:w-12 before:-translate-x-2/4 before:-translate-y-2/4 before:rounded-full before:opacity-0 before:transition-opacity hover:before:opacity-0"
-					id="radio-button-example"
-					name="example"
-					checked />
-				<span
-					class="text-primary pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 opacity-0 transition-opacity peer-checked:opacity-100">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-2 w-2"
-						viewBox="0 0 16 16"
-						fill="currentColor">
-						<circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
-					</svg>
-				</span>
-			</label>
-		</span>
-	</span>
-
-	DropdownMenuRadioItems/Active
-</button>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">dropdown-menu-sub</h3>
-      </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div class="relative">
 	<!-- DropdownMenuTrigger(Button Component) -->
 	<button
@@ -570,12 +428,12 @@
     </div>
   
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">dropdown-menu</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">dropdown-menu</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div class="relative">
 	<!-- DropdownMenuTrigger(Button Component) -->
 	<button

@@ -8,95 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pagination Components</title>
   <link href="../css/output.css" rel="stylesheet">
-  <style>
-    .component-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-    }
-    @media (max-width: 768px) {
-      .component-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-background min-h-screen">
+  <nav class="sticky top-0 left-0 bg-background w-full">
+    <div class="container mx-auto py-4">
+      <a href="../index.html" class="text-primary-emphasis hover:brightness-90 font-medium">← Back to All Components</a>
+    </div>
+  </nav>
   <div class="container mx-auto px-6 py-8">
     <div class="mb-8">
-      <nav class="mb-4">
-        <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back to All Components</a>
-      </nav>
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">Pagination Components</h1>
-      <p class="text-gray-600">Preview of all pagination component variations</p>
+      <h1 class="text-4xl font-bold text-foreground mb-2">Pagination Components</h1>
+      <p class="text-secondary-foreground">Preview of all pagination component variations</p>
     </div>
     
-    <div class="component-grid">
+    <div class="space-y-8">
       
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">pagination-structure</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">pagination</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
-          <!-- Pagination -->
-<nav class="flex items-center gap-2"></nav>
-
-<!-- Pagination Button -->
-<button
-	class="hover:bg-accent hover:text-accent-text/80 inline-flex h-9 items-center justify-center gap-1 rounded-md px-3 py-2 pl-2.5 text-sm font-medium sm:h-10">
-	Pagination Button
-</button>
-
-<!-- Pagination Ellipsis -->
-<span aria-hidden="true" class="flex h-9 w-9 items-center justify-center">
-	<svg
-		class="h-3.5 w-3.5 sm:h-4 sm:w-4"
-		stroke="currentColor"
-		fill="none"
-		stroke-width="2"
-		viewBox="0 0 24 24"
-		stroke-linecap="round"
-		stroke-linejoin="round"
-		class="h-4 w-4"
-		height="1em"
-		width="1em"
-		xmlns="http://www.w3.org/2000/svg">
-		<circle cx="12" cy="12" r="1"></circle>
-		<circle cx="19" cy="12" r="1"></circle>
-		<circle cx="5" cy="12" r="1"></circle>
-	</svg>
-</span>
-
-<!-- Pagination Number Wrapper -->
-<ul class="flex flex-row items-center gap-1"></ul>
-
-<!-- Pagination Number -->
-<li>
-	<button
-		class="hover:bg-accent hover:text-accent-text/80 inline-flex h-9 w-9 items-center justify-center gap-1 rounded-md text-sm sm:h-10 sm:w-10">
-		3
-	</button>
-</li>
-
-<!-- Pagination Number Active -->
-<li>
-	<button
-		class="bg-surface hover:bg-accent hover:text-accent-text/80 inline-flex h-9 w-9 items-center justify-center gap-1 rounded-md border text-sm sm:h-10 sm:w-10">
-		4
-	</button>
-</li>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">pagination</h3>
-      </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <nav class="flex items-center gap-2">
 	<!-- /* ----------------------------- Previous Button ---------------------------- */ -->
 	<button

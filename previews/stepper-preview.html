@@ -8,37 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stepper Components</title>
   <link href="../css/output.css" rel="stylesheet">
-  <style>
-    .component-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-    }
-    @media (max-width: 768px) {
-      .component-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-background min-h-screen">
+  <nav class="sticky top-0 left-0 bg-background w-full">
+    <div class="container mx-auto py-4">
+      <a href="../index.html" class="text-primary-emphasis hover:brightness-90 font-medium">← Back to All Components</a>
+    </div>
+  </nav>
   <div class="container mx-auto px-6 py-8">
     <div class="mb-8">
-      <nav class="mb-4">
-        <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back to All Components</a>
-      </nav>
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">Stepper Components</h1>
-      <p class="text-gray-600">Preview of all stepper component variations</p>
+      <h1 class="text-4xl font-bold text-foreground mb-2">Stepper Components</h1>
+      <p class="text-secondary-foreground">Preview of all stepper component variations</p>
     </div>
     
-    <div class="component-grid">
+    <div class="space-y-8">
       
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">stepper-active</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">stepper-active</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div
 	class="flex w-full max-w-xl flex-col items-center justify-center gap-2 sm:flex-row">
 	<!-- /* ------------------------------- Active Step ------------------------------ */ -->
@@ -87,53 +77,12 @@
     </div>
   
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">stepper-structure</h3>
+    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
+      <div class="px-6 py-3 border-b bg-secondary border-border">
+        <h3 class="text-lg font-medium text-secondary-foreground">stepper</h3>
       </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
-          <!-- Stepper -->
-<div
-	class="flex w-full max-w-xl flex-col items-center justify-center gap-2 sm:flex-row"></div>
-
-<!-- Stepper Item -->
-<div class="flex w-full flex-col items-center gap-2 sm:flex-row"></div>
-
-<!-- Stepper Item Button/Active -->
-<button
-	class="border-main-text bg-main-text text-main flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border text-sm">
-	1
-</button>
-
-<!-- Stepper Item Button/Current -->
-<button
-	class="border-main-text bg-surface flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border text-sm">
-	2
-</button>
-
-<!-- Stepper Item Button/Default -->
-<button
-	class="text-muted-text flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border text-sm">
-	3
-</button>
-
-<!-- Stepper Item Separator/Default -->
-<div class="bg-main-border h-8 w-px sm:h-px sm:w-full sm:max-w-40"></div>
-
-<!-- Stepper Item Separator/Active -->
-<div class="bg-main-text h-8 w-px sm:h-px sm:w-full sm:max-w-40"></div>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-      <div class="bg-gray-50 px-6 py-3 border-b border-gray-200">
-        <h3 class="text-lg font-semibold text-gray-800">stepper</h3>
-      </div>
-      <div class="p-8 bg-white">
-        <div class="flex items-center justify-center min-h-[120px] bg-gray-50 rounded-lg p-6">
+      <div class="p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
           <div
 	class="flex w-full max-w-xl flex-col items-center justify-center gap-2 sm:flex-row">
 	<!-- /* ------------------------------ Current Step ------------------------------ */ -->
