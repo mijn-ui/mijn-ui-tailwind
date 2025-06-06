@@ -9,6 +9,30 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			borderRadius: {
+				"2xs": "var(--radius-2xs)",
+				xs: "var(--radius-xs)",
+				sm: "var(--radius-sm)",
+				base: "var(--radius-base)",
+				lg: "var(--radius-lg)",
+				xl: "var(--radius-xl)",
+				"2xl": "var(--radius-2xl)",
+				full: "var(--radius-full)",
+			},
+			opacity: {
+				active: "var(--active-opacity)",
+				hover: "var(--hover-opacity)",
+				disabled: "var(--disabled-opacity)",
+			},
+			boxShadow: {
+				xs: "var(--shadow-xs)",
+				sm: "var(--shadow-sm)",
+				md: "var(--shadow-md)",
+				lg: "var(--shadow-lg)",
+				xl: "var(--shadow-xl)",
+				"2xl": "var(--shadow-2xl)",
+				"3xl": "var(--shadow-3xl)",
+			},
 			colors: {
 				background: "hsl(var(--background))",
 				"background-alt": "hsl(var(--background-alt))",

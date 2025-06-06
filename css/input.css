@@ -55,6 +55,31 @@
 		--danger-emphasis: 0, 83%, 41%;
 		--border-danger: 0, 83%, 41%;
 		--border-danger-subtle: 0, 100%, 86%;
+
+		--radius-2xs: 0.125rem; /* 2px */
+		--radius-xs: 0.25rem; /* 4px */
+		--radius-sm: 0.375rem; /* 6px */
+		--radius-base: 0.5rem; /* 8px */
+		--radius-lg: 0.75rem; /* 12px */
+		--radius-xl: 1rem; /* 16px */
+		--radius-2xl: 1.25rem; /* 20px */
+		--radius-full: 9999px;
+
+		--active-opacity: 0.75;
+		--hover-opacity: 0.85;
+		--disabled-opacity: 0.95;
+
+		--shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.05);
+		--shadow-sm:
+			0 1px 3px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06);
+		--shadow-md:
+			0 4px 8px rgba(16, 24, 40, 0.1), 0 2px 4px rgba(16, 24, 40, 0.06);
+		--shadow-lg:
+			0 12px 16px rgba(16, 24, 40, 0.08), 0 4px 6px rgba(16, 24, 40, 0.03);
+		--shadow-xl:
+			0 20px 24px rgba(16, 24, 40, 0.08), 0 8px 8px rgba(16, 24, 40, 0.03);
+		--shadow-2xl: 0 24px 48px rgba(16, 24, 40, 0.18);
+		--shadow-3xl: 0 32px 64px rgba(16, 24, 40, 0.14);
 	}
 
 	.dark {
@@ -107,6 +132,10 @@
 		--danger-emphasis: 0, 83%, 73%;
 		--border-danger: 0, 83%, 73%;
 		--border-danger-subtle: 0, 76%, 30%;
+
+		--active-opacity: 0.9;
+		--hover-opacity: 0.95;
+		--disabled-opacity: 0.5;
 	}
 
 	* {

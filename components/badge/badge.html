@@ -1,4 +1,141 @@
-<div
-	class="bg-default text-default-text hover:bg-accent hover:text-accent-text focus:ring-ring inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium shadow-sm transition-colors focus:outline-none focus:ring-2">
-	Badge
+<div class="flex flex-wrap items-center gap-2">
+	<!-- Badge Primary -->
+	<button
+		class="flex items-center rounded-sm bg-primary px-1 py-0.5 text-primary-foreground duration-200 ease-in-out hover:opacity-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+		<span class="px-1 text-xs font-semibold">Active</span>
+
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 384 512"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg"
+			class="size-3">
+			<path
+				d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+		</svg>
+	</button>
+
+	<!-- Badge Primary Subtle -->
+	<button
+		class="flex items-center rounded-sm border border-border-primary-subtle bg-primary-subtle px-1 py-0.5 text-primary-foreground-subtle duration-200 ease-in-out hover:opacity-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-subtle focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 448 512"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg"
+			class="size-3">
+			<path
+				d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"></path>
+		</svg>
+
+		<span class="px-1 text-xs font-semibold">Pending</span>
+
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 384 512"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg"
+			class="size-3">
+			<path
+				d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+		</svg>
+	</button>
+
+	<!-- Badge Outlined -->
+	<button
+		class="flex items-center rounded-sm border bg-background-alt px-1 py-0.5 text-foreground duration-200 ease-in-out hover:opacity-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 448 512"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg"
+			class="size-3 text-secondary-foreground">
+			<path
+				d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"></path>
+		</svg>
+
+		<span class="px-1 text-xs font-semibold">Draft</span>
+
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 384 512"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg"
+			class="size-3 text-secondary-foreground">
+			<path
+				d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+		</svg>
+	</button>
+
+	<!-- Badge Success -->
+	<button
+		class="flex items-center rounded-sm bg-success px-1 py-0.5 text-success-foreground duration-200 ease-in-out hover:opacity-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-success focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+		<span class="px-1 text-xs font-semibold">Completed</span>
+
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 384 512"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg"
+			class="size-3">
+			<path
+				d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+		</svg>
+	</button>
+
+	<!-- Badge Warning -->
+	<button
+		class="flex items-center rounded-sm bg-warning px-1 py-0.5 text-warning-foreground duration-200 ease-in-out hover:opacity-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warning focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+		<span class="px-1 text-xs font-semibold">In progress</span>
+
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 384 512"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg"
+			class="size-3">
+			<path
+				d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+		</svg>
+	</button>
+
+	<!-- Badge Danger -->
+	<button
+		class="flex items-center rounded-sm bg-danger px-1 py-0.5 text-danger-foreground duration-200 ease-in-out hover:opacity-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+		<span class="px-1 text-xs font-semibold">Failed</span>
+
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 384 512"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg"
+			class="size-3">
+			<path
+				d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+		</svg>
+	</button>
 </div>
