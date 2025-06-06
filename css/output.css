@@ -557,48 +557,48 @@ video {
 }
 
 :root {
-  --background: 0, 0%, 100%;
-  --background-alt: 0, 0%, 100%;
-  --foreground: 240, 8%, 4%;
-  --border: 240, 10%, 83%;
-  --secondary: 240, 10%, 95%;
-  --secondary-foreground: 240, 8%, 27%;
-  --border-secondary: 240, 10%, 89%;
-  --muted: 240, 10%, 89%;
-  --muted-alt: 240, 10%, 89%;
-  --muted-foreground: 240, 8%, 48%;
-  --border-muted: 240, 10%, 95%;
-  --inverse: 240, 8%, 4%;
-  --inverse-foreground: 0, 0%, 100%;
-  --border-inverse: 240, 8%, 27%;
-  --primary: 18, 90%, 48%;
-  --primary-subtle: 18, 100%, 92%;
-  --primary-foreground: 18, 100%, 97%;
-  --primary-foreground-subtle: 18, 75%, 28%;
-  --primary-emphasis: 18, 90%, 40%;
-  --border-primary: 18, 90%, 40%;
-  --border-primary-subtle: 18, 100%, 86%;
-  --success: 144, 76%, 36%;
-  --success-subtle: 144, 100%, 94%;
-  --success-foreground: 144, 100%, 99%;
-  --success-foreground-subtle: 144, 76%, 16%;
-  --success-emphasis: 144, 76%, 30%;
-  --border-success: 144, 76%, 30%;
-  --border-success-subtle: 144, 76%, 81%;
-  --warning-foreground: 42, 100%, 97%;
-  --warning-foreground-subtle: 42, 75%, 28%;
-  --warning-emphasis: 42, 90%, 32%;
-  --warning: 42, 90%, 40%;
-  --warning-subtle: 42, 100%, 90%;
-  --border-warning: 42, 90%, 32%;
-  --border-warning-subtle: 42, 100%, 86%;
-  --danger: 0, 83%, 51%;
-  --danger-subtle: 0, 100%, 94%;
-  --danger-foreground: 0, 100%, 99%;
-  --danger-foreground-subtle: 0, 76%, 25%;
-  --danger-emphasis: 0, 83%, 41%;
-  --border-danger: 0, 83%, 41%;
-  --border-danger-subtle: 0, 100%, 86%;
+  --background: 0 0 100%;
+  --background-alt: 0 0 100%;
+  --foreground: 240 10% 4%;
+  --border: 240 5% 84%;
+  --muted: 240 6% 90%;
+  --muted-alt: 240 6% 90%;
+  --muted-foreground: 240 4% 46%;
+  --border-muted: 240 5% 96%;
+  --inverse: 240 10% 4%;
+  --inverse-foreground: 0 0 98%;
+  --border-inverse: 240 5% 26%;
+  --primary: 21 90% 48%;
+  --primary-foreground: 20 100% 96%;
+  --primary-subtle: 20 100% 92%;
+  --primary-foreground-subtle: 20 75% 28%;
+  --primary-emphasis: 20 88% 40%;
+  --border-primary: 20 88% 40%;
+  --border-primary-subtle: 21 98% 83%;
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 240 5% 26%;
+  --border-secondary: 240 6% 90%;
+  --success: 142 76% 36%;
+  --success-foreground: 143 76% 97%;
+  --success-subtle: 143 84% 93%;
+  --success-foreground-subtle: 142 61% 20%;
+  --success-emphasis: 142 72% 29%;
+  --border-success: 142 72% 29%;
+  --border-success-subtle: 142 79% 85%;
+  --warning: 41 96% 40%;
+  --warning-foreground: 41 92% 95%;
+  --warning-subtle: 41 97% 88%;
+  --warning-foreground-subtle: 40 73% 26%;
+  --warning-emphasis: 41 92% 33%;
+  --border-warning: 41 92% 33%;
+  --border-warning-subtle: 41 98% 77%;
+  --danger: 0 72% 51%;
+  --danger-foreground: 0 86% 97%;
+  --danger-subtle: 0 93% 94%;
+  --danger-foreground-subtle: 0 63% 31%;
+  --danger-emphasis: 0 74% 42%;
+  --border-danger: 0 74% 42%;
+  --border-danger-subtle: 0 96% 89%;
   --radius-2xs: 0.125rem;
   /* 2px */
   --radius-xs: 0.25rem;
@@ -631,48 +631,48 @@ video {
 }
 
 .dark {
-  --background: 240, 8%, 4%;
-  --background-alt: 240, 8%, 16%;
-  --foreground: 0, 0%, 100%;
-  --border: 240, 8%, 27%;
-  --secondary: 240, 8%, 10%;
-  --secondary-foreground: 240, 10%, 83%;
-  --border-secondary: 240, 8%, 16%;
-  --muted: 240, 8%, 16%;
-  --muted-alt: 240, 8%, 4%;
-  --muted-foreground: 240, 8%, 48%;
-  --border-muted: 240, 8%, 10%;
-  --inverse: 0, 0%, 100%;
-  --inverse-foreground: 240, 8%, 4%;
-  --border-inverse: 240, 10%, 83%;
-  --primary: 18, 100%, 61%;
-  --primary-subtle: 18, 75%, 28%;
-  --primary-foreground: 18, 75%, 14%;
-  --primary-foreground-subtle: 18, 100%, 92%;
-  --primary-emphasis: 18, 100%, 61%;
-  --border-primary: 18, 100%, 61%;
-  --border-primary-subtle: 18, 75%, 30%;
-  --success: 144, 76%, 61%;
-  --success-subtle: 144, 76%, 16%;
-  --success-foreground: 144, 76%, 2%;
-  --success-foreground-subtle: 144, 100%, 94%;
-  --success-emphasis: 144, 76%, 61%;
-  --border-success: 144, 76%, 61%;
-  --border-success-subtle: 144, 76%, 40%;
-  --warning-foreground: 42, 75%, 14%;
-  --warning-foreground-subtle: 42, 100%, 90%;
-  --warning-emphasis: 42, 100%, 49%;
-  --warning: 42, 100%, 49%;
-  --warning-subtle: 42, 75%, 28%;
-  --border-warning: 42, 100%, 49%;
-  --border-warning-subtle: 42, 75%, 20%;
-  --danger: 0, 83%, 73%;
-  --danger-subtle: 0, 76%, 25%;
-  --danger-foreground: 0, 76%, 4%;
-  --danger-foreground-subtle: 0, 100%, 94%;
-  --danger-emphasis: 0, 83%, 73%;
-  --border-danger: 0, 83%, 73%;
-  --border-danger-subtle: 0, 76%, 30%;
+  --background: 240 10% 4%;
+  --background-alt: 240 4% 16%;
+  --foreground: 0 0 100%;
+  --border: 240 5% 26%;
+  --muted: 240 4% 16%;
+  --muted-alt: 240 10% 4%;
+  --muted-foreground: 240 4% 46%;
+  --border-muted: 240 6% 10%;
+  --inverse: 0 0 100%;
+  --inverse-foreground: 240 10% 4%;
+  --border-inverse: 240 5% 84%;
+  --primary: 20 96% 61%;
+  --primary-foreground: 21 81% 15%;
+  --primary-subtle: 20 75% 28%;
+  --primary-foreground-subtle: 20 100% 92%;
+  --primary-emphasis: 20 96% 61%;
+  --border-primary: 20 96% 61%;
+  --border-primary-subtle: 21 79% 34%;
+  --secondary: 240 6% 10%;
+  --secondary-foreground: 240 5% 84%;
+  --border-secondary: 240 4% 16%;
+  --success: 142 69% 58%;
+  --success-foreground: 142 80% 10%;
+  --success-subtle: 142 61% 20%;
+  --success-foreground-subtle: 143 84% 93%;
+  --success-emphasis: 142 69% 58%;
+  --border-success: 142 69% 58%;
+  --border-success-subtle: 142 64% 24%;
+  --warning: 41 96% 53%;
+  --warning-foreground: 41 83% 14%;
+  --warning-subtle: 40 73% 26%;
+  --warning-foreground-subtle: 41 97% 88%;
+  --warning-emphasis: 41 96% 53%;
+  --border-warning: 41 96% 53%;
+  --border-warning-subtle: 41 81% 29%;
+  --danger: 0 91% 71%;
+  --danger-foreground: 0 75% 15%;
+  --danger-subtle: 0 63% 31%;
+  --danger-foreground-subtle: 0 93% 94%;
+  --danger-emphasis: 0 91% 71%;
+  --border-danger: 0 91% 71%;
+  --border-danger-subtle: 0 70% 35%;
   --active-opacity: 0.9;
   --hover-opacity: 0.95;
   --disabled-opacity: 0.5;
@@ -905,26 +905,6 @@ body {
   aspect-ratio: 4/3;
 }
 
-.size-10{
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.size-11{
-  width: 2.75rem;
-  height: 2.75rem;
-}
-
-.size-12{
-  width: 3rem;
-  height: 3rem;
-}
-
-.size-3{
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
 .size-4{
   width: 1rem;
   height: 1rem;
@@ -933,16 +913,6 @@ body {
 .size-5{
   width: 1.25rem;
   height: 1.25rem;
-}
-
-.size-8{
-  width: 2rem;
-  height: 2rem;
-}
-
-.size-9{
-  width: 2.25rem;
-  height: 2.25rem;
 }
 
 .size-full{
@@ -1272,10 +1242,6 @@ body {
   flex-wrap: wrap;
 }
 
-.items-end{
-  align-items: flex-end;
-}
-
 .items-center{
   align-items: center;
 }
@@ -1290,10 +1256,6 @@ body {
 
 .justify-between{
   justify-content: space-between;
-}
-
-.gap-0{
-  gap: 0px;
 }
 
 .gap-1{
@@ -1452,14 +1414,6 @@ body {
   border-color: hsl(var(--danger));
 }
 
-.border-primary{
-  border-color: hsl(var(--primary));
-}
-
-.border-secondary{
-  border-color: hsl(var(--secondary));
-}
-
 .border-success{
   border-color: hsl(var(--success));
 }
@@ -1478,10 +1432,6 @@ body {
 
 .bg-danger{
   background-color: hsl(var(--danger));
-}
-
-.bg-danger\/20{
-  background-color: hsl(var(--danger) / 0.2);
 }
 
 .bg-green-500{
@@ -1514,16 +1464,8 @@ body {
   background-color: hsl(var(--secondary));
 }
 
-.bg-secondary\/20{
-  background-color: hsl(var(--secondary) / 0.2);
-}
-
 .bg-success{
   background-color: hsl(var(--success));
-}
-
-.bg-success\/20{
-  background-color: hsl(var(--success) / 0.2);
 }
 
 .bg-transparent{
@@ -1532,10 +1474,6 @@ body {
 
 .bg-warning{
   background-color: hsl(var(--warning));
-}
-
-.bg-warning\/20{
-  background-color: hsl(var(--warning) / 0.2);
 }
 
 .bg-yellow-500{
@@ -1589,11 +1527,6 @@ body {
   padding: 2rem;
 }
 
-.px-0{
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1627,11 +1560,6 @@ body {
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .px-6{
@@ -1850,10 +1778,6 @@ body {
   color: hsl(var(--primary-foreground-subtle));
 }
 
-.text-secondary{
-  color: hsl(var(--secondary));
-}
-
 .text-secondary-foreground{
   color: hsl(var(--secondary-foreground));
 }
@@ -1864,10 +1788,6 @@ body {
 
 .text-success-foreground{
   color: hsl(var(--success-foreground));
-}
-
-.text-warning{
-  color: hsl(var(--warning));
 }
 
 .text-warning-foreground{
@@ -2116,32 +2036,12 @@ body {
   background-color: hsl(var(--primary));
 }
 
-.hover\:bg-danger:hover{
-  background-color: hsl(var(--danger));
-}
-
 .hover\:bg-muted:hover{
   background-color: hsl(var(--muted));
 }
 
-.hover\:bg-primary:hover{
-  background-color: hsl(var(--primary));
-}
-
 .hover\:bg-primary\/90:hover{
   background-color: hsl(var(--primary) / 0.9);
-}
-
-.hover\:bg-secondary:hover{
-  background-color: hsl(var(--secondary));
-}
-
-.hover\:bg-success:hover{
-  background-color: hsl(var(--success));
-}
-
-.hover\:bg-warning:hover{
-  background-color: hsl(var(--warning));
 }
 
 .hover\:underline:hover{
@@ -2202,10 +2102,6 @@ body {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.focus-visible\:ring-border:focus-visible{
-  --tw-ring-color: hsl(var(--border));
 }
 
 .focus-visible\:ring-danger:focus-visible{
