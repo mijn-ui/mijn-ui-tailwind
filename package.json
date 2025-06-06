@@ -14,8 +14,8 @@
 		"dev": "concurrently --kill-others --names css,html,server -c green,cyan,magenta \"tailwindcss -i ./css/input.css -o ./css/output.css --watch\" \"chokidar \\\"components/**/*.html\\\" \\\"scripts/**/*.mts\\\" -c \\\"tsx scripts/generate-previews.mts\\\"\" \"live-server . --port=3000 --no-browser --wait=500\"",
 		"serve": "live-server . --port=3000",
 		"clean": "rm -rf previews/ index.html css/output.css css/output.min.css",
-		"prettier:check": "prettier --check .",
-		"prettier:fix": "prettier --write ."
+		"prettier:check": "prettier --check ./components",
+		"prettier:fix": "prettier --write ./components"
 	},
 	"keywords": [
 		"tailwindcss",
