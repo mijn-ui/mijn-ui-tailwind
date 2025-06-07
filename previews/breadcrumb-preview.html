@@ -51,45 +51,6 @@
       
     <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
       <div class="px-6 py-3 border-b bg-secondary border-border">
-        <h3 class="text-lg font-medium text-secondary-foreground">breadcrumb-items</h3>
-      </div>
-      <div class="p-8">
-        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
-          <!-- Breadcrumb -->
-<nav>
-	<!-- Breadcrumb List -->
-	<ol
-		class="text-muted-text flex flex-wrap items-center gap-1.5 break-words text-sm sm:gap-2.5">
-		<!-- Breadcrumb Item -->
-		<li class="inline-flex items-center gap-1.5">
-			<!-- Breadcrumb Link -->
-			<a class="hover:text-main-text transition-colors hover:underline" href="#"
-				>Home</a
-			>
-		</li>
-
-		<!-- Breadcrumb Item -->
-		<li class="inline-flex items-center gap-1.5">
-			<!-- Breadcrumb Link -->
-			<a class="hover:text-main-text transition-colors hover:underline" href="#"
-				>Components</a
-			>
-		</li>
-
-		<!-- Breadcrumb Item/Active Page -->
-		<li class="inline-flex items-center gap-1.5">
-			<!-- Breadcrumb Link/Active Link -->
-			<span class="text-main-text font-normal">Breadcrumb</span>
-		</li>
-	</ol>
-</nav>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="bg-background rounded-lg shadow-md overflow-hidden border border-border">
-      <div class="px-6 py-3 border-b bg-secondary border-border">
         <h3 class="text-lg font-medium text-secondary-foreground">breadcrumb</h3>
       </div>
       <div class="p-8">
@@ -97,62 +58,126 @@
           <!-- Breadcrumb -->
 <nav>
 	<!-- Breadcrumb List -->
-	<ol
-		class="text-muted-text flex flex-wrap items-center gap-1.5 break-words text-sm sm:gap-2.5">
+	<ol class="flex flex-wrap items-center gap-2 sm:gap-4">
 		<!-- Breadcrumb Item -->
-		<li class="inline-flex items-center gap-1.5">
+		<li
+			class="inline-flex items-center gap-4 text-sm text-muted-foreground transition duration-300 hover:text-secondary-foreground">
 			<!-- Breadcrumb Link -->
-			<a class="hover:text-main-text transition-colors hover:underline" href="#"
-				>Home</a
-			>
-		</li>
+			<a href="#"> Breadcrumb </a>
 
-		<!-- Breadcrumb Item/Separator -->
-		<li class="[&>svg]:h-3.5 [&>svg]:w-3.5">
+			<!-- Breadcrumb Item/Separator -->
 			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
+				width="6"
+				height="9"
+				viewBox="0 0 6 9"
 				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="lucide lucide-chevron-right">
-				<path d="m9 18 6-6-6-6"></path>
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M1.5 7.5L3.79289 5.20711C4.12623 4.87377 4.29289 4.70711 4.29289 4.5C4.29289 4.29289 4.12623 4.12623 3.79289 3.79289L1.5 1.5"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round" />
 			</svg>
 		</li>
 
 		<!-- Breadcrumb Item -->
-		<li class="inline-flex items-center gap-1.5">
-			<!-- Breadcrumb Link -->
-			<a class="hover:text-main-text transition-colors hover:underline" href="#"
-				>Components</a
-			>
-		</li>
-
-		<!-- Breadcrumb Item/Separator -->
-		<li class="[&>svg]:h-3.5 [&>svg]:w-3.5">
+		<li
+			class="inline-flex items-center gap-4 text-sm text-muted-foreground transition duration-300 hover:text-secondary-foreground">
 			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
+				width="12"
+				height="17"
+				viewBox="0 0 12 17"
 				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="lucide lucide-chevron-right">
-				<path d="m9 18 6-6-6-6"></path>
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M1.92898 14.0795C1.68371 14.0795 1.47325 13.9917 1.29759 13.8161C1.12192 13.6404 1.03409 13.4299 1.03409 13.1847C1.03409 12.9394 1.12192 12.7289 1.29759 12.5533C1.47325 12.3776 1.68371 12.2898 1.92898 12.2898C2.17424 12.2898 2.38471 12.3776 2.56037 12.5533C2.73603 12.7289 2.82386 12.9394 2.82386 13.1847C2.82386 13.3471 2.78243 13.4962 2.69957 13.6321C2.62003 13.768 2.51231 13.8774 2.37642 13.9602C2.24384 14.0398 2.0947 14.0795 1.92898 14.0795ZM5.78445 14.0795C5.53918 14.0795 5.32872 13.9917 5.15305 13.8161C4.97739 13.6404 4.88956 13.4299 4.88956 13.1847C4.88956 12.9394 4.97739 12.7289 5.15305 12.5533C5.32872 12.3776 5.53918 12.2898 5.78445 12.2898C6.02971 12.2898 6.24018 12.3776 6.41584 12.5533C6.5915 12.7289 6.67933 12.9394 6.67933 13.1847C6.67933 13.3471 6.6379 13.4962 6.55504 13.6321C6.4755 13.768 6.36778 13.8774 6.23189 13.9602C6.09931 14.0398 5.95017 14.0795 5.78445 14.0795ZM9.63991 14.0795C9.39465 14.0795 9.18419 13.9917 9.00852 13.8161C8.83286 13.6404 8.74503 13.4299 8.74503 13.1847C8.74503 12.9394 8.83286 12.7289 9.00852 12.5533C9.18419 12.3776 9.39465 12.2898 9.63991 12.2898C9.88518 12.2898 10.0956 12.3776 10.2713 12.5533C10.447 12.7289 10.5348 12.9394 10.5348 13.1847C10.5348 13.3471 10.4934 13.4962 10.4105 13.6321C10.331 13.768 10.2232 13.8774 10.0874 13.9602C9.95478 14.0398 9.80563 14.0795 9.63991 14.0795Z"
+					fill="currentColor" />
+			</svg>
+
+			<!-- Breadcrumb Item/Separator -->
+			<svg
+				width="6"
+				height="9"
+				viewBox="0 0 6 9"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M1.5 7.5L3.79289 5.20711C4.12623 4.87377 4.29289 4.70711 4.29289 4.5C4.29289 4.29289 4.12623 4.12623 3.79289 3.79289L1.5 1.5"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round" />
 			</svg>
 		</li>
 
-		<!-- Breadcrumb Item/Active Page -->
-		<li class="inline-flex items-center gap-1.5">
-			<!-- Breadcrumb Link/Active Link -->
-			<span class="text-main-text font-normal">Breadcrumb</span>
+		<li
+			class="inline-flex items-center gap-0.5 text-sm text-muted-foreground transition duration-300 hover:text-secondary-foreground">
+			<!-- Breadcrumb Dropdown -->
+			<a href="#">Documents</a>
+
+			<!-- Breadcrumb Item/Separator -->
+			<svg
+				width="14"
+				height="15"
+				viewBox="0 0 14 15"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M3.5 5.75L6.29289 8.54289C6.62623 8.87623 6.79289 9.04289 7 9.04289C7.20711 9.04289 7.37377 8.87623 7.70711 8.54289L10.5 5.75"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round" />
+			</svg>
+		</li>
+
+		<!-- Breadcrumb Item -->
+		<li
+			class="inline-flex items-center gap-4 text-sm text-muted-foreground transition duration-300 hover:text-secondary-foreground">
+			<!-- Breadcrumb Item/Separator -->
+			<svg
+				width="6"
+				height="9"
+				viewBox="0 0 6 9"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M1.5 7.5L3.79289 5.20711C4.12623 4.87377 4.29289 4.70711 4.29289 4.5C4.29289 4.29289 4.12623 4.12623 3.79289 3.79289L1.5 1.5"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round" />
+			</svg>
+		</li>
+
+		<!-- Breadcrumb Item -->
+		<li
+			class="inline-flex items-center gap-4 text-sm text-muted-foreground transition duration-300 hover:text-secondary-foreground">
+			<!-- Breadcrumb Link -->
+			<a href="#">Work</a>
+
+			<!-- Breadcrumb Item/Separator -->
+			<svg
+				width="6"
+				height="9"
+				viewBox="0 0 6 9"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M1.5 7.5L3.79289 5.20711C4.12623 4.87377 4.29289 4.70711 4.29289 4.5C4.29289 4.29289 4.12623 4.12623 3.79289 3.79289L1.5 1.5"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round" />
+			</svg>
+		</li>
+
+		<!-- Breadcrumb Item -->
+		<li
+			class="inline-flex items-center gap-4 text-sm font-medium text-secondary-foreground transition duration-300">
+			<!-- Breadcrumb Link -->
+			<a href="#">Q2_Report.pdf</a>
 		</li>
 	</ol>
 </nav>
