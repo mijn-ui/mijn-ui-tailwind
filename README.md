@@ -37,7 +37,7 @@ A comprehensive, organized collection of reusable Tailwind CSS components with l
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/mijn-ui/mijn-ui-tailwind
+   git clone --branch beta https://github.com/mijn-ui/mijn-ui-tailwind
    cd mijn-ui-tailwind
    ```
 
