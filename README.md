@@ -25,8 +25,7 @@ A comprehensive, organized collection of reusable Tailwind CSS components with l
 │ ├── button-preview.html
 │ └── ...
 ├── scripts/
-│ ├── generate-previews.mts # Preview generation script
-│ └── build.sh # Build script
+│ └── generate-previews.mts # Preview generation script
 ├── index.html # Main component library page (generated)
 └── package.json
 ```
