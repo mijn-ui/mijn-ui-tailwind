@@ -1489,6 +1489,10 @@ body {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
 }
 
+.bg-inverse{
+  background-color: hsl(var(--inverse));
+}
+
 .fill-current{
   fill: currentColor;
 }
@@ -1809,6 +1813,14 @@ body {
 
 .text-secondary{
   color: hsl(var(--secondary));
+}
+
+.text-success-emphasis{
+  color: hsl(var(--success-emphasis));
+}
+
+.text-warning-emphasis{
+  color: hsl(var(--warning-emphasis));
 }
 
 .opacity-0{
@@ -2173,6 +2185,10 @@ body {
   background-color: hsl(var(--muted) / 0.75);
 }
 
+.disabled\:text-muted-foreground:disabled{
+  color: hsl(var(--muted-foreground));
+}
+
 .disabled\:opacity-50:disabled{
   opacity: 0.5;
 }
@@ -2188,6 +2204,10 @@ body {
 
 .group:hover .group-hover\:text-primary{
   color: hsl(var(--primary));
+}
+
+.group:hover .group-hover\:text-foreground{
+  color: hsl(var(--foreground));
 }
 
 .group:hover .group-hover\:underline{

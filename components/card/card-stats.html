@@ -1,47 +1,30 @@
-<!-- Card -->
-<div class="bg-surface text-surface-text w-full max-w-sm rounded-lg shadow-sm">
-	<!-- Card Header -->
-	<div class="flex flex-col space-y-1.5 p-4">
-		<!-- Card Title -->
-		<h3 class="text-xl font-semibold leading-none tracking-tight">
-			Sales Overview
-		</h3>
-		<!-- Card Description -->
-		<p class="text-muted-text text-sm">
-			<span class="text-success">+20.1%</span> from last month
+<div
+	class="w-full max-w-44 space-y-3 rounded-lg border bg-background-alt p-5 shadow-sm sm:space-y-4 sm:p-6">
+	<span
+		class="inline-flex h-10 w-10 items-center justify-center gap-1 rounded-full bg-secondary p-0 text-sm hover:text-secondary-foreground hover:opacity-hover sm:h-12 sm:w-12">
+		<svg
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 512 512"
+			class="h-4 w-4 sm:h-5 sm:w-5"
+			height="1em"
+			width="1em"
+			xmlns="http://www.w3.org/2000/svg">
+			<path
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="32"
+				d="M80 176a16 16 0 0 0-16 16v216c0 30.24 25.76 56 56 56h272c30.24 0 56-24.51 56-54.75V192a16 16 0 0 0-16-16zm80 0v-32a96 96 0 0 1 96-96h0a96 96 0 0 1 96 96v32"></path>
+		</svg>
+	</span>
+	<div class="space-y-0.5 sm:space-y-1">
+		<p class="text-sm font-medium text-secondary-foreground">Total Sales</p>
+		<h3 class="text-xl font-medium sm:text-2xl">$75,890.75</h3>
+		<p class="text-xs font-normal text-muted-foreground">
+			<span class="text-success-emphasis">+128%</span>
+			from June
 		</p>
-	</div>
-	<!-- Card Content -->
-	<div class="p-4 pt-0">
-		<h3 class="text-2xl font-semibold leading-none tracking-tight">$42.5k</h3>
-	</div>
-	<!-- Card Footer -->
-	<div class="flex flex-col space-y-2 p-4 pt-0">
-		<div class="bg-main-text relative h-4 w-full overflow-hidden rounded-full">
-			<div
-				class="h-full bg-primary"
-				aria-valuemin="0"
-				aria-valuemax="100"
-				aria-valuenow="60"
-				role="progressbar"
-				style="transform: scaleX(0.6); transform-origin: left center"></div>
-		</div>
-		<div
-			class="text-muted-text flex w-full items-center justify-between px-1.5 text-sm">
-			<div class="flex items-center gap-1.5">
-				<div
-					class="bg-default text-muted-text focus:ring-ring inline-flex items-center rounded-full px-2 py-1 text-xs font-medium shadow-sm transition-colors focus:outline-none focus:ring-2">
-					62.2%
-				</div>
-				<p class="text-sm">Orders</p>
-			</div>
-			<div class="flex items-center gap-1.5">
-				<div
-					class="bg-default text-muted-text focus:ring-ring inline-flex items-center rounded-full px-2 py-1 text-xs font-medium shadow-sm transition-colors focus:outline-none focus:ring-2">
-					25.5%
-				</div>
-				<p class="text-sm">Visits</p>
-			</div>
-		</div>
 	</div>
 </div>

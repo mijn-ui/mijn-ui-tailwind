@@ -1,6 +1,6 @@
 <!-- Card -->
 <div
-	class="bg-surface text-surface-text w-full max-w-sm overflow-hidden rounded-lg shadow-sm">
+	class="w-full max-w-sm overflow-hidden rounded-lg border bg-background-alt shadow-sm">
 	<!-- Card Header -->
 	<div class="relative mb-4 flex aspect-[4/3] w-full flex-col space-y-1.5 p-0">
 		<img
@@ -18,7 +18,8 @@
 	<!-- Card Content -->
 	<div class="space-y-2 p-4 pt-0">
 		<!-- Card Title -->
-		<h3 class="text-2xl font-semibold leading-none tracking-tight">
+		<h3
+			class="text-2xl font-semibold leading-none tracking-tight text-foreground">
 			PUMA Smash v2 Sneakers
 		</h3>
 
@@ -89,31 +90,31 @@
 				stroke-width="2"
 				stroke-linecap="round"
 				stroke-linejoin="round"
-				class="size-4 text-gray-300">
+				class="size-4 text-muted-foreground">
 				<polygon
 					points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
 			</svg>
-			<span class="text-muted-text/70 ml-2 text-sm">(4.5)</span>
+			<span class="ml-2 text-sm text-secondary-foreground">(4.5)</span>
 		</div>
 
 		<!-- Card Description -->
-		<p class="text-muted-text text-sm">
+		<p class="text-sm text-secondary-foreground">
 			Classic tennis-inspired sneakers with a sleek design and everyday comfort.
 		</p>
 
 		<div class="mb-4 flex items-center justify-between">
 			<span class="text-3xl font-bold">$60</span>
-			<div
-				class="border-main-border text-default-text hover:bg-accent hover:text-accent-text focus:ring-ring inline-flex items-center rounded-full border bg-transparent px-2.5 py-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2">
-				In Stock
-			</div>
+			<span
+				class="flex items-center rounded-full border bg-background-alt px-1 py-0.5 text-foreground duration-200 ease-in-out hover:opacity-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				<span class="px-1 text-xs font-semibold">In Stock</span>
+			</span>
 		</div>
 	</div>
 	<!-- Card Footer -->
 	<div class="flex items-center p-4 pt-0">
 		<button
-			class="text-primary-text focus-visible:ring-ring focus-visible:ring-offset-main inline-flex h-10 w-full items-center justify-center gap-1 rounded-md bg-primary px-3.5 text-sm transition-colors duration-200 ease-in-out hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90 disabled:pointer-events-none disabled:opacity-50">
-			Add To Cart
+			class="flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-primary-foreground duration-200 ease-in-out hover:opacity-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+			<span class="px-1 text-sm font-medium">Add To Cart</span>
 		</button>
 	</div>
 </div>
