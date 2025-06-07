@@ -1,6 +1,84 @@
-<div class="relative w-80">
+<div class="relative flex w-80 flex-col gap-2">
+	<div class="flex w-full items-center justify-between">
+		<p class="text-sm font-medium">Username</p>
+
+		<svg
+			width="16"
+			height="16"
+			viewBox="0 0 16 16"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			class="text-muted-foreground">
+			<g clip-path="url(#clip0_4063_4015)">
+				<circle
+					cx="7.99992"
+					cy="8.00016"
+					r="6.66667"
+					stroke="currentColor"
+					stroke-width="1.5" />
+				<path
+					d="M6.6665 6.00033C6.6665 5.26395 7.26346 4.66699 7.99984 4.66699C8.73622 4.66699 9.33317 5.26395 9.33317 6.00033C9.33317 6.26576 9.25561 6.51308 9.12191 6.72085C8.72344 7.34011 7.99984 7.93061 7.99984 8.66699V9.00033"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round" />
+				<path
+					d="M7.9945 11.3335H8.00049"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round" />
+			</g>
+			<defs>
+				<clipPath id="clip0_4063_4015">
+					<rect width="16" height="16" fill="white" />
+				</clipPath>
+			</defs>
+		</svg>
+	</div>
 	<input
-		class="border-input-border bg-main placeholder:text-muted-text focus-visible:ring-ring focus-visible:ring-offset-main peer flex h-10 w-full rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+		class="focus-visible:ring-offset-main peer flex h-10 w-full rounded-md border border-border bg-secondary px-3 py-2 text-sm transition duration-300 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
 		id="example-1"
-		placeholder="Placeholder..." />
+		placeholder="Enter username" />
+
+	<div class="flex w-full items-center justify-between">
+		<p class="text-sm font-medium">Bio</p>
+
+		<svg
+			width="16"
+			height="16"
+			viewBox="0 0 16 16"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			class="text-muted-foreground">
+			<g clip-path="url(#clip0_4063_4015)">
+				<circle
+					cx="7.99992"
+					cy="8.00016"
+					r="6.66667"
+					stroke="currentColor"
+					stroke-width="1.5" />
+				<path
+					d="M6.6665 6.00033C6.6665 5.26395 7.26346 4.66699 7.99984 4.66699C8.73622 4.66699 9.33317 5.26395 9.33317 6.00033C9.33317 6.26576 9.25561 6.51308 9.12191 6.72085C8.72344 7.34011 7.99984 7.93061 7.99984 8.66699V9.00033"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round" />
+				<path
+					d="M7.9945 11.3335H8.00049"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round" />
+			</g>
+			<defs>
+				<clipPath id="clip0_4063_4015">
+					<rect width="16" height="16" fill="white" />
+				</clipPath>
+			</defs>
+		</svg>
+	</div>
+	<textarea
+		class="focus-visible:ring-offset-main flex min-h-32 w-full rounded-md border bg-secondary px-3 py-2 text-sm transition duration-300 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-disabled"
+		placeholder="Describe yourself"></textarea>
+
+	<p class="text-sm text-muted-foreground">0/150</p>
 </div>

@@ -996,6 +996,10 @@ body {
   min-height: 100vh;
 }
 
+.min-h-32{
+  min-height: 8rem;
+}
+
 .w-10{
   width: 2.5rem;
 }
@@ -1897,6 +1901,14 @@ body {
 
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.placeholder\:text-muted-foreground::-moz-placeholder{
+  color: hsl(var(--muted-foreground));
+}
+
+.placeholder\:text-muted-foreground::placeholder{
+  color: hsl(var(--muted-foreground));
 }
 
 .before\:absolute::before{
