@@ -13,7 +13,7 @@ module.exports = {
 				"2xs": "var(--radius-2xs)",
 				xs: "var(--radius-xs)",
 				sm: "var(--radius-sm)",
-				base: "var(--radius-base)",
+				md: "var(--radius-md)",
 				lg: "var(--radius-lg)",
 				xl: "var(--radius-xl)",
 				"2xl": "var(--radius-2xl)",
@@ -23,6 +23,11 @@ module.exports = {
 				active: "var(--active-opacity)",
 				hover: "var(--hover-opacity)",
 				disabled: "var(--disabled-opacity)",
+			},
+			brightness: {
+				active: "var(--active-brightness)",
+				hover: "var(--hover-brightness)",
+				disabled: "var(--disabled-brightness)",
 			},
 			boxShadow: {
 				xs: "var(--shadow-xs)",
