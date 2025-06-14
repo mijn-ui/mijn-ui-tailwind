@@ -1,0 +1,87 @@
+<div
+	class="relative flex w-[480px] flex-col items-center gap-4 rounded-lg border bg-background-alt p-6 shadow-lg">
+	<div class="flex h-16 w-96 flex-col gap-2">
+		<h3 class="font-semibold text-foreground">Rate Your Experience</h3>
+		<p class="text-sm text-secondary-foreground">
+			Please select your feedback rating and share your story in the text box
+			below before confirming or canceling.
+		</p>
+	</div>
+
+	<div class="flex h-44 w-96 flex-col gap-2">
+		<div class="flex h-9 w-auto gap-2">
+			<button class="h-9 w-36 rounded-md border bg-background-alt px-3 py-1.5">
+				🙁 Bad
+			</button>
+			<button
+				class="h-9 w-36 rounded-md border bg-background-alt px-3 py-1.5 ring-2 ring-primary ring-offset-2 ring-offset-background">
+				🙂 Fine
+			</button>
+			<button class="h-9 w-36 rounded-md border bg-background-alt px-3 py-1.5">
+				😍 Good
+			</button>
+		</div>
+
+		<textarea
+			class="font-muted-foreground h-32 w-full resize-none rounded-lg border bg-secondary p-3 text-sm placeholder-muted-foreground focus:outline-none"
+			placeholder="Tell us your story"></textarea>
+	</div>
+
+	<div class="flex h-9 w-96 justify-end gap-2">
+		<button class="h-9 w-24 rounded-md border px-3 py-1.5">Cancel</button>
+		<button
+			class="h-9 w-24 rounded-md border bg-primary px-3 py-1.5 text-primary-foreground">
+			Confirm
+		</button>
+	</div>
+
+	<button class="absolute right-9 top-1 h-4 w-4 p-2">
+		<svg
+			width="32"
+			height="32"
+			viewBox="0 0 32 32"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg">
+			<g filter="url(#filter0_d_4146_3035)">
+				<path
+					d="M20 12L16 16M16 16L12 20M16 16L20 20M16 16L12 12"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round" />
+			</g>
+			<defs>
+				<filter
+					id="filter0_d_4146_3035"
+					x="-2"
+					y="-1"
+					width="36"
+					height="36"
+					filterUnits="userSpaceOnUse"
+					color-interpolation-filters="sRGB">
+					<feFlood flood-opacity="0" result="BackgroundImageFix" />
+					<feColorMatrix
+						in="SourceAlpha"
+						type="matrix"
+						values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+						result="hardAlpha" />
+					<feOffset dy="1" />
+					<feGaussianBlur stdDeviation="1" />
+					<feComposite in2="hardAlpha" operator="out" />
+					<feColorMatrix
+						type="matrix"
+						values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.05 0" />
+					<feBlend
+						mode="normal"
+						in2="BackgroundImageFix"
+						result="effect1_dropShadow_4146_3035" />
+					<feBlend
+						mode="normal"
+						in="SourceGraphic"
+						in2="effect1_dropShadow_4146_3035"
+						result="shape" />
+				</filter>
+			</defs>
+		</svg>
+	</button>
+</div>
