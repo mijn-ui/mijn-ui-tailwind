@@ -616,9 +616,6 @@ video {
   --radius-2xl: 1.25rem;
   /* 20px */
   --radius-full: 9999px;
-  --active-opacity: 0.75;
-  --hover-opacity: 0.85;
-  --disabled-opacity: 0.5;
   --shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.05);
   --shadow-sm:
 			0 1px 3px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06);
@@ -2103,16 +2100,16 @@ body {
   background-color: hsl(var(--primary) / 0.8);
 }
 
-.hover\:bg-primary\/85:hover{
-  background-color: hsl(var(--primary) / 0.85);
-}
-
-.hover\:text-secondary-foreground:hover{
-  color: hsl(var(--secondary-foreground));
+.hover\:bg-danger\/80:hover{
+  background-color: hsl(var(--danger) / 0.8);
 }
 
 .hover\:text-accent-foreground:hover{
   color: hsl(var(--accent-foreground));
+}
+
+.hover\:text-secondary-foreground:hover{
+  color: hsl(var(--secondary-foreground));
 }
 
 .hover\:opacity-100:hover{
@@ -2121,10 +2118,6 @@ body {
 
 .hover\:opacity-90:hover{
   opacity: 0.9;
-}
-
-.hover\:opacity-hover:hover{
-  opacity: var(--hover-opacity);
 }
 
 .hover\:shadow-lg:hover{
@@ -2206,8 +2199,20 @@ body {
   --tw-ring-offset-color: hsl(var(--background));
 }
 
-.active\:opacity-active:active{
-  opacity: var(--active-opacity);
+.active\:bg-primary\/80:active{
+  background-color: hsl(var(--primary) / 0.8);
+}
+
+.active\:bg-primary\/70:active{
+  background-color: hsl(var(--primary) / 0.7);
+}
+
+.active\:bg-background-alt\/70:active{
+  background-color: hsl(var(--background-alt) / 0.7);
+}
+
+.active\:bg-danger\/70:active{
+  background-color: hsl(var(--danger) / 0.7);
 }
 
 .active\:brightness-90:active{
@@ -2225,10 +2230,6 @@ body {
 
 .disabled\:opacity-50:disabled{
   opacity: 0.5;
-}
-
-.disabled\:opacity-disabled:disabled{
-  opacity: var(--disabled-opacity);
 }
 
 .group:hover .group-hover\:translate-x-1{
