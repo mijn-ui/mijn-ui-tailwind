@@ -71,8 +71,8 @@ function generateComponentPreview(folderNode: ComponentNode): string {
       <div class="px-6 py-3 border-b bg-secondary border-border">
         <h3 class="text-lg font-medium text-secondary-foreground">${componentName}</h3>
       </div>
-      <div class="p-8">
-        <div class="flex items-center justify-center min-h-96 rounded-lg p-6">
+      <div class="p-2 md:p-8">
+        <div class="flex items-center justify-center min-h-96 rounded-lg md:p-6">
           ${content}
         </div>
       </div>
