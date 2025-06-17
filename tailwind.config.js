@@ -19,11 +19,6 @@ module.exports = {
 				"2xl": "var(--radius-2xl)",
 				full: "var(--radius-full)",
 			},
-			opacity: {
-				active: "var(--active-opacity)",
-				hover: "var(--hover-opacity)",
-				disabled: "var(--disabled-opacity)",
-			},
 			boxShadow: {
 				xs: "var(--shadow-xs)",
 				sm: "var(--shadow-sm)",
