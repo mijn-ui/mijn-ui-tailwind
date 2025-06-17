@@ -1352,6 +1352,10 @@ body {
   border-color: hsl(var(--border));
 }
 
+.divide-border-secondary > :not([hidden]) ~ :not([hidden]){
+  border-color: hsl(var(--border-secondary));
+}
+
 .overflow-auto{
   overflow: auto;
 }
@@ -2092,6 +2096,10 @@ body {
   background-color: hsl(var(--accent));
 }
 
+.hover\:bg-danger\/80:hover{
+  background-color: hsl(var(--danger) / 0.8);
+}
+
 .hover\:bg-muted:hover{
   background-color: hsl(var(--muted));
 }
@@ -2100,8 +2108,16 @@ body {
   background-color: hsl(var(--primary) / 0.8);
 }
 
-.hover\:bg-danger\/80:hover{
-  background-color: hsl(var(--danger) / 0.8);
+.hover\:bg-inverse\/80:hover{
+  background-color: hsl(var(--inverse) / 0.8);
+}
+
+.hover\:bg-background-alt\/80:hover{
+  background-color: hsl(var(--background-alt) / 0.8);
+}
+
+.hover\:bg-danger-subtle:hover{
+  background-color: hsl(var(--danger-subtle));
 }
 
 .hover\:text-accent-foreground:hover{
@@ -2110,6 +2126,10 @@ body {
 
 .hover\:text-secondary-foreground:hover{
   color: hsl(var(--secondary-foreground));
+}
+
+.hover\:text-danger-foreground-subtle:hover{
+  color: hsl(var(--danger-foreground-subtle));
 }
 
 .hover\:opacity-100:hover{
@@ -2156,6 +2176,10 @@ body {
   background-color: hsl(var(--accent));
 }
 
+.focus-visible\:bg-danger-subtle:focus-visible{
+  background-color: hsl(var(--danger-subtle));
+}
+
 .focus-visible\:text-accent-foreground:focus-visible{
   color: hsl(var(--accent-foreground));
 }
@@ -2191,6 +2215,14 @@ body {
   --tw-ring-color: hsl(var(--warning));
 }
 
+.focus-visible\:ring-inverse:focus-visible{
+  --tw-ring-color: hsl(var(--inverse));
+}
+
+.focus-visible\:ring-background-alt:focus-visible{
+  --tw-ring-color: hsl(var(--background-alt));
+}
+
 .focus-visible\:ring-offset-2:focus-visible{
   --tw-ring-offset-width: 2px;
 }
@@ -2199,12 +2231,8 @@ body {
   --tw-ring-offset-color: hsl(var(--background));
 }
 
-.active\:bg-primary\/80:active{
-  background-color: hsl(var(--primary) / 0.8);
-}
-
-.active\:bg-primary\/70:active{
-  background-color: hsl(var(--primary) / 0.7);
+.focus-visible\:ring-offset-inverse:focus-visible{
+  --tw-ring-offset-color: hsl(var(--inverse));
 }
 
 .active\:bg-background-alt\/70:active{
@@ -2213,6 +2241,22 @@ body {
 
 .active\:bg-danger\/70:active{
   background-color: hsl(var(--danger) / 0.7);
+}
+
+.active\:bg-primary\/70:active{
+  background-color: hsl(var(--primary) / 0.7);
+}
+
+.active\:bg-inverse\/70:active{
+  background-color: hsl(var(--inverse) / 0.7);
+}
+
+.active\:bg-danger-subtle\/70:active{
+  background-color: hsl(var(--danger-subtle) / 0.7);
+}
+
+.active\:bg-accent\/70:active{
+  background-color: hsl(var(--accent) / 0.7);
 }
 
 .active\:brightness-90:active{
