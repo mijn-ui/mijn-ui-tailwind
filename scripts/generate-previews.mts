@@ -152,7 +152,7 @@ function generateMainIndex(tree: ComponentNode[]): string {
 
 			return `
       <a href="previews/${previewFileName}" class="block group">
-        <div class="bg-background-alt rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-border overflow-hidden">
+        <div class="bg-background-alt rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-border overflow-hidden">
           <div class="p-6">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">

@@ -1,0 +1,101 @@
+<div class="flex flex-col items-start gap-1.5">
+	<button
+		class="inline-flex h-9 items-center gap-1 rounded-md border bg-background-alt px-3 text-foreground duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+		<span class="px-1 text-sm font-medium">Select Language</span>
+
+		<svg
+			width="20"
+			height="20"
+			viewBox="0 0 20 20"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			class="rotate-180">
+			<path
+				d="M5 7.5L9.29289 11.7929C9.62623 12.1262 9.79289 12.2929 10 12.2929C10.2071 12.2929 10.3738 12.1262 10.7071 11.7929L15 7.5"
+				stroke="currentColor"
+				stroke-width="1.5"
+				stroke-linecap="round"
+				stroke-linejoin="round" />
+		</svg>
+	</button>
+
+	<div class="w-60 rounded-md border bg-background-alt shadow-lg">
+		<div class="relative">
+			<span class="absolute left-3 top-3 text-muted-foreground">
+				<svg
+					width="16"
+					height="16"
+					viewBox="0 0 16 16"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_4227_6651)">
+						<path
+							d="M11.6665 11.667L14.6665 14.667"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path
+							d="M13.333 7.3335C13.333 4.01979 10.6467 1.3335 7.33301 1.3335C4.0193 1.3335 1.33301 4.01979 1.33301 7.3335C1.33301 10.6472 4.0193 13.3335 7.33301 13.3335C10.6467 13.3335 13.333 10.6472 13.333 7.3335Z"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linejoin="round" />
+					</g>
+					<defs>
+						<clipPath id="clip0_4227_6651">
+							<rect width="16" height="16" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</span>
+
+			<input
+				type="text"
+				class="h-10 w-full border-b bg-transparent pl-[2.125rem] text-sm outline-none transition duration-300 placeholder:text-muted-foreground focus-within:border-b-foreground"
+				placeholder="Search" />
+		</div>
+
+		<div class="flex flex-col py-1">
+			<button
+				class="inline-flex h-9 items-center gap-0.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:outline-none active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				Chinese
+			</button>
+			<button
+				class="inline-flex h-9 items-center gap-0.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:outline-none active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				English
+			</button>
+			<button
+				class="inline-flex h-9 items-center gap-0.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:outline-none active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				French
+			</button>
+			<button
+				class="inline-flex h-9 items-center gap-0.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:outline-none active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				German
+			</button>
+			<button
+				class="inline-flex h-9 items-center gap-0.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:outline-none active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				Italian
+			</button>
+			<button
+				class="inline-flex h-9 items-center gap-0.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:outline-none active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				Japanese
+			</button>
+			<button
+				class="inline-flex h-9 items-center gap-0.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:outline-none active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				Korean
+			</button>
+		</div>
+
+		<div class="flex items-center justify-end gap-1 border-t p-1.5">
+			<button
+				class="accent-visible:outline-none flex h-8 items-center rounded-md bg-background-alt px-3 text-sm text-foreground duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground hover:opacity-hover focus-visible:text-accent-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				<span class="px-1 font-medium">Cancel</span>
+			</button>
+
+			<button
+				class="flex h-8 items-center rounded-md bg-primary px-3 text-sm text-primary-foreground duration-300 ease-in-out hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:opacity-active disabled:pointer-events-none disabled:opacity-disabled">
+				<span class="px-1 font-medium">Confirm</span>
+			</button>
+		</div>
+	</div>
+</div>
