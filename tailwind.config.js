@@ -34,9 +34,6 @@ module.exports = {
 				foreground: "hsl(var(--foreground))",
 				border: "hsl(var(--border))",
 
-				accent: "hsl(var(--accent))",
-				"accent-foreground": "hsl(var(--accent-foreground))",
-
 				secondary: "hsl(var(--secondary))",
 				"secondary-foreground": "hsl(var(--secondary-foreground))",
 				"border-secondary": "hsl(var(--border-secondary))",
