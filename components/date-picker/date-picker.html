@@ -1,0 +1,693 @@
+<!-- Container -->
+<div class="flex min-h-screen w-full flex-col pt-10">
+	<!-- Date-picker -->
+	<div class="relative h-fit p-1.5">
+		<button
+			autofocus
+			class="hover:bg-accent hover:text-accent-foreground flex h-9 w-60 items-center gap-0.5 rounded-md border bg-secondary px-3 text-sm font-normal text-muted-foreground outline-none duration-300 ease-in-out focus-visible:border-border-primary-subtle focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50">
+			<span class="text-foreground">
+				<svg
+					width="20"
+					height="20"
+					viewBox="0 0 20 20"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M15 1.6665V3.33317M5 1.6665V3.33317"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+						stroke-linejoin="round" />
+					<path
+						d="M2.0835 10.2027C2.0835 6.57161 2.0835 4.75607 3.12693 3.62803C4.17036 2.5 5.84974 2.5 9.2085 2.5H10.7918C14.1506 2.5 15.83 2.5 16.8734 3.62803C17.9168 4.75607 17.9168 6.57161 17.9168 10.2027V10.6306C17.9168 14.2617 17.9168 16.0773 16.8734 17.2053C15.83 18.3333 14.1506 18.3333 10.7918 18.3333H9.2085C5.84974 18.3333 4.17036 18.3333 3.12693 17.2053C2.0835 16.0773 2.0835 14.2617 2.0835 10.6306V10.2027Z"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+						stroke-linejoin="round" />
+					<path
+						d="M2.5 6.6665H17.5"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+			</span>
+
+			<span class="px-1">Select a date</span>
+		</button>
+
+		<div
+			class="absolute top-full w-80 overflow-hidden rounded-md border bg-background-alt shadow-md">
+			<div class="px-3 py-2 pb-0">
+				<div
+					class="flex w-full max-w-80 items-center rounded-md bg-secondary p-1">
+					<button
+						class="inline-flex h-7 w-full items-center justify-center gap-1.5 rounded-md px-3 text-sm font-medium leading-none text-muted-foreground outline-none duration-300 ease-in-out disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background-alt data-[state=active]:text-foreground data-[state=active]:active:bg-background-alt/70"
+						data-state="active">
+						General
+					</button>
+					<button
+						class="inline-flex h-7 w-full items-center justify-center gap-1.5 rounded-md px-3 text-sm font-medium leading-none text-muted-foreground outline-none duration-300 ease-in-out disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background-alt data-[state=active]:text-foreground data-[state=active]:active:bg-background-alt/70">
+						Current
+					</button>
+					<button
+						class="inline-flex h-7 w-full items-center justify-center gap-1.5 rounded-md px-3 text-sm font-medium leading-none text-muted-foreground outline-none duration-300 ease-in-out disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background-alt data-[state=active]:text-foreground data-[state=active]:active:bg-background-alt/70">
+						Previous
+					</button>
+				</div>
+			</div>
+
+			<div class="w-full py-1">
+				<button
+					class="inline-flex h-9 w-full items-center gap-1.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:bg-secondary active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50">
+					<span class="flex w-full flex-grow items-center justify-start px-1">
+						All time
+					</span>
+
+					<span class="flex-auto text-primary-emphasis">
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 20 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M4.1665 11.6665L7.08317 14.5832L15.8332 5.4165"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</span>
+				</button>
+				<button
+					class="inline-flex h-9 w-full items-center gap-1.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:bg-secondary active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50">
+					<span class="flex w-full flex-grow items-center justify-start px-1">
+						Last 7 days
+					</span>
+				</button>
+				<button
+					class="inline-flex h-9 w-full items-center gap-1.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:bg-secondary active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50">
+					<span class="flex w-full flex-grow items-center justify-start px-1">
+						Last 30 days
+					</span>
+				</button>
+				<button
+					class="inline-flex h-9 w-full items-center gap-1.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:bg-secondary active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50">
+					<span class="flex w-full flex-grow items-center justify-start px-1">
+						Last 90 days
+					</span>
+				</button>
+				<button
+					class="inline-flex h-9 w-full items-center gap-1.5 bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:bg-secondary active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50">
+					<span class="flex w-full flex-grow items-center justify-start px-1">
+						Last 365 days
+					</span>
+				</button>
+			</div>
+
+			<button
+				class="inline-flex h-9 w-full items-center gap-1.5 border-t bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:bg-secondary active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50">
+				<span class="flex w-full flex-grow items-center justify-start px-1">
+					Custom date range
+				</span>
+
+				<svg
+					width="20"
+					height="20"
+					viewBox="0 0 20 20"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M7.5 15L11.7929 10.7071C12.1262 10.3738 12.2929 10.2071 12.2929 10C12.2929 9.79289 12.1262 9.62623 11.7929 9.29289L7.5 5"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<!-- Container -->
+	<div class="mt-[296px]">
+		<div class="relative h-fit p-1.5">
+			<button
+				autofocus
+				class="hover:bg-accent hover:text-accent-foreground flex h-9 w-60 items-center gap-0.5 rounded-md border bg-secondary px-3 text-sm font-normal text-muted-foreground outline-none duration-300 ease-in-out focus-visible:border-border-primary-subtle focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50">
+				<span class="text-foreground">
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M15 1.6665V3.33317M5 1.6665V3.33317"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path
+							d="M2.0835 10.2027C2.0835 6.57161 2.0835 4.75607 3.12693 3.62803C4.17036 2.5 5.84974 2.5 9.2085 2.5H10.7918C14.1506 2.5 15.83 2.5 16.8734 3.62803C17.9168 4.75607 17.9168 6.57161 17.9168 10.2027V10.6306C17.9168 14.2617 17.9168 16.0773 16.8734 17.2053C15.83 18.3333 14.1506 18.3333 10.7918 18.3333H9.2085C5.84974 18.3333 4.17036 18.3333 3.12693 17.2053C2.0835 16.0773 2.0835 14.2617 2.0835 10.6306V10.2027Z"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path
+							d="M2.5 6.6665H17.5"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+				</span>
+
+				<span class="px-1">Select a date</span>
+			</button>
+
+			<div
+				class="absolute top-full w-fit overflow-hidden rounded-md border bg-background-alt shadow-md">
+				<div class="flex w-80 items-center overflow-x-auto sm:w-full">
+					<div class="flex w-full max-w-64 flex-col gap-1.5 rounded-md p-4">
+						<!-- Header -->
+						<div class="flex w-full items-center justify-between gap-1.5">
+							<button
+								type="button"
+								class="flex h-8 w-8 flex-shrink-0 items-center justify-center gap-0.5 rounded-md border bg-background-alt text-sm font-medium text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50"
+								aria-label="Previous month">
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 4L6.70711 7.29289C6.37377 7.62623 6.20711 7.79289 6.20711 8C6.20711 8.20711 6.37377 8.37377 6.70711 8.70711L10 12"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</button>
+
+							<button
+								class="flex h-8 w-full items-center justify-center gap-0.5 rounded-md border bg-background-alt px-3 py-2 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50">
+								December, 2024
+							</button>
+
+							<button
+								type="button"
+								class="flex h-8 w-8 flex-shrink-0 items-center justify-center gap-0.5 rounded-md border bg-background-alt text-sm font-medium text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50"
+								aria-label="Next month">
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M6 12L9.29289 8.70711C9.62623 8.37377 9.79289 8.20711 9.79289 8C9.79289 7.79289 9.62623 7.62623 9.29289 7.29289L6 4"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+
+						<!-- Calendar Grid -->
+						<div class="flex">
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Su
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Mo
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Tu
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								We
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Th
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Fr
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Sa
+							</div>
+						</div>
+
+						<!-- Dates -->
+						<div class="grid grid-cols-7 gap-y-1.5 text-sm font-medium">
+							<!-- Previous month's tail dates -->
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>1</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>2</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>3</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>4</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>5</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>6</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>7</span>
+							</button>
+
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>8</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>9</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>10</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>11</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>12</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>13</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>14</span>
+							</button>
+
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>15</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>16</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>17</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>18</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>19</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>20</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>21</span>
+							</button>
+
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>22</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>23</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>24</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>25</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>26</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-l-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-state="active">
+								<span>27</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>28</span>
+							</button>
+
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>29</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>30</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>31</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true"
+								disabled>
+								<span>1</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true"
+								disabled>
+								<span>2</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true"
+								disabled>
+								<span>3</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true"
+								disabled>
+								<span>4</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="flex w-full max-w-64 flex-col gap-1.5 rounded-md p-4">
+						<!-- Header -->
+						<div class="flex w-full items-center justify-between gap-1.5">
+							<button
+								type="button"
+								class="flex h-8 w-8 flex-shrink-0 items-center justify-center gap-0.5 rounded-md border bg-background-alt text-sm font-medium text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50"
+								aria-label="Previous month">
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 4L6.70711 7.29289C6.37377 7.62623 6.20711 7.79289 6.20711 8C6.20711 8.20711 6.37377 8.37377 6.70711 8.70711L10 12"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</button>
+
+							<button
+								class="flex h-8 w-full items-center justify-center gap-0.5 rounded-md border bg-background-alt px-3 py-2 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50">
+								January, 2025
+							</button>
+
+							<button
+								type="button"
+								class="flex h-8 w-8 flex-shrink-0 items-center justify-center gap-0.5 rounded-md border bg-background-alt text-sm font-medium text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50"
+								aria-label="Next month">
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M6 12L9.29289 8.70711C9.62623 8.37377 9.79289 8.20711 9.79289 8C9.79289 7.79289 9.62623 7.62623 9.29289 7.29289L6 4"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+
+						<!-- Calendar Grid -->
+						<div class="flex">
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Su
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Mo
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Tu
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								We
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Th
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Fr
+							</div>
+							<div
+								class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+								Sa
+							</div>
+						</div>
+
+						<!-- Dates -->
+						<div class="grid grid-cols-7 gap-y-1.5 text-sm font-medium">
+							<!-- Previous month's tail dates -->
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true"
+								disabled>
+								<span>29</span>
+							</button>
+							<!-- Previous month's tail dates -->
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true"
+								disabled>
+								<span>30</span>
+							</button>
+							<!-- Previous month's tail dates -->
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true"
+								disabled>
+								<span>31</span>
+							</button>
+							<!-- Previous month's tail dates -->
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>1</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>2</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>3</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>4</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>5</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>6</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>7</span>
+							</button>
+
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>8</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[date-range=true]:bg-primary-subtle data-[state=active]:bg-primary data-[date-range=true]:text-primary-foreground-subtle data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-date-range="true">
+								<span>9</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-r-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-state="active">
+								<span>10</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>11</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>12</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>13</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>14</span>
+							</button>
+
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>15</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>16</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>17</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>18</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>19</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>20</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>21</span>
+							</button>
+
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>22</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>23</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>24</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>25</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>26</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>27</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>28</span>
+							</button>
+
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>29</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>30</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+								<span>31</span>
+							</button>
+							<button
+								class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+								data-disabled="true">
+								<span>1</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<button
+					class="inline-flex h-9 w-full items-center gap-1.5 border-t bg-background-alt px-3 text-sm font-normal leading-none text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:bg-secondary active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50">
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M4.1665 10L16.6665 9.9998"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path
+							d="M7.50016 5.8335L4.0406 9.29306C3.70727 9.62639 3.5406 9.79306 3.5406 10.0002C3.5406 10.2073 3.70727 10.3739 4.0406 10.7073L7.50016 14.1668"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+
+					<span class="flex w-full flex-grow items-center justify-start px-1">
+						Preset date range
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
