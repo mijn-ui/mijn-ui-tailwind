@@ -1,367 +1,234 @@
-<div class="border-main-border bg-surface rounded-lg border p-3">
-	<div class="relative flex flex-col sm:flex-row">
-		<!-- /* --------------------------- CALENDAR NAV --------------------------- */ -->
-		<nav>
-			<button
-				class="border-main-border hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main absolute left-1 top-0 z-10 inline-flex h-7 w-7 items-center justify-center gap-1 rounded-md border bg-transparent p-0 text-sm opacity-50 transition-colors duration-150 hover:bg-accent hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-				aria-label="Go to the Previous Month">
-				<svg
+<div
+	class="flex w-full max-w-64 flex-col gap-1.5 rounded-md border bg-background p-4 shadow-xs">
+	<!-- Header -->
+	<div class="flex w-full items-center justify-between gap-1.5">
+		<button
+			type="button"
+			class="flex h-8 w-8 flex-shrink-0 items-center justify-center gap-0.5 rounded-md border bg-background-alt text-sm font-medium text-foreground duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50"
+			aria-label="Previous month">
+			<svg
+				width="16"
+				height="16"
+				viewBox="0 0 16 16"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M10 4L6.70711 7.29289C6.37377 7.62623 6.20711 7.79289 6.20711 8C6.20711 8.20711 6.37377 8.37377 6.70711 8.70711L10 12"
 					stroke="currentColor"
-					fill="none"
-					stroke-width="2"
-					viewBox="0 0 24 24"
+					stroke-width="1.5"
 					stroke-linecap="round"
-					stroke-linejoin="round"
-					class="h-4 w-4"
-					height="1em"
-					width="1em"
-					xmlns="http://www.w3.org/2000/svg">
-					<path d="m15 18-6-6 6-6" />
-				</svg>
-			</button>
+					stroke-linejoin="round" />
+			</svg>
+		</button>
 
-			<button
-				class="border-main-border hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main absolute right-1 top-0 z-10 inline-flex h-7 w-7 items-center justify-center gap-1 rounded-md border bg-transparent p-0 text-sm opacity-50 transition-colors duration-150 hover:bg-accent hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-				aria-label="Go to the Next Month">
-				<svg
+		<button
+			class="flex h-8 w-full items-center gap-0.5 rounded-md border bg-background-alt px-3 py-2 text-sm font-normal text-foreground duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50">
+			December, 2024
+		</button>
+
+		<button
+			type="button"
+			class="flex h-8 w-8 flex-shrink-0 items-center justify-center gap-0.5 rounded-md border bg-background-alt text-sm font-medium text-foreground duration-300 ease-in-out hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-background-alt/70 disabled:pointer-events-none disabled:opacity-50"
+			aria-label="Next month">
+			<svg
+				width="16"
+				height="16"
+				viewBox="0 0 16 16"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M6 12L9.29289 8.70711C9.62623 8.37377 9.79289 8.20711 9.79289 8C9.79289 7.79289 9.62623 7.62623 9.29289 7.29289L6 4"
 					stroke="currentColor"
-					fill="none"
-					stroke-width="2"
-					viewBox="0 0 24 24"
+					stroke-width="1.5"
 					stroke-linecap="round"
-					stroke-linejoin="round"
-					class="h-4 w-4"
-					height="1em"
-					width="1em"
-					xmlns="http://www.w3.org/2000/svg">
-					<path d="m9 18 6-6-6-6" />
-				</svg>
-			</button>
-		</nav>
+					stroke-linejoin="round" />
+			</svg>
+		</button>
+	</div>
 
-		<!-- /* ---------------------------- CALENDAR TITLE --------------------------- */ -->
-		<div>
-			<div class="relative flex items-center justify-center py-2">
-				<span class="text-sm font-medium" role="status">October 2024</span>
-			</div>
-
-			<!-- /* ---------------------------- CALENDAR TABLE --------------------------- */ -->
-			<table
-				role="grid"
-				aria-label="October 2024"
-				class="w-full border-collapse space-y-1">
-				<!-- CALENDAR TABLE HEADER -->
-				<thead>
-					<tr class="flex">
-						<th
-							aria-label="Sunday"
-							class="text-muted-text flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal"
-							scope="col">
-							Su
-						</th>
-						<th
-							aria-label="Monday"
-							class="text-muted-text flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal"
-							scope="col">
-							Mo
-						</th>
-						<th
-							aria-label="Tuesday"
-							class="text-muted-text flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal"
-							scope="col">
-							Tu
-						</th>
-						<th
-							aria-label="Wednesday"
-							class="text-muted-text flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal"
-							scope="col">
-							We
-						</th>
-						<th
-							aria-label="Thursday"
-							class="text-muted-text flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal"
-							scope="col">
-							Th
-						</th>
-						<th
-							aria-label="Friday"
-							class="text-muted-text flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal"
-							scope="col">
-							Fr
-						</th>
-						<th
-							aria-label="Saturday"
-							class="text-muted-text flex h-9 w-9 items-center justify-center text-[0.8rem] font-normal"
-							scope="col">
-							Sa
-						</th>
-					</tr>
-				</thead>
-
-				<!-- CALENDAR TABLE BODY -->
-				<tbody>
-					<tr class="mt-0.5 flex w-full">
-						<td>
-							<button
-								class="text-muted-text text-muted-text/80 focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-								aria-label="Sunday, September 29th, 2024">
-								29
-							</button>
-						</td>
-						<td data-day="2024-09-30" data-month="2024-09">
-							<button
-								class="text-muted-text text-muted-text/80 focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-								aria-label="Monday, September 30th, 2024">
-								30
-							</button>
-						</td>
-						<td data-day="2024-10-01">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Tuesday, October 1st, 2024">
-								1
-							</button>
-						</td>
-						<td data-day="2024-10-02">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Wednesday, October 2nd, 2024">
-								2
-							</button>
-						</td>
-						<td data-day="2024-10-03">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Thursday, October 3rd, 2024">
-								3
-							</button>
-						</td>
-						<td data-day="2024-10-04">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Friday, October 4th, 2024">
-								4
-							</button>
-						</td>
-						<td data-day="2024-10-05">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Saturday, October 5th, 2024">
-								5
-							</button>
-						</td>
-					</tr>
-					<tr class="mt-0.5 flex w-full">
-						<td data-day="2024-10-06">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Sunday, October 6th, 2024">
-								6
-							</button>
-						</td>
-						<td data-day="2024-10-07">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Monday, October 7th, 2024">
-								7
-							</button>
-						</td>
-						<td data-day="2024-10-08">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Tuesday, October 8th, 2024">
-								8
-							</button>
-						</td>
-						<td data-day="2024-10-09">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Wednesday, October 9th, 2024">
-								9
-							</button>
-						</td>
-						<td data-day="2024-10-10">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Thursday, October 10th, 2024">
-								10
-							</button>
-						</td>
-						<td data-day="2024-10-11">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Friday, October 11th, 2024">
-								11
-							</button>
-						</td>
-						<td data-day="2024-10-12">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Saturday, October 12th, 2024">
-								12
-							</button>
-						</td>
-					</tr>
-					<tr class="mt-0.5 flex w-full">
-						<td data-day="2024-10-13">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Sunday, October 13th, 2024">
-								13
-							</button>
-						</td>
-						<td data-day="2024-10-14">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Monday, October 14th, 2024">
-								14
-							</button>
-						</td>
-						<td data-day="2024-10-15">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Tuesday, October 15th, 2024">
-								15
-							</button>
-						</td>
-						<td data-day="2024-10-16">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Wednesday, October 16th, 2024">
-								16
-							</button>
-						</td>
-						<td data-day="2024-10-17">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Thursday, October 17th, 2024">
-								17
-							</button>
-						</td>
-						<td data-day="2024-10-18">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Friday, October 18th, 2024">
-								18
-							</button>
-						</td>
-						<td data-day="2024-10-19">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Saturday, October 19th, 2024">
-								19
-							</button>
-						</td>
-					</tr>
-					<tr class="mt-0.5 flex w-full">
-						<td data-day="2024-10-20">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Sunday, October 20th, 2024">
-								20
-							</button>
-						</td>
-						<td
-							data-day="2024-10-21"
-							data-today="true"
-							aria-selected="true"
-							data-selected="true">
-							<button
-								class="text-primary-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md bg-primary p-0 text-center text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-								tabindex="0"
-								aria-label="Today, Monday, October 21st, 2024, selected">
-								21
-							</button>
-						</td>
-						<td data-day="2024-10-22">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Tuesday, October 22nd, 2024">
-								22
-							</button>
-						</td>
-						<td data-day="2024-10-23">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Wednesday, October 23rd, 2024">
-								23
-							</button>
-						</td>
-						<td data-day="2024-10-24">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Thursday, October 24th, 2024">
-								24
-							</button>
-						</td>
-						<td data-day="2024-10-25">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Friday, October 25th, 2024">
-								25
-							</button>
-						</td>
-						<td data-day="2024-10-26">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Saturday, October 26th, 2024">
-								26
-							</button>
-						</td>
-					</tr>
-					<tr class="mt-0.5 flex w-full">
-						<td data-day="2024-10-27">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Sunday, October 27th, 2024">
-								27
-							</button>
-						</td>
-						<td data-day="2024-10-28">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Monday, October 28th, 2024">
-								28
-							</button>
-						</td>
-						<td data-day="2024-10-29">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Tuesday, October 29th, 2024">
-								29
-							</button>
-						</td>
-						<td data-day="2024-10-30">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Wednesday, October 30th, 2024">
-								30
-							</button>
-						</td>
-						<td data-day="2024-10-31">
-							<button
-								class="hover:text-accent-text focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:brightness-90"
-								aria-label="Thursday, October 31st, 2024">
-								31
-							</button>
-						</td>
-						<td data-day="2024-11-01" data-month="2024-11" data-outside="true">
-							<button
-								class="text-muted-text/80 focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-								aria-label="Friday, November 1st, 2024">
-								1
-							</button>
-						</td>
-						<td data-day="2024-11-02" data-month="2024-11" data-outside="true">
-							<button
-								class="text-muted-text/80 focus-visible:ring-ring focus-visible:ring-offset-main relative h-9 w-9 rounded-md p-0 text-center text-sm hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-								aria-label="Saturday, November 2nd, 2024">
-								2
-							</button>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+	<!-- Calendar Grid -->
+	<div class="flex">
+		<div
+			class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+			Su
 		</div>
+		<div
+			class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+			Mo
+		</div>
+		<div
+			class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+			Tu
+		</div>
+		<div
+			class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+			We
+		</div>
+		<div
+			class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+			Th
+		</div>
+		<div
+			class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+			Fr
+		</div>
+		<div
+			class="flex h-8 w-8 items-center justify-center text-sm text-muted-foreground">
+			Sa
+		</div>
+	</div>
+
+	<!-- Dates -->
+	<div class="grid grid-cols-7 gap-y-1.5 text-sm font-medium">
+		<!-- Previous month's tail dates -->
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>1</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>2</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>3</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>4</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>5</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>6</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>7</span>
+		</button>
+
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>8</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>9</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>10</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>11</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+			data-state="active">
+			<span>12</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>13</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>14</span>
+		</button>
+
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>15</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>16</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>17</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>18</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>19</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>20</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>21</span>
+		</button>
+
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>22</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>23</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>24</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>25</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>26</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>27</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>28</span>
+		</button>
+
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>29</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>30</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50">
+			<span>31</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+			data-disabled="true">
+			<span>1</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+			data-disabled="true">
+			<span>2</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+			data-disabled="true">
+			<span>3</span>
+		</button>
+		<button
+			class="flex h-8 w-8 items-center justify-center gap-0.5 rounded-md text-sm font-normal text-foreground outline-none duration-300 ease-in-out hover:bg-secondary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-secondary/70 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[disabled=true]:opacity-50"
+			data-disabled="true">
+			<span>4</span>
+		</button>
 	</div>
 </div>
