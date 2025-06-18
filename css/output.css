@@ -2046,6 +2046,16 @@ body {
   border-radius: var(--radius-full);
 }
 
+.after\:bg-primary-foreground::after{
+  content: var(--tw-content);
+  background-color: hsl(var(--primary-foreground));
+}
+
+.after\:bg-background::after{
+  content: var(--tw-content);
+  background-color: hsl(var(--background));
+}
+
 .after\:transition-all::after{
   content: var(--tw-content);
   transition-property: all;
@@ -2306,9 +2316,18 @@ body {
   opacity: 0.8;
 }
 
+.peer:disabled ~ .peer-disabled\:opacity-50{
+  opacity: 0.5;
+}
+
 .peer:disabled ~ .peer-disabled\:after\:opacity-80::after{
   content: var(--tw-content);
   opacity: 0.8;
+}
+
+.peer:disabled ~ .peer-disabled\:after\:opacity-50::after{
+  content: var(--tw-content);
+  opacity: 0.5;
 }
 
 .data-\[state\=active\]\:border-b-2[data-state="active"]{
