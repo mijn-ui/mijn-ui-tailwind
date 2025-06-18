@@ -13,7 +13,7 @@ module.exports = {
 				"2xs": "var(--radius-2xs)",
 				xs: "var(--radius-xs)",
 				sm: "var(--radius-sm)",
-				base: "var(--radius-base)",
+				md: "var(--radius-base)",
 				lg: "var(--radius-lg)",
 				xl: "var(--radius-xl)",
 				"2xl": "var(--radius-2xl)",
