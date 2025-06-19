@@ -1528,6 +1528,10 @@ body {
   opacity: 0;
 }
 
+.opacity-50{
+  opacity: 0.5;
+}
+
 .shadow-lg{
   --tw-shadow: var(--shadow-lg);
   --tw-shadow-colored: var(--shadow-lg);
