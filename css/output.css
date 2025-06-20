@@ -1236,6 +1236,14 @@ body {
   border-color: hsl(var(--secondary-foreground));
 }
 
+.border-danger{
+  border-color: hsl(var(--danger));
+}
+
+.border-primary{
+  border-color: hsl(var(--primary));
+}
+
 .bg-background{
   background-color: hsl(var(--background));
 }
@@ -1524,6 +1532,10 @@ body {
   color: hsl(var(--warning-foreground));
 }
 
+.text-danger{
+  color: hsl(var(--danger));
+}
+
 .placeholder-muted-foreground::-moz-placeholder{
   color: hsl(var(--muted-foreground));
 }
@@ -1810,6 +1822,10 @@ body {
 
 .focus-within\:ring-primary:focus-within{
   --tw-ring-color: hsl(var(--primary));
+}
+
+.focus-within\:ring-danger:focus-within{
+  --tw-ring-color: hsl(var(--danger));
 }
 
 .focus-within\:ring-offset-2:focus-within{
