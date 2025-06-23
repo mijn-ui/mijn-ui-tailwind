@@ -1784,6 +1784,14 @@ body {
   background-color: hsl(var(--primary));
 }
 
+.focus-within\:border-border-primary-subtle:focus-within{
+  border-color: hsl(var(--border-primary-subtle));
+}
+
+.focus-within\:border-border-danger-subtle:focus-within{
+  border-color: hsl(var(--border-danger-subtle));
+}
+
 .focus-within\:border-b-foreground:focus-within{
   border-bottom-color: hsl(var(--foreground));
 }
